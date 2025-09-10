@@ -1,0 +1,231 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #fdf7f2;
+  color: #333;
+  min-height: 100vh;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex: 1;
+}
+
+/* ===== NAVBAR ===== */
+.topbar {
+  background: #2d3436;
+  padding: 15px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffa041;
+  text-decoration: none;
+}
+
+.nav a {
+  margin-left: 12px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 10px;
+  transition: 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+.nav a:hover {
+  color: #ffa041;
+  border-bottom: 2px solid #ffa041;
+}
+
+.logo {
+  width: 120px; /* sesuaikan ukuran logo */
+  height: auto;
+}
+
+.topbar-inner {
+  display: flex;
+  justify-content: space-between; /* brand kiri, nav kanan */
+  align-items: center;
+  padding: 0 60px; /* tambah jarak kiri-kanan lebih jauh */
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* jarak logo dan tulisan Cafeteria */
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 70vh;
+  padding: 40px 20px;
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #2d3436;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #ffa041, #ff7a00);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #ff7a00, #ffa041);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-ghost {
+  padding: 12px 25px;
+  border: 2px solid #ffa041;
+  color: #ffa041;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-ghost:hover {
+  background: #ffa041;
+  color: #fff;
+}
+
+/* ===== LOGIN / SIGN UP CARD ===== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #fdf7f2;
+  color: #333;
+}
+
+body.login-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Container center card */
+.card-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* vertikal center */
+  align-items: center; /* horizontal center */
+  flex: 1; /* ambil sisa space */
+  text-align: center;
+  padding: 0 15px;
+}
+
+.card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  color: #ffa041;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.login-form label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.login-form input:focus {
+  border-color: #ffa041;
+  box-shadow: 0 0 6px rgba(255, 160, 65, 0.5);
+}
+
+.login-form button.btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, #ffa041, #ff7a00);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.login-form button.btn:hover {
+  background: linear-gradient(45deg, #ff7a00, #ffa041);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer tetap di bawah */

@@ -1,0 +1,178 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3e9d9;
+  position: relative;
+  overflow: hidden;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(4px);
+  opacity: 0.3;
+}
+
+.card {
+  max-width: 400px;
+  width: 100%;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 2px solid #fb923c; /* orange */
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #991b1b; /* dark red */
+  margin-bottom: 10px;
+}
+
+/* FORM */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* semua input default */
+.input {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #555;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #fb923c;
+  box-shadow: 0 0 0 2px #fb923c55;
+}
+
+/* khusus password input supaya sejajar dengan email */
+.password-field input {
+  padding: 12px 45px 12px 20px; /* kanan lebih besar untuk icon 👁 */
+}
+
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
+.password-field button {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #888;
+}
+
+.password-field button:hover {
+  color: #444;
+}
+
+.forget {
+  align-self: flex-start;
+  font-size: 13px;
+  color: #b91c1c;
+  text-decoration: none;
+  margin: -4px 0 6px 4px;
+}
+
+.forget:hover {
+  text-decoration: underline;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  border-radius: 50px;
+  border: none;
+  background-color: #fb923c;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn-primary:hover {
+  background-color: #f97316;
+}
+
+.or-with {
+  color: #991b1b;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.socials img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: opacity 0.2s;
+}
+
+.socials img:hover {
+  opacity: 0.8;
+}
+
+.signup {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #fb923c;
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.signup:hover {
+  text-decoration: underline;
+}
+
+.signup span {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* error message */
+.error-msg {
+  color: red;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 5px;
+}
