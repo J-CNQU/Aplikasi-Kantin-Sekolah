@@ -53,6 +53,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
 </head>
 
+<body class="site-bg">
+  <nav class="navbar">
+    <div class="logo">
+      <img src="assets/img/logo-copy.png" class="logo" alt="Logo">
+      <span>CafeTaria</span>
+    </div>
+    <ul class="nav-links">
+      <li><a class="active" href="index.php">Home</a></li>
+      <li><a href="login.php" class="btns">Login</a></li>
+      <li><a href="signup.php" class="btns">Sign Up</a></li>
+      <li><a href="#">Help</a></li>
+
 </ul>
 <div class="nav-icons">
   <button><i class="fas fa-search"></i></button>
