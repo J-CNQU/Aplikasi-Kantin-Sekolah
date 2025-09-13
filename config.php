@@ -1,8 +1,8 @@
 <?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db   = "cafeteria";
+$host = "localhost";  // pakai MySQL lokal Laragon
+$user = "root";       // default Laragon
+$pass = "";           // defaultnya kosong (jika belum diubah)
+$db   = "cafeteria";  // bikin database manual di phpMyAdmin Laragon
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 
