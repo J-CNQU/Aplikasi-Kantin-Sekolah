@@ -1,3 +1,5 @@
+```
+
 Cafeteria Project
 
 Aplikasi web sederhana berbasis PHP dan MySQL yang dikembangkan menggunakan Laragon.  
@@ -19,7 +21,6 @@ Instalasi
    git clone https://github.com/username/cafeteria.git
    cd cafeteria
    Buat database di phpMyAdmin
-   ```
 
 Nama database: cafeteria
 
@@ -88,3 +89,4 @@ Juan Felix Katoro
 📧 Email: jferxiic@gmail.com
 
 💻 GitHub: @jferxiic
+```
