@@ -85,7 +85,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <button><i class="fas fa-search"></i></button>
       <button><i class="fas fa-user"></i></button>
       <button><i class="fas fa-shopping-cart"></i></button>
-      
     </div>
     
   </nav>
