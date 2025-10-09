@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Cafeteria Sekolah - Home</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/style-index.css">
+  <link rel="stylesheet" href="assets/css/homepage.css">
   <link rel="shortcut icon" href="/assets/img/fcon.png" type="image/x-icon">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet" />
@@ -93,12 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <main class="container">
     <section class="hero">
       <div class="hero-card">
-       
-        <h1>Selamat Datang di <strong>Cafeteria Sekolah</strong></h1>
-        <p>Nikmati makanan bergizi, cepat, dan terjangkau — langsung dari kantin sekolah.</p>
-        <div class="hero-cta">
-          <a class="btn" href="login.php">Login</a>
-          <a class="btn-ghost" href="signup.php">Sign Up</a>
+        <a href="homepage.php" class="btns-user">Haloww, <?= htmlspecialchars($_SESSION['name']) ?><h1>(≧▽≦q)!  </h1></a>
         </div>
       </div>
       <div class="hero-image" aria-hidden="true"></div>

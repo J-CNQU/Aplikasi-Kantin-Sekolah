@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             } else {
                 $error = "Terjadi kesalahan, coba lagi.";
             }
-        }
+        } 
     }
 }
 ?>

@@ -581,26 +581,22 @@ button {
 }
 
 @keyframes worm-move {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-3px);
-    }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
 }
 
 .btns-user {
-    display: inline-block;
-    animation: worm-move 1.2s ease-in-out infinite;
-    font-weight: bold;
-    color: #007bff;
-    padding: 5px 10px;
-    border: 1px solid #007bff;
-    border-radius: 4px;
+  display: block;
+  animation: worm-move 1.2s ease-in-out infinite;
+  font-weight: bold;
+  color: #007bff;
+  padding: 20px 40px;
+  border-radius: 15px;
+  font-size: 80px;
+  text-decoration: none;
 }
-
-.btns-user:hover {
-    color: #ffffff;
-    background-color: #007bff;
-}
-

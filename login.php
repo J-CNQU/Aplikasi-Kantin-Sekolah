@@ -4,13 +4,13 @@ require 'config.php'; // koneksi database
 
 // Jika sudah login, redirect
 if (isset($_SESSION['id']) && isset($_SESSION['role'])) {
-    if ($_SESSION['role'] === 'admin') {
-        header("Location: dashboard_admin.php");
-        exit();
-    } elseif ($_SESSION['role'] === 'user') {
-        header("Location: dashboard_user.php");
-        exit();
-    }
+  if ($_SESSION['role'] === 'admin') {
+    header("Location: dashboard_admin.php");
+    exit();
+  } elseif ($_SESSION['role'] === 'user') {
+    header("Location: homepage.php");
+    exit();
+  }
 }
 
 // Variabel untuk pesan error
@@ -18,61 +18,67 @@ $error = "";
 
 // Proses login
 if (isset($_POST['login'])) {
-    $email = trim($_POST['email']);
-    $password = $_POST['password'];
+  $email = trim($_POST['email']);
+  $password = $_POST['password'];
 
-    // Ambil data user dari database
-    $stmt = $conn->prepare("SELECT * FROM users WHERE email=? LIMIT 1");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
+  // Ambil data user dari database
+  $stmt = $conn->prepare("SELECT * FROM users WHERE email=? LIMIT 1");
+  $stmt->bind_param("s", $email);
+  $stmt->execute();
+  $result = $stmt->get_result();
 
-    if ($result->num_rows === 1) {
-        $user = $result->fetch_assoc();
+  if ($result->num_rows === 1) {
+    $user = $result->fetch_assoc();
 
-        // Cek password hash
-        if (password_verify($password, $user['password'])) {
-            // Set session
-            $_SESSION['id'] = $user['id'];
-            $_SESSION['name'] = $user['name'];
-            $_SESSION['email'] = $user['email'];
-            $_SESSION['role'] = $user['role'];
+    // Cek password hash
+    if (password_verify($password, $user['password'])) {
+      // Set session
+      $_SESSION['id'] = $user['id'];
+      $_SESSION['name'] = $user['name'];
+      $_SESSION['email'] = $user['email'];
+      $_SESSION['role'] = $user['role'];
 
-            // Redirect sesuai role
-            if ($user['role'] === 'admin') {
-                header("Location: dashboard_admin.php");
-            } else {
-                header("Location: dashboard_user.php");
-            }
-            exit();
-        } else {
-            $error = "Password salah!";
-        }
+      // Redirect sesuai role
+// Simpan role di sesi, tapi tetap kembali ke halaman utama (index.php)
+      if ($user['role'] === 'admin') {
+        // Jika Anda tetap ingin admin ke dashboard_admin, biarkan ini.
+        // Atau ganti menjadi: header("Location: index.php");
+        header("Location: dashboard_admin.php");
+      } else {
+        // Untuk user biasa, kembalikan ke halaman utama agar pop-up hilang dan menu berubah
+        header("Location: homepage.php");
+      }
+      exit();
     } else {
-        $error = "Email tidak ditemukan!";
+      $error = "Password salah!";
     }
+  } else {
+    $error = "Email tidak ditemukan!";
+  }
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sign In</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <style>
     <?php include "assets/css/login.css"; ?>
   </style>
 </head>
+
 <body>
   <div class="container">
-    <img alt="Background" class="background" src="https://placehold.co/600x600/png?text=Food+Background"/>
+    <img alt="Background" class="background" src="https://placehold.co/600x600/png?text=Food+Background" />
 
     <div class="card">
       <div class="logo">
-        <img alt="CAFETARIA Logo" src="/assets/img/logo.png"/>
+        <img alt="CAFETARIA Logo" src="/assets/img/logo.png" />
       </div>
 
       <h1>Sign In</h1>
@@ -97,9 +103,9 @@ if (isset($_POST['login'])) {
 
       <p class="or-with">Or With</p>
       <div class="socials">
-        <a href="https://www.google.com/"><img src="/assets/img/google.png" alt="Google"/></a>
-        <a href="https://www.facebook.com/"><img src="/assets/img/facebook.png" alt="Facebook"/></a>
-        <a href="https://x.com/"><img src="/assets/img/x.png" alt="X"/></a>
+        <a href="https://www.google.com/"><img src="/assets/img/google.png" alt="Google" /></a>
+        <a href="https://www.facebook.com/"><img src="/assets/img/facebook.png" alt="Facebook" /></a>
+        <a href="https://x.com/"><img src="/assets/img/x.png" alt="X" /></a>
       </div>
 
       <a href="signup.php" class="signup">
@@ -124,4 +130,5 @@ if (isset($_POST['login'])) {
     }
   </script>
 </body>
+
 </html>
