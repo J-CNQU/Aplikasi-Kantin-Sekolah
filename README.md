@@ -86,7 +86,8 @@ User bisa logout untuk mengakhiri sesi
 Author
 Juan Felix Katoro
 
+
 📧 Email: jferxiic@gmail.com
 
-💻 GitHub: @jferxiic
+💻 GitHub: Juan Felix
 ```
