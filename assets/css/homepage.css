@@ -40,6 +40,7 @@ body {
   display: flex;
   gap: 20px;
   list-style: none;
+  font-family: myFont;
 }
 
 .nav-links a {
@@ -206,7 +207,7 @@ body {
   font-size: 24px; /* atur ukuran */
   color: #f4b942; /* atur warna teks */
   font-weight: 600; /* biar agak tebal */
-  font-family: myFont; /* kalau mau sama kayak title */
+  font-family: myFont;
 }
 
 /* Best Seller */
@@ -382,11 +383,11 @@ footer {
 }
 
 .label {
-  font-weight: bold; /* WhatsApp: dan Email: tebal */
+  font-weight: bold;
 }
 
 .number {
-  font-family: "Courier New", monospace; /* nomor rapi */
+  font-family: "Courier New", monospace;
   font-weight: normal;
 }
 
@@ -401,9 +402,9 @@ footer {
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
-  color: #f7941d;
+  color: #a80000;
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 @media (min-width: 640px) {
@@ -415,7 +416,7 @@ footer {
 
 .socials {
   display: flex;
-  flex-direction: column; /* biar "Connect with us" tetap di atas */
+  flex-direction: column;
   align-items: flex-start;
 }
 
@@ -423,6 +424,8 @@ footer {
   font-weight: bold;
   margin-bottom: 6px;
   margin-top: -40px;
+  font-weight: 900;
+  font-size: 18px;
 }
 
 .icons {
@@ -446,6 +449,8 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  color: #a80000;
+  font-weight: 900;
 }
 
 .download .stores {
@@ -488,6 +493,7 @@ footer {
 
 .copyright > p {
   font-family: myFont;
+  columns: #ffffff;
 }
 
 body {
@@ -583,16 +589,16 @@ button {
 @keyframes worm-move {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateX(0, 0);
   }
   50% {
-    transform: translateY(-3px);
+    transform: translateX(-50px);
   }
 }
 
 .btns-user {
   display: block;
-  animation: worm-move 1.2s ease-in-out infinite;
+  animation: worm-move 2.2s ease-in-out infinite;
   font-weight: bold;
   color: #007bff;
   padding: 20px 40px;

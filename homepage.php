@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <li><a class="active" href="index.php">Home</a></li>
 
       <?php if (isset($_SESSION['name'])): ?>
-        <li><a href="menu.php" class="btns">Menu</a></li>
+        <li><a href="../Menu-AfterLogin/Counter-1.php" class="btns">Menu</a></li>
         <li><a href="orders.php" class="btns">Orders</a></li>
         <li><a href="logout.php" class="btns-logout">Signout</a></li>
       <?php else: ?>
@@ -86,14 +86,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <button><i class="fas fa-user"></i></button>
       <button><i class="fas fa-shopping-cart"></i></button>
     </div>
-    
+
   </nav>
 
   <main class="container">
     <section class="hero">
       <div class="hero-card">
-        <a href="homepage.php" class="btns-user">Haloww, <?= htmlspecialchars($_SESSION['name']) ?><h1>(≧▽≦q)!  </h1></a>
-        </div>
+        <a href="homepage.php" class="btns-user">Haloww, <?= htmlspecialchars($_SESSION['name']) ?>
+          <h1>(≧▽≦q)! </h1>
+        </a>
+      </div>
       </div>
       <div class="hero-image" aria-hidden="true"></div>
     </section>
@@ -108,12 +110,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <section class="counter">
     <p>Shop by counter</p>
     <div class="counter-grid">
-      <img src="/assets/homepage/counter 1.png" alt="Counter 1" />
-      <img src="/assets/homepage/counter 2.png" alt="Counter 2" />
-      <img src="/assets/homepage/counter 3.png" alt="Counter 3" />
-      <img src="/assets/homepage/counter 4.png" alt="Counter 4" />
+      <a href="../Menu-AfterLogin/Counter-1.php">
+        <img src="/assets/homepage/counter 1.png" alt="Counter 1" />
+      </a>
+      <a href="../Menu-AfterLogin/Counter-2.php">
+        <img src="/assets/homepage/counter 2.png" alt="Counter 2" />
+      </a>
+      <a href="../Menu-AfterLogin/Counter-3.php">
+        <img src="/assets/homepage/counter 3.png" alt="Counter 3" />
+      </a>
+      <a href="../Menu-AfterLogin/Counter-4.php">
+        <img src="/assets/homepage/counter 4.png" alt="Counter 4" />
+      </a>
     </div>
   </section>
+
 
   <!-- Promo -->
   <section class="promo">
@@ -151,7 +162,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <style>
 
   </style>
-  <script src="/assets/js/script.js"></script>
 
   <!-- Item Section -->
   <section class="menu">
@@ -204,7 +214,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <p>Udon lembut dengan kuah kari ayam khas Jepang.</p>
           <span class="price">Rp30.000</span>
         </div>
-        <button class="add-to-cart-button">Coba?</button>
+        <a href="logout.php"><button class="add-to-cart-button">Coba?</button></a>
       </div>
 
     </section>
@@ -225,11 +235,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           </div>
 
           <div class="footer-section">
-            <h3 class="title">About Us</h3>
-            <p class="text">
-              CafeTaria hadir untuk memudahkan guru, staf, dan siswa memesan makanan favorit dengan cepat, praktis, dan
-              tanpa ribet.
-            </p>
+            <h3 class="brand">About Us</h3>
+            <h3>CafeTaria hadir untuk memudahkan guru, staf, dan siswa memesan makanan favorit dengan cepat, praktis, dan
+              tanpa ribet.</h3>
           </div>
 
           <div class="footer-container">
@@ -273,29 +281,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
       <div class="footer-bottom">
         <div class="copyright">
-          ©2023 <p>CafeTaria |CafeTaria is a simple online place for school teachers, staff, and students to order
+          <p>CafeTaria |CafeTaria is a simple online place for school teachers, staff, and students to order
             meals.
           </p>
         </div>
       </div>
     </footer>
-    <!-- di akhir body -->
-    <div class="popup-overlay" id="popup">
-      <div class="card">
-        <button class="close-btn" id="closePopup">&times;</button>
-        <div class="card-inner">
-          <h1>Please Login or Sign up first</h1>
-          <p>
-            Daftar akun atau log masuk terlebih dahulu untuk mengakses berbagai fitur di CafeTaria
-          </p>
-          <div class="button-container">
-            <button class="btn-login" type="button" onclick="window.location.href='login.php'">Login</button>
-
-            <button class="btn-signup" type="button" onclick="window.location.href='signup.php'">Sign Up</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <script src="/assets/js/index.js"></script>
 

@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  font-family: myFont, "Roboto", sans-serif;
+  font-family: myFont;
   background: #fcfcfc;
   color: #333;
 }
@@ -21,6 +21,7 @@ body {
   top: 0;
   background: #fcfcfc;
   z-index: 100;
+  font-family: myFont;
 }
 
 .logo {
@@ -70,7 +71,7 @@ body {
 }
 
 .banner {
-  padding: 0px 40px;
+  padding: 0px 200px;
 }
 
 .Slideshow2 {
@@ -203,10 +204,10 @@ body {
 }
 
 .category-list button span {
-  font-size: 24px; /* atur ukuran */
-  color: #f4b942; /* atur warna teks */
-  font-weight: 600; /* biar agak tebal */
-  font-family: myFont; /* kalau mau sama kayak title */
+  font-size: 24px;
+  color: #f4b942;
+  font-weight: 600;
+  font-family: myFont;
 }
 
 /* Best Seller */
@@ -311,7 +312,7 @@ footer {
 }
 
 .title {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 800;
   color: #f7941d;
   margin-bottom: 8px;
@@ -343,7 +344,7 @@ footer {
 }
 
 .footer-section {
-  flex: 1;
+  font-family: myFont;
 }
 
 .title {
@@ -375,23 +376,23 @@ footer {
 
 .texts {
   font-family: myFont;
-  font-size: 14px;
+  font-size: 10px;
   color: #333;
   line-height: 1.6;
   margin: 4px 0;
 }
 
 .label {
-  font-weight: bold; /* WhatsApp: dan Email: tebal */
+  font-weight: bold;
 }
 
 .number {
-  font-family: "Courier New", monospace; /* nomor rapi */
+  font-family: monospace;
   font-weight: normal;
 }
 
 .email {
-  font-family: Arial, sans-serif;
+  font-family: myFont;
   font-weight: bold;
   color: #333;
 }
@@ -581,26 +582,26 @@ button {
 }
 
 @keyframes worm-move {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-3px);
-    }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
 }
 
 .btns-user {
-    display: inline-block;
-    animation: worm-move 1.2s ease-in-out infinite;
-    font-weight: bold;
-    color: #007bff;
-    padding: 5px 10px;
-    border: 1px solid #007bff;
-    border-radius: 4px;
+  display: inline-block;
+  animation: worm-move 1.2s ease-in-out infinite;
+  font-weight: bold;
+  color: #007bff;
+  padding: 5px 10px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
 }
 
 .btns-user:hover {
-    color: #ffffff;
-    background-color: #007bff;
+  color: #ffffff;
+  background-color: #007bff;
 }
-

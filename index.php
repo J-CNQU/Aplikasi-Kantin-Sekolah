@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <li><a class="active" href="index.php">Home</a></li>
 
       <?php if (isset($_SESSION['name'])): ?>
-        <li><a href="menu.php" class="btns">Menu</a></li>
+        <li><a href="../Menu-AfterLogin/Counter-1" class="btns">Menu</a></li>
         <li><a href="orders.php" class="btns">Orders</a></li>
         <li><a href="logout.php" class="btns-logout">Signout</a></li>
       <?php else: ?>
@@ -231,7 +231,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           </div>
 
           <div class="footer-section">
-            <h3 class="title">About Us</h3>
+            <h2 class="brand">About Us</h2>
             <p class="text">
               CafeTaria hadir untuk memudahkan guru, staf, dan siswa memesan makanan favorit dengan cepat, praktis, dan
               tanpa ribet.
@@ -279,7 +279,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
       <div class="footer-bottom">
         <div class="copyright">
-          ©2023 <p>CafeTaria |CafeTaria is a simple online place for school teachers, staff, and students to order
+          <p>CafeTaria |CafeTaria is a simple online place for school teachers, staff, and students to order
             meals.
           </p>
         </div>

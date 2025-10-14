@@ -5,9 +5,14 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: myFont;
+  src: url(/assets/font/Cocogoose-Pro-Bold-trial.ttf);
+}
+
 html,
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: myFont;
   background: #fdf7f2;
   color: #333;
   min-height: 100vh;
@@ -135,17 +140,6 @@ body {
 .btn-ghost:hover {
   background: #ffa041;
   color: #fff;
-}
-
-/* ===== LOGIN / SIGN UP CARD ===== */
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #fdf7f2;
-  color: #333;
 }
 
 body.login-page {
