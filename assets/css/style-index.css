@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  font-family: myFont;
+  font-family: myFont, "Roboto", sans-serif;
   background: #fcfcfc;
   color: #333;
 }
@@ -21,7 +21,6 @@ body {
   top: 0;
   background: #fcfcfc;
   z-index: 100;
-  font-family: myFont;
 }
 
 .logo {
@@ -41,6 +40,7 @@ body {
   display: flex;
   gap: 20px;
   list-style: none;
+  font-family: myFont;
 }
 
 .nav-links a {
@@ -71,7 +71,7 @@ body {
 }
 
 .banner {
-  padding: 0px 200px;
+  padding: 0px 40px;
 }
 
 .Slideshow2 {
@@ -204,9 +204,9 @@ body {
 }
 
 .category-list button span {
-  font-size: 24px;
-  color: #f4b942;
-  font-weight: 600;
+  font-size: 24px; /* atur ukuran */
+  color: #f4b942; /* atur warna teks */
+  font-weight: 600; /* biar agak tebal */
   font-family: myFont;
 }
 
@@ -219,12 +219,16 @@ body {
   margin-bottom: 15px;
 }
 
+.hero-card {
+  box-shadow: 0 5px 50px rgba(1, 1, 1, 0.3);
+}
+
 .item {
   display: flex;
   align-items: center;
   gap: 15px;
   background: white;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0.4, 0.4, 0.4, 0.4);
   border-radius: 10px;
   padding: 15px;
   margin-bottom: 15px;
@@ -254,8 +258,7 @@ body {
 .item .price {
   color: #d32f2f;
   font-weight: bold;
-  font-family: monospace;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .add-to-cart-button {
@@ -277,30 +280,122 @@ body {
   background-color: #d32f2f; /* Warna merah lebih gelap saat di-hover */
 }
 /*  */
-
 footer {
-  background: #f6f6f6; /* full background */
-  padding: 40px 0 0;
-}
-
-.footer {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 24px;
+  background-color: #f4f4f4;
+  padding-top: 10px;
   color: #555;
+  font-family: "Poppins", sans-serif;
 }
 
-.footer-main {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 120px;
+  flex-wrap: wrap;
+  padding: 40px 60px 30px 60px;
 }
 
-@media (min-width: 640px) {
-  .footer-main {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    align-items: start;
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-column h2 {
+  color: #c30003;
+  font-weight: 800;
+  margin-bottom: 15px;
+  margin-top: 0;
+  padding: 0;
+}
+
+.footer-column h3 {
+  color: #ffa040;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  font-weight: 800;
+}
+
+.footer-column p {
+  font-size: 16px;
+  color: #777;
+  line-height: 1.6;
+  max-width: 260px;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #777;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #ffa040;
+}
+
+.footer-column.about,
+.footer-column.contact {
+  margin-top: 36px;
+}
+
+.footer-social {
+  color: #ffa040;
+  font-size: 18px;
+  font-weight: 900;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 120px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  padding: 0 60px;
+}
+
+.footer-social img {
+  width: 60px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.footer-social img:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  background-color: #ffa040;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  margin-top: 30px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .footer-social {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
   }
 }
 
@@ -312,7 +407,7 @@ footer {
 }
 
 .title {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 800;
   color: #f7941d;
   margin-bottom: 8px;
@@ -344,7 +439,7 @@ footer {
 }
 
 .footer-section {
-  font-family: myFont;
+  flex: 1;
 }
 
 .title {
@@ -373,10 +468,9 @@ footer {
   font-weight: bold;
   color: #333;
 }
-
 .texts {
   font-family: myFont;
-  font-size: 10px;
+  font-size: 14px;
   color: #333;
   line-height: 1.6;
   margin: 4px 0;
@@ -387,12 +481,12 @@ footer {
 }
 
 .number {
-  font-family: monospace;
+  font-family: "Courier New";
   font-weight: normal;
 }
 
 .email {
-  font-family: myFont;
+  font-family: Arial, sans-serif;
   font-weight: bold;
   color: #333;
 }
@@ -402,9 +496,9 @@ footer {
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
-  color: #f7941d;
+  color: #a80000;
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 @media (min-width: 640px) {
@@ -416,7 +510,7 @@ footer {
 
 .socials {
   display: flex;
-  flex-direction: column; /* biar "Connect with us" tetap di atas */
+  flex-direction: column;
   align-items: flex-start;
 }
 
@@ -424,6 +518,8 @@ footer {
   font-weight: bold;
   margin-bottom: 6px;
   margin-top: -40px;
+  font-weight: 900;
+  font-size: 18px;
 }
 
 .icons {
@@ -447,6 +543,8 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  color: #a80000;
+  font-weight: 900;
 }
 
 .download .stores {
@@ -489,6 +587,7 @@ footer {
 
 .copyright > p {
   font-family: myFont;
+  columns: #ffffff;
 }
 
 body {
@@ -584,24 +683,20 @@ button {
 @keyframes worm-move {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateX(0, 0);
   }
   50% {
-    transform: translateY(-3px);
+    transform: translateX(-50px);
   }
 }
 
 .btns-user {
-  display: inline-block;
-  animation: worm-move 1.2s ease-in-out infinite;
+  display: block;
+  animation: worm-move 2.2s ease-in-out infinite;
   font-weight: bold;
   color: #007bff;
-  padding: 5px 10px;
-  border: 1px solid #007bff;
-  border-radius: 4px;
-}
-
-.btns-user:hover {
-  color: #ffffff;
-  background-color: #007bff;
+  padding: 20px 40px;
+  border-radius: 15px;
+  font-size: 80px;
+  text-decoration: none;
 }

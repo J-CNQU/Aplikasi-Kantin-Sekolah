@@ -9,49 +9,42 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/homepage.css">
 </head>
+<header class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="CafeTaria Logo">
+            <span>CafeTaria</span>
+        </div>
 
-<body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="assets/img/logo-copy.png" class="logo" alt="Logo">
-                <span>CafeTaria</span>
-            </div>
+    <nav class="links">
+      <a href="#">Home</a>
+      <a href="#" class="active">Menu</a>
+      <a href="#">Orders</a>
+      <a href="#">Help</a>
+    </nav>
 
-            <ul class="nav-links">
-                <li><a class="active" href="../index.php">Home</a></li>
+    <div class="icons">
+        <img src="search.png" alt="search"> 
+        <img src="cart.png" alt="cart"> 
+        <img src="person.png" alt="person"> 
+    </div>
+  </header>
 
-                <?php if (isset($_SESSION['name'])): ?>
-                    <li><a href="../Menu-AfterLogin/Counter-1.php" class="btns">Menu</a></li>
-                    <li><a href="logout.php" class="btns-logout">Signout</a></li>
-                <?php else: ?>
-                    <li><a href="login.php" class="btns">Login</a></li>
-                    <li><a href="signup.php" class="btns">Sign Up</a></li>
-                <?php endif; ?>
+  <section class="counters">
+    <div class="counter-content">
+        <div class="counter-background">
+            <img src="counter 1/iklan counter 1.png" alt="counter 1">
+        </div>
+        
+        <img src="logo per counter/1.png" alt="counter 1" class="counter-logo">
 
-                <li><a href="#">Help</a></li>
-
-            </ul>
-
-            <div class="nav-icons">
-                <button><i class="fas fa-search"></i></button>
-                <button><i class="fas fa-user"></i></button>
-                <button><i class="fas fa-shopping-cart"></i></button>
-            </div>
-
-        </nav>
-    </header>
-
-    <div class="banner">
-        <img src="https://csspicker.dev/api/image/?q=indonesian+food+nasi+goreng&image_type=photo" alt="Food Banner"
-            class="banner-image">
-        <div class="counter-tabs">
-            <button class="counter-tab active">Counter 1</button>
-            <button class="counter-tab">Counter 2</button>
-            <button class="counter-tab">Counter 3</button>
-            <button class="counter-tab">Counter 4</button>
+        <div class="counter-selection">
+            <div class="counter-item active">Counter 1</div>
+            <div class="counter-item">Counter 2</div>
+            <div class="counter-item">Counter 3</div>
+            <div class="counter-item">Counter 4</div>
         </div>
     </div>
+  </section>
 
     <main class="main-content">
         <h1 class="menu-title">Menu</h1>
@@ -67,7 +60,7 @@
                         <span class="menu-price">Rp15.000</span>
                         <div class="quantity-controls">
                             <button class="qty-btn">+</button>
-                            <span class="qty-display">1</span>
+                            <span class="qty-display">0</span>
                             <button class="qty-btn">−</button>
                         </div>
                     </div>
@@ -85,7 +78,7 @@
                         <span class="menu-price">Rp22.000</span>
                         <div class="quantity-controls">
                             <button class="qty-btn">+</button>
-                            <span class="qty-display">1</span>
+                            <span class="qty-display">0</span>
                             <button class="qty-btn">−</button>
                         </div>
                     </div>
@@ -103,7 +96,7 @@
                         <span class="menu-price">Rp25.000</span>
                         <div class="quantity-controls">
                             <button class="qty-btn">+</button>
-                            <span class="qty-display">1</span>
+                            <span class="qty-display">0</span>
                             <button class="qty-btn">−</button>
                         </div>
                     </div>
@@ -121,7 +114,7 @@
                         <span class="menu-price">Rp19.000</span>
                         <div class="quantity-controls">
                             <button class="qty-btn">+</button>
-                            <span class="qty-display">1</span>
+                            <span class="qty-display">0</span>
                             <button class="qty-btn">−</button>
                         </div>
                     </div>
@@ -139,7 +132,7 @@
                         <span class="menu-price">Rp27.000</span>
                         <div class="quantity-controls">
                             <button class="qty-btn">+</button>
-                            <span class="qty-display">1</span>
+                            <span class="qty-display">0</span>
                             <button class="qty-btn">−</button>
                         </div>
                     </div>
@@ -154,10 +147,10 @@
                     <p class="menu-description">Nasi hangat dengan lauk bumbu rendang, miring, rendang, daun ubi, sambal
                         hijau, keya dan pelengkap</p>
                     <div class="menu-footer">
-                        <p>Rp20.000</p>
+                        <span class="menu-price">Rp20.000</span>
                         <div class="quantity-controls">
                             <button class="qty-btn">+</button>
-                            <span class="qty-display">1</span>
+                            <span class="qty-display">0</span>
                             <button class="qty-btn">−</button>
                         </div>
                     </div>

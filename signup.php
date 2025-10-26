@@ -1,7 +1,7 @@
 <?php
 require 'config.php';
-
 $error = '';
+$success = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = trim($_POST['name']);
@@ -14,26 +14,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $role = "user";
 
-        // Cek apakah email sudah terdaftar
         $check = $conn->prepare("SELECT id FROM users WHERE email = ?");
         $check->bind_param("s", $email);
         $check->execute();
         $check->store_result();
 
         if ($check->num_rows > 0) {
-            $error = "❌ Email sudah terdaftar, silakan login.";
+            $error = "Email sudah terdaftar, silakan login.";
         } else {
             $stmt = $conn->prepare("INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)");
             $stmt->bind_param("ssss", $name, $email, $hashed_password, $role);
             if ($stmt->execute()) {
-                $success = "✅ Registrasi berhasil, silakan login.";
+                $success = "Registrasi berhasil, silakan login.";
             } else {
                 $error = "Terjadi kesalahan, coba lagi.";
             }
-        } 
+        }
     }
 }
+
+// Kalau mau debugging, uncomment salah satu:
+// echo $error;
+// echo $success;
 ?>
+
 
 <!DOCTYPE html>
 <html lang="id">

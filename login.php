@@ -1,62 +1,56 @@
 <?php
 session_start();
-require 'config.php'; // koneksi database
+require 'config.php';
 
-// Jika sudah login, redirect
+// Jika sudah login, langsung arahkan ke halaman sesuai role
 if (isset($_SESSION['id']) && isset($_SESSION['role'])) {
-  if ($_SESSION['role'] === 'admin') {
-    header("Location: dashboard_admin.php");
-    exit();
-  } elseif ($_SESSION['role'] === 'user') {
-    header("Location: homepage.php");
-    exit();
-  }
+    if ($_SESSION['role'] === 'admin') {
+        header("Location: dashboard_admin.php");
+        exit();
+    } elseif ($_SESSION['role'] === 'user') {
+        header("Location: homepage.php");
+        exit();
+    }
 }
 
-// Variabel untuk pesan error
 $error = "";
 
-// Proses login
-if (isset($_POST['login'])) {
-  $email = trim($_POST['email']);
-  $password = $_POST['password'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = trim($_POST['email']);
+    $password = $_POST['password'];
 
-  // Ambil data user dari database
-  $stmt = $conn->prepare("SELECT * FROM users WHERE email=? LIMIT 1");
-  $stmt->bind_param("s", $email);
-  $stmt->execute();
-  $result = $stmt->get_result();
+    $stmt = $conn->prepare("SELECT * FROM users WHERE email=? LIMIT 1");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-  if ($result->num_rows === 1) {
-    $user = $result->fetch_assoc();
+    if ($result->num_rows === 1) {
+        $user = $result->fetch_assoc();
 
-    // Cek password hash
-    if (password_verify($password, $user['password'])) {
-      // Set session
-      $_SESSION['id'] = $user['id'];
-      $_SESSION['name'] = $user['name'];
-      $_SESSION['email'] = $user['email'];
-      $_SESSION['role'] = $user['role'];
+        if (password_verify($password, $user['password'])) {
+            $_SESSION['id'] = $user['id'];
+            $_SESSION['name'] = $user['name'];
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['role'] = $user['role'];
 
-      // Redirect sesuai role
-// Simpan role di sesi, tapi tetap kembali ke halaman utama (index.php)
-      if ($user['role'] === 'admin') {
-        // Jika Anda tetap ingin admin ke dashboard_admin, biarkan ini.
-        // Atau ganti menjadi: header("Location: index.php");
-        header("Location: dashboard_admin.php");
-      } else {
-        // Untuk user biasa, kembalikan ke halaman utama agar pop-up hilang dan menu berubah
-        header("Location: homepage.php");
-      }
-      exit();
+            if ($user['role'] === 'admin') {
+                header("Location: dashboard_admin.php");
+            } else {
+                header("Location: homepage.php");
+            }
+            exit();
+        } else {
+            $error = "Password salah!";
+        }
     } else {
-      $error = "Password salah!";
+        $error = "Email tidak ditemukan!";
     }
-  } else {
-    $error = "Email tidak ditemukan!";
-  }
 }
+
+// Kalau mau debugging, kamu bisa uncomment ini:
+// echo $error;
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -65,8 +59,6 @@ if (isset($_POST['login'])) {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sign In</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <style>
     <?php include "assets/css/login.css"; ?>
   </style>

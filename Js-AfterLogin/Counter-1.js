@@ -4,7 +4,7 @@ document.querySelectorAll('.menu-item').forEach(item => {
     const minusBtn = item.querySelectorAll('.qty-btn')[1];
     const display = item.querySelector('.qty-display');
 
-    let quantity = 1;
+    let quantity = 0;
 
     plusBtn.addEventListener('click', () => {
         quantity++;
@@ -12,7 +12,7 @@ document.querySelectorAll('.menu-item').forEach(item => {
     });
 
     minusBtn.addEventListener('click', () => {
-        if (quantity > 1) {
+        if (quantity > 0) {
             quantity--;
             display.textContent = quantity;
         }

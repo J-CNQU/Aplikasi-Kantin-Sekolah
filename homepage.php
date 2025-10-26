@@ -1,13 +1,12 @@
 <?php
-// #1 PERBAIKAN: session_start() HARUS di baris paling atas!
 session_start();
-include("config.php"); // koneksi database
+require 'auth_check.php';
+include("config.php");
 
-// #2 Tentukan status login setelah sesi dimuat
 $isLoggedIn = isset($_SESSION['id']) ? 'true' : 'false';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  // BAGIAN INI TIDAK AKAN MERAH LAGI
+
   $email = $_POST['email'];
   $password = $_POST['password'];
 
@@ -20,12 +19,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $row = $result->fetch_assoc();
 
     if (password_verify($password, $row['password'])) {
-      // set session
+
       $_SESSION['id'] = $row['id'];
       $_SESSION['name'] = $row['name'];
       $_SESSION['role'] = $row['role'];
 
-      // cek role untuk redirect
+
       if ($row['role'] === 'admin') {
         header("Location: dashboard_admin.php");
         exit();
@@ -69,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <li><a class="active" href="index.php">Home</a></li>
 
       <?php if (isset($_SESSION['name'])): ?>
-        <li><a href="../Menu-AfterLogin/Counter-1.php" class="btns">Menu</a></li>
+        <li><a href="../cafetaria/Counter1.php" class="btns">Menu</a></li>
         <li><a href="orders.php" class="btns">Orders</a></li>
         <li><a href="logout.php" class="btns-logout">Signout</a></li>
       <?php else: ?>
@@ -110,16 +109,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <section class="counter">
     <p>Shop by counter</p>
     <div class="counter-grid">
-      <a href="../Menu-AfterLogin/Counter-1.php">
+      <a href="../cafetaria/Counter1.php">
         <img src="/assets/homepage/counter 1.png" alt="Counter 1" />
       </a>
-      <a href="../Menu-AfterLogin/Counter-2.php">
+      <a href="../cafetaria/Counter1.php">
         <img src="/assets/homepage/counter 2.png" alt="Counter 2" />
       </a>
-      <a href="../Menu-AfterLogin/Counter-3.php">
+      <a href="../cafetaria/Counter1.php">
         <img src="/assets/homepage/counter 3.png" alt="Counter 3" />
       </a>
-      <a href="../Menu-AfterLogin/Counter-4.php">
+      <a href="../cafetaria/Counter1.php">
         <img src="/assets/homepage/counter 4.png" alt="Counter 4" />
       </a>
     </div>
@@ -219,74 +218,54 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     </section>
 
-    <!-- Footer -->
-    <footer>
-      <div class="footer">
-        <div class="footer-main">
-          <div class="footer-section">
-            <h2 class="brand">CafeTaria</h2>
-            <h3 class="title">Navigations</h3>
-            <ul class="nav-list">
-              <li class="nav-item active">Home</li>
-              <li class="nav-item">Menu</li>
-              <li class="nav-item">Orders</li>
-              <li class="nav-item">Help</li>
+      <footer class="footer">
+    <div class="footer-container">
+        
+        <div class="footer-column">
+            <div class="title"><h2>CafeTaria</h2></div>
+            <h3>Navigations</h3>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="orders.html">Orders</a></li>
+                <li><a href="">Help</a></li>
             </ul>
-          </div>
-
-          <div class="footer-section">
-            <h3 class="brand">About Us</h3>
-            <h3>CafeTaria hadir untuk memudahkan guru, staf, dan siswa memesan makanan favorit dengan cepat, praktis, dan
-              tanpa ribet.</h3>
-          </div>
-
-          <div class="footer-container">
-            <!-- Section Connect -->
-            <div class="footer-section">
-              <h3 class="title">Connect with Us</h3>
-              <div class="contact-item">
-                <span class="label">WhatsApp:</span>
-                <div class="number">0000-0000-0000</div>
-              </div>
-              <div class="contact-item">
-                <span class="label">Email:</span>
-                <span class="email">CafeTaria@gmail.com</span>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="footer-extra">
-            <div class="socials">
-              <span>Connect with us</span>
-              <div class="icons">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="download">
-            <span>Download the app</span>
-            <div class="stores">
-              <img id="apple" src="/assets/homepage/apple.png">
-              <img src="/assets/homepage/google.svg">
-            </div>
-          </div>
         </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div class="copyright">
-          <p>CafeTaria |CafeTaria is a simple online place for school teachers, staff, and students to order
-            meals.
-          </p>
+        
+        <div class="footer-column about">
+            <h3>About Us</h3>
+            <p>
+                CafeTaria hadir untuk memudahkan guru, staf, dan siswa memesan makanan favorit dengan cepat, praktis, dan tanpa ribet.
+            </p>
         </div>
-      </div>
-    </footer>
+        
+        <div class="footer-column contact">
+            <h3>Contact</h3>
+            <p>WhatsApp: 0000-0000-0000</p>
+            <p>Email: CafeTaria@gmail.com</p>
+        </div>
+    </div>
+    
+    <div class="footer-social">
+        <div>
+            <h4>Connect with us</h4>
+            <a href="#"><img src="logo2 footer/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="logo2 footer/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="logo2 footer/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="logo2 footer/youtube.png" alt="YouTube"></a>
+        </div>
+        
+        <div>
+            <h4>Download the app</h4>
+            <a href="#"><img src="logo2 footer/apple.png" alt="App Store"></a>
+            <a href="#"><img src="logo2 footer/playstore.png" alt="Play Store"></a>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>©2025 CafeTaria | CafeTaria is a simple online place for school teachers, staff, and students to order their favorite meals.</p>
+    </div>
+</footer>
 
     <script src="/assets/js/index.js"></script>
 

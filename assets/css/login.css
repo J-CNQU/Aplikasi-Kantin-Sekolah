@@ -2,6 +2,7 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f8f5f0;
 }
 
 .container {
@@ -21,32 +22,49 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  filter: blur(4px);
-  opacity: 0.3;
+  filter: blur(5px) brightness(0.9);
+  opacity: 0.35;
 }
 
 .card {
   max-width: 400px;
   width: 100%;
-  background: none;
+  background: #fff;
+  padding: 40px 32px;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 18px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .logo img {
   width: 96px;
   height: 96px;
   border-radius: 50%;
-  border: 2px solid #fb923c; /* orange */
+  border: 3px solid #fb923c;
+  box-shadow: 0 0 10px rgba(251, 146, 60, 0.5);
 }
 
 h1 {
   font-size: 28px;
   font-weight: bold;
-  color: #991b1b; /* dark red */
-  margin-bottom: 10px;
+  color: #991b1b;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
 }
 
 /* FORM */
@@ -54,34 +72,35 @@ form {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
-/* semua input default */
 .input {
   width: 100%;
   padding: 12px 20px;
   border-radius: 50px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  color: #555;
+  border: 1.5px solid #ddd;
+  font-size: 15px;
+  color: #444;
   outline: none;
   box-sizing: border-box;
+  transition: all 0.2s ease;
+  background-color: #fafafa;
 }
 
 .input:focus {
   border-color: #fb923c;
-  box-shadow: 0 0 0 2px #fb923c55;
-}
-
-/* khusus password input supaya sejajar dengan email */
-.password-field input {
-  padding: 12px 45px 12px 20px; /* kanan lebih besar untuk icon 👁 */
+  box-shadow: 0 0 6px rgba(251, 146, 60, 0.5);
+  background-color: #fff;
 }
 
 .password-field {
   position: relative;
   width: 100%;
+}
+
+.password-field input {
+  padding: 12px 45px 12px 20px;
 }
 
 .password-field button {
@@ -92,7 +111,8 @@ form {
   border: none;
   background: none;
   cursor: pointer;
-  color: #888;
+  color: #aaa;
+  transition: color 0.2s;
 }
 
 .password-field button:hover {
@@ -104,11 +124,13 @@ form {
   font-size: 13px;
   color: #b91c1c;
   text-decoration: none;
-  margin: -4px 0 6px 4px;
+  margin: -4px 0 6px 6px;
+  transition: color 0.2s;
 }
 
 .forget:hover {
   text-decoration: underline;
+  color: #991b1b;
 }
 
 .btn-primary {
@@ -116,63 +138,94 @@ form {
   padding: 12px;
   border-radius: 50px;
   border: none;
-  background-color: #fb923c;
+  background: linear-gradient(135deg, #fb923c, #f97316);
   color: #fff;
   font-weight: bold;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(251, 146, 60, 0.4);
+  transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #f97316;
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(251, 146, 60, 0.5);
 }
 
 .or-with {
   color: #991b1b;
   font-weight: bold;
-  margin: 10px 0;
+  margin: 14px 0 6px;
+  position: relative;
+}
+
+.or-with::before,
+.or-with::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 2px;
+  background-color: #991b1b;
+  transform: translateY(-50%);
+}
+
+.or-with::before {
+  left: -55px;
+}
+
+.or-with::after {
+  right: -55px;
 }
 
 .socials {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 22px;
 }
 
 .socials img {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  transition: opacity 0.2s;
+  transition: transform 0.2s ease, opacity 0.2s;
 }
 
 .socials img:hover {
-  opacity: 0.8;
+  transform: scale(1.1);
+  opacity: 0.85;
 }
 
 .signup {
-  margin-top: 10px;
+  margin-top: 14px;
   font-size: 13px;
   color: #fb923c;
-  background: #fff;
-  padding: 6px 12px;
+  background: #fff7ed;
+  padding: 8px 16px;
   border-radius: 50px;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .signup:hover {
+  background: #ffe6cc;
   text-decoration: underline;
 }
 
 .signup span {
   font-weight: bold;
-  text-decoration: underline;
+  color: #f97316;
 }
 
 /* error message */
 .error-msg {
-  color: red;
+  color: #ef4444;
   font-size: 13px;
   text-align: center;
   margin-top: 5px;
+  background: #fee2e2;
+  padding: 6px 10px;
+  border-radius: 8px;
+  width: 100%;
 }
