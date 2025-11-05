@@ -76,7 +76,22 @@ body {
   gap: 20px; /* jarak logo dan tulisan Cafeteria */
 }
 
-/* ===== HERO SECTION ===== */
+.banner {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slideshow-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 15px;
+}
+
 .hero {
   display: flex;
   flex-direction: column;

@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Cafeteria Sekolah - Home</title>
-    <link rel="stylesheet" href="counter.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/style-index.css">
-    <link rel="shortcut icon" href="../assets/img/fcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/cafetaria/counter-3.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style-index.css">
+    <link rel="shortcut icon" href="/assets/img/fcon.png" type="image/x-icon">
+
 </head>
 
 <body class="site-bg">
@@ -19,10 +20,10 @@
         </div>
 
         <ul class="nav-links">
-            <li><a href="" class="btns">Home</a></li>
-            <li><a href="" class="active">Menu</a></li>
-            <li><a href="" class="btns">Orders</a></li>
-            <li><a href="" class="btns">Helps</a></li>
+            <li><a href="../../homepage.php" class="btns">Home</a></li>
+            <li><a href="../../counter1.php" class="active">Menu</a></li>
+            <li><a href="../../orders.php" class="btns">Orders</a></li>
+            <li><a href="../../helps.php" class="btns">Helps</a></li>
         </ul>
 
         </ul>
@@ -47,11 +48,21 @@
             <img src="logo per counter/3.png" alt="counter 1" class="counter-logo">
 
             <div class="counter-selection">
-                <a href="counter1.php" class="counter-item">Counter <span class="number">1</span></a>
-                <a href="counter2.php" class="counter-item">Counter <span class="number">2</span></a>
-                <a href="counter3.php" class="counter-item active">Counter <span class="number">3</span></a>
-                <a href="counter4.php" class="counter-item">Counter <span class="number">4</span></a>
+
+                <a href="../php/counter.php?id=1" class="counter-item">
+                    Counter <span class="number">1</span>
+                </a>
+                <a href="../php/counter.php?id=2" class="counter-item">
+                    Counter <span class="number">2</span>
+                </a>
+                <a href="../php/counter.php?id=3" class="counter-item active">
+                    Counter <span class="number">3</span>
+                </a>
+                <a href="../php/counter.php?id=4" class="counter-item">
+                    Counter <span class="number">4</span>
+                </a>
             </div>
+
 
         </div>
     </section>
@@ -62,7 +73,7 @@
         <div class="menu-grid">
             <div class="list-menu">
                 <div class="menu-image">
-                    <img src="counter 3/1. oyakodon.png" alt="oyakodon">
+                    <img src="counter 3/3.oyakodon.png" alt="oyakodon">
                 </div>
                 <div class="menu-info">
                     <h3 class="menu-title">Oyakodon</h3>
@@ -82,7 +93,7 @@
 
             <div class="list-menu">
                 <div class="menu-image">
-                    <img src="counter 3/2. chicken katsu.png" alt="chicken katsu">
+                    <img src="counter 3/3.chicken-katsu.png" alt="chicken katsu">
                 </div>
                 <div class="menu-info">
                     <h3 class="menu-title">Chicken Katsu</h3>
@@ -102,7 +113,7 @@
 
             <div class="list-menu">
                 <div class="menu-image">
-                    <img src="counter 3/3. chicken teriyaki.png" alt="chicken teriyaki">
+                    <img src="counter 3/3.chicken-teriyaki.png" alt="chicken teriyaki">
                 </div>
                 <div class="menu-info">
                     <h3 class="menu-title">Chicken Teriyaki</h3>
@@ -122,7 +133,7 @@
 
             <div class="list-menu">
                 <div class="menu-image">
-                    <img src="counter 3/4. gyudon.png" alt="gyudon">
+                    <img src="counter 3/3.gyudon.png" alt="gyudon">
                 </div>
                 <div class="menu-info">
                     <h3 class="menu-title">Gyudon</h3>
@@ -142,7 +153,7 @@
 
             <div class="list-menu">
                 <div class="menu-image">
-                    <img src="counter 3/5. bibimbap.png" alt="bibimbap">
+                    <img src="counter 3/3.bibimbap.png" alt="bibimbap">
                 </div>
                 <div class="menu-info">
                     <h3 class="menu-title">Bibimbap</h3>
@@ -162,7 +173,7 @@
 
             <div class="list-menu">
                 <div class="menu-image">
-                    <img src="counter 3/6. ayam cabe garam.png" alt="ayam cabe garam">
+                    <img src="counter 3/3.ayam-cabe-garam.png" alt="ayam cabe garam">
                 </div>
                 <div class="menu-info">
                     <h3 class="menu-title">Ayam Cabe Garam</h3>

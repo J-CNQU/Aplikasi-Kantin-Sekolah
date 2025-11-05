@@ -1,13 +1,12 @@
 <?php
-// #1 PERBAIKAN: session_start() HARUS di baris paling atas!
-session_start();
-include("config.php"); // koneksi database
 
-// #2 Tentukan status login setelah sesi dimuat
+session_start();
+include("config.php");
+
 $isLoggedIn = isset($_SESSION['id']) ? 'true' : 'false';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  // BAGIAN INI TIDAK AKAN MERAH LAGI
+
   $email = $_POST['email'];
   $password = $_POST['password'];
 
@@ -20,12 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $row = $result->fetch_assoc();
 
     if (password_verify($password, $row['password'])) {
-      // set session
+
       $_SESSION['id'] = $row['id'];
       $_SESSION['name'] = $row['name'];
       $_SESSION['role'] = $row['role'];
 
-      // cek role untuk redirect
       if ($row['role'] === 'admin') {
         header("Location: dashboard_admin.php");
         exit();
@@ -103,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   <!-- Banner -->
   <section class="banner">
-    <img src="./assets/homepage/slideshow-2.png" class="Slideshow2">
+    <img id="slideshow-img" src="./assets/homepage/slideshow-1.png" class="slideshow-img" alt="Slideshow Banner">
   </section>
 
   <!-- Shop by Counter -->
@@ -133,7 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="category-list">
       <button class="category-btn" data-category="Sate">
         <img src="/assets/homepage/categories/1.png" />
-        <span>Sate</span>
+        <span>Rice</span>
       </button>
       <button class="category-btn" data-category="Noodles">
         <img src="/assets/homepage/categories/2.png" />
@@ -141,11 +139,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </button>
       <button class="category-btn" data-category="Bakso">
         <img src="/assets/homepage/categories/3.png" />
-        <span>Bakso</span>
+        <span>Chicken</span>
       </button>
       <button class="category-btn" data-category="Rice">
         <img src="/assets/homepage/categories/5.png" />
-        <span>Rice</span>
+        <span>Bakso</span>
       </button>
     </div>
   </section>
@@ -211,54 +209,58 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     </section>
 
-      <footer class="footer">
-    <div class="footer-container">
-        
+    <footer class="footer">
+      <div class="footer-container">
+
         <div class="footer-column">
-            <div class="title"><h2>CafeTaria</h2></div>
-            <h3>Navigations</h3>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Menu</a></li>
-                <li><a href="orders.html">Orders</a></li>
-                <li><a href="helps.php">Help</a></li>
-            </ul>
+          <div class="title">
+            <h2>CafeTaria</h2>
+          </div>
+          <h3>Navigations</h3>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Menu</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="helps.php">Help</a></li>
+          </ul>
         </div>
-        
+
         <div class="footer-column about">
-            <h3>About Us</h3>
-            <p>
-                CafeTaria hadir untuk memudahkan guru, staf, dan siswa memesan makanan favorit dengan cepat, praktis, dan tanpa ribet.
-            </p>
+          <h3>About Us</h3>
+          <p>
+            CafeTaria hadir untuk memudahkan guru, staf, dan siswa memesan makanan favorit dengan cepat, praktis, dan
+            tanpa ribet.
+          </p>
         </div>
-        
+
         <div class="footer-column contact">
-            <h3>Contact</h3>
-            <p>WhatsApp: 0000-0000-0000</p>
-            <p>Email: CafeTaria@gmail.com</p>
+          <h3>Contact</h3>
+          <p>WhatsApp: 0000-0000-0000</p>
+          <p>Email: CafeTaria@gmail.com</p>
         </div>
-    </div>
-    
-    <div class="footer-social">
+      </div>
+
+      <div class="footer-social">
         <div>
-            <h4>Connect with us</h4>
-            <a href="#"><img src="logo2 footer/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="logo2 footer/instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="logo2 footer/twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="logo2 footer/youtube.png" alt="YouTube"></a>
+          <h4>Connect with us</h4>
+          <a href="#"><img src="logo2 footer/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="logo2 footer/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="logo2 footer/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="logo2 footer/youtube.png" alt="YouTube"></a>
         </div>
-        
+
         <div>
-            <h4>Download the app</h4>
-            <a href="#"><img src="logo2 footer/apple.png" alt="App Store"></a>
-            <a href="#"><img src="logo2 footer/playstore.png" alt="Play Store"></a>
+          <h4>Download the app</h4>
+          <a href="#"><img src="logo2 footer/apple.png" alt="App Store"></a>
+          <a href="#"><img src="logo2 footer/playstore.png" alt="Play Store"></a>
         </div>
-    </div>
-    
-    <div class="footer-bottom">
-        <p>©2025 CafeTaria | CafeTaria is a simple online place for school teachers, staff, and students to order their favorite meals.</p>
-    </div>
-</footer>
+      </div>
+
+      <div class="footer-bottom">
+        <p>©2025 CafeTaria | CafeTaria is a simple online place for school teachers, staff, and students to order their
+          favorite meals.</p>
+      </div>
+    </footer>
 
     <!-- di akhir body -->
     <div class="popup-overlay" id="popup">
@@ -278,6 +280,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </div>
     </div>
 
+    <script>
+      const IS_LOGGED_IN = <?php echo isset($_SESSION['id']) ? 'true' : 'false'; ?>;
+    </script>
     <script src="/assets/js/index.js"></script>
+    <script src="slideshow.js"></script>
+
+    <script src="/assets/js/index.js"></script>
+    <script src="slideshow.js"></script>
 
 </html>

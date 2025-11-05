@@ -51,10 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/homepage.css">
   <link rel="shortcut icon" href="/assets/img/fcon.png" type="image/x-icon">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
 </head>
 
 <body class="site-bg">
@@ -68,15 +64,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <li><a class="active" href="index.php">Home</a></li>
 
       <?php if (isset($_SESSION['name'])): ?>
-        <li><a href="../cafetaria/Counter1.php" class="btns">Menu</a></li>
+        <li><a href="../php/counter.php" class="btns">Menu</a></li>
         <li><a href="orders.php" class="btns">Orders</a></li>
-        <li><a href="logout.php" class="btns-logout">Signout</a></li>
+        <li><a href="logout.php" class="btns-logout">Logout</a></li>
       <?php else: ?>
         <li><a href="login.php" class="btns">Login</a></li>
         <li><a href="signup.php" class="btns">Sign Up</a></li>
       <?php endif; ?>
 
-      <li><a href="#">Help</a></li>
+      <li><a href="helps.php">Help</a></li>
 
     </ul>
 
@@ -101,24 +97,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </main>
 
   <!-- Banner -->
-  <section class="banner">
-    <img src="./assets/homepage/slideshow-2.png" class="Slideshow2">
-  </section>
+<section class="banner">
+  <img id="slideshow-img" src="./assets/homepage/slideshow-1.png" class="slideshow-img" alt="Slideshow Banner">
+</section>
 
   <!-- Shop by Counter -->
   <section class="counter">
     <p>Shop by counter</p>
     <div class="counter-grid">
-      <a href="../cafetaria/Counter1.php">
+      <a href="../php/counter.php">
         <img src="/assets/homepage/counter 1.png" alt="Counter 1" />
       </a>
-      <a href="../cafetaria/Counter1.php">
+      <a href="../php/counter.php">
         <img src="/assets/homepage/counter 2.png" alt="Counter 2" />
       </a>
-      <a href="../cafetaria/Counter1.php">
+      <a href="../php/counter.php">
         <img src="/assets/homepage/counter 3.png" alt="Counter 3" />
       </a>
-      <a href="../cafetaria/Counter1.php">
+      <a href="../php/counter.php">
         <img src="/assets/homepage/counter 4.png" alt="Counter 4" />
       </a>
     </div>
@@ -139,22 +135,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <section class="categories">
     <p>Categories</p>
     <div class="category-list">
-      <button class="category-btn" data-category="Sate">
-        <img src="/assets/homepage/categories/1.png" />
-        <span>Sate</span>
-      </button>
-      <button class="category-btn" data-category="Noodles">
-        <img src="/assets/homepage/categories/2.png" />
-        <span>Noodles</span>
-      </button>
-      <button class="category-btn" data-category="Bakso">
-        <img src="/assets/homepage/categories/3.png" />
-        <span>Bakso</span>
-      </button>
-      <button class="category-btn" data-category="Rice">
-        <img src="/assets/homepage/categories/5.png" />
-        <span>Rice</span>
-      </button>
+      <a href="../php/counter.php" class="categories-button">
+        <button class="category-btn" data-category="Sate">
+          <img src="/assets/homepage/categories/1.png" />
+          <span>Rice</span>
+        </button>
+      </a>
+      <a href="/../php/counter.php" class="categories-button">
+        <button class="category-btn" data-category="Noodles">
+          <img src="/assets/homepage/categories/2.png" />
+          <span>Noodles</span>
+        </button>
+      </a>
+      <a href="/../php/counter.php" class="categories-button">
+        <button class="category-btn" data-category="Bakso">
+          <img src="/assets/homepage/categories/3.png" />
+          <span>Chicken</span>
+        </button>
+      </a>
+      <a href="../php/counter.php" class="categories-button">
+        <button class="category-btn" data-category="Rice">
+          <img src="/assets/homepage/categories/5.png" />
+          <span>Bakso</span>
+        </button>
+      </a>
     </div>
   </section>
 
@@ -172,8 +176,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <h1>Nasi Goreng Spesial</h1>
           <p>Nasi goreng spesial khas cafeTaria, gurih - manis, pedas yang nikmat.</p>
           <span class="price">Rp18.000</span>
-        </div>
-        <button class="add-to-cart-button">Coba?</button>
+        </div>      
+        <a href="/php/counter.php">
+          <a href="/php/counter.php">
+          <button class="add-to-cart-button">Coba?</button>
+        </a>
+        </a>
       </div>
 
       <div class="item">
@@ -183,7 +191,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <p>Nasi hainam lembut dengan ayam gurih, kaya rasa oriental.</p>
           <span class="price">Rp27.000</span>
         </div>
-        <button class="add-to-cart-button">Coba?</button>
+        <a href="/php/counter.php">
+          <button class="add-to-cart-button">Coba?</button>
+        </a>
       </div>
 
       <div class="item">
@@ -193,7 +203,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <p>Nasi Padang dengan rendang, ayam ubi, sambal ijo, dan bawang.</p>
           <span class="price">Rp25.000</span>
         </div>
-        <button class="add-to-cart-button">Coba?</button>
+        <a href="/php/counter.php">
+          <button class="add-to-cart-button">Coba?</button>
+        </a>
       </div>
 
       <div class="item">
@@ -203,7 +215,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <p>Mie ayam dengan bakso kenyal, kuah gurih nikmat.</p>
           <span class="price">Rp22.000</span>
         </div>
-        <button class="add-to-cart-button">Coba?</button>
+        <a href="/php/counter.php">
+          <button class="add-to-cart-button">Coba?</button>
+        </a>
       </div>
 
       <div class="item">
@@ -213,60 +227,66 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <p>Udon lembut dengan kuah kari ayam khas Jepang.</p>
           <span class="price">Rp30.000</span>
         </div>
-        <a href="logout.php"><button class="add-to-cart-button">Coba?</button></a>
+        <a href="/php/counter.php">
+          <button class="add-to-cart-button">Coba?</button>
+        </a>
       </div>
 
     </section>
 
-      <footer class="footer">
-    <div class="footer-container">
-        
+    <footer class="footer">
+      <div class="footer-container">
+
         <div class="footer-column">
-            <div class="title"><h2>CafeTaria</h2></div>
-            <h3>Navigations</h3>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Menu</a></li>
-                <li><a href="orders.html">Orders</a></li>
-                <li><a href="">Help</a></li>
-            </ul>
+          <div class="title">
+            <h2>CafeTaria</h2>
+          </div>
+          <h3>Navigations</h3>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Menu</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="">Help</a></li>
+          </ul>
         </div>
-        
+
         <div class="footer-column about">
-            <h3>About Us</h3>
-            <p>
-                CafeTaria hadir untuk memudahkan guru, staf, dan siswa memesan makanan favorit dengan cepat, praktis, dan tanpa ribet.
-            </p>
+          <h3>About Us</h3>
+          <p>
+            CafeTaria hadir untuk memudahkan guru, staf, dan siswa memesan makanan favorit dengan cepat, praktis, dan
+            tanpa ribet.
+          </p>
         </div>
-        
+
         <div class="footer-column contact">
-            <h3>Contact</h3>
-            <p>WhatsApp: 0000-0000-0000</p>
-            <p>Email: CafeTaria@gmail.com</p>
+          <h3>Contact</h3>
+          <p>WhatsApp: 0000-0000-0000</p>
+          <p>Email: CafeTaria@gmail.com</p>
         </div>
-    </div>
-    
-    <div class="footer-social">
+      </div>
+
+      <div class="footer-social">
         <div>
-            <h4>Connect with us</h4>
-            <a href="#"><img src="logo2 footer/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="logo2 footer/instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="logo2 footer/twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="logo2 footer/youtube.png" alt="YouTube"></a>
+          <h4>Connect with us</h4>
+          <a href="#"><img src="logo2 footer/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="logo2 footer/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="logo2 footer/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="logo2 footer/youtube.png" alt="YouTube"></a>
         </div>
-        
+
         <div>
-            <h4>Download the app</h4>
-            <a href="#"><img src="logo2 footer/apple.png" alt="App Store"></a>
-            <a href="#"><img src="logo2 footer/playstore.png" alt="Play Store"></a>
+          <h4>Download the app</h4>
+          <a href="#"><img src="logo2 footer/apple.png" alt="App Store"></a>
+          <a href="#"><img src="logo2 footer/playstore.png" alt="Play Store"></a>
         </div>
-    </div>
-    
-    <div class="footer-bottom">
-        <p>©2025 CafeTaria | CafeTaria is a simple online place for school teachers, staff, and students to order their favorite meals.</p>
-    </div>
-</footer>
+      </div>
+
+      <div class="footer-bottom">
+        <p>©2025 CafeTaria | CafeTaria is a simple online place for school teachers, staff, and students to order their
+          favorite meals.</p>
+      </div>
+    </footer>
 
     <script src="/assets/js/index.js"></script>
-
+        <script src="slideshow.js"></script>
 </html>

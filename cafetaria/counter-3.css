@@ -346,7 +346,7 @@ body {
 
 .order-button-container {
   position: absolute;
-  bottom: -900px;
+  bottom: -500px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
