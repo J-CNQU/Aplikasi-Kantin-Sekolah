@@ -144,7 +144,7 @@ body {
 .counter-logo {
   position: absolute;
   top: 50%;
-  left: 65px;
+  left: 145px;
   transform: translateY(-50%);
   width: 150px;
   height: 150px;
@@ -156,7 +156,7 @@ body {
 .counter-selection {
   position: absolute;
   top: 50%;
-  left: 280px;
+  left: 22%;
   transform: translateY(-50%);
   background: white;
   padding: 14px 160px;

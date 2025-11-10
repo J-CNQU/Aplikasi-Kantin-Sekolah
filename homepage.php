@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <li><a href="signup.php" class="btns">Sign Up</a></li>
       <?php endif; ?>
 
-      <li><a href="helps.php">Help</a></li>
+      <li><a href="/helppage/help.php">Help</a></li>
 
     </ul>
 
@@ -86,39 +86,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   <main class="container">
     <section class="hero">
-      <div class="hero-card">
-        <a href="homepage.php" class="btns-user">Haloww, <?= htmlspecialchars($_SESSION['name']) ?>
-          <h1>(≧▽≦q)! </h1>
-        </a>
-      </div>
-      </div>
+      <div class="">
+        <a href="homepage.php" class="btns-user">
+          Haloww,<br>
+          <?= htmlspecialchars($_SESSION['name']) ?>
+          <br>
+          (≧▽≦q)!
+          </a>
+        </div>
       <div class="hero-image" aria-hidden="true"></div>
-    </section>
-  </main>
+      </section>
+    </main>
 
   <!-- Banner -->
-<section class="banner">
-  <img id="slideshow-img" src="./assets/homepage/slideshow-1.png" class="slideshow-img" alt="Slideshow Banner">
-</section>
+  <section class="banner">
+    <img id="slideshow-img" src="./assets/homepage/slideshow-1.png" class="slideshow-img" alt="Slideshow Banner">
+  </section>
 
   <!-- Shop by Counter -->
   <section class="counter">
-    <p>Shop by counter</p>
+    <p>Shop by Counter</p>
     <div class="counter-grid">
-      <a href="../php/counter.php">
-        <img src="/assets/homepage/counter 1.png" alt="Counter 1" />
+      <a href="../php/counter.php" class="counter-item">
+        <img src="/assets/homepage/counter 1.png" alt="Counter 1">
       </a>
-      <a href="../php/counter.php">
-        <img src="/assets/homepage/counter 2.png" alt="Counter 2" />
+      <a href="../php/counter.php" class="counter-item">
+        <img src="/assets/homepage/counter 2.png" alt="Counter 2">
       </a>
-      <a href="../php/counter.php">
-        <img src="/assets/homepage/counter 3.png" alt="Counter 3" />
+      <a href="../php/counter.php" class="counter-item">
+        <img src="/assets/homepage/counter 3.png" alt="Counter 3">
       </a>
-      <a href="../php/counter.php">
-        <img src="/assets/homepage/counter 4.png" alt="Counter 4" />
+      <a href="../php/counter.php" class="counter-item">
+        <img src="/assets/homepage/counter 4.png" alt="Counter 4">
       </a>
     </div>
   </section>
+
 
 
   <!-- Promo -->
@@ -176,11 +179,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <h1>Nasi Goreng Spesial</h1>
           <p>Nasi goreng spesial khas cafeTaria, gurih - manis, pedas yang nikmat.</p>
           <span class="price">Rp18.000</span>
-        </div>      
+        </div>
         <a href="/php/counter.php">
-          <a href="/php/counter.php">
-          <button class="add-to-cart-button">Coba?</button>
-        </a>
+          <button class="add-to-cart-button">Review?</button>
         </a>
       </div>
 
@@ -192,7 +193,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <span class="price">Rp27.000</span>
         </div>
         <a href="/php/counter.php">
-          <button class="add-to-cart-button">Coba?</button>
+          <button class="add-to-cart-button">Review?</button>
         </a>
       </div>
 
@@ -204,7 +205,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <span class="price">Rp25.000</span>
         </div>
         <a href="/php/counter.php">
-          <button class="add-to-cart-button">Coba?</button>
+          <button class="add-to-cart-button">Review?</button>
         </a>
       </div>
 
@@ -216,7 +217,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <span class="price">Rp22.000</span>
         </div>
         <a href="/php/counter.php">
-          <button class="add-to-cart-button">Coba?</button>
+          <button class="add-to-cart-button">Review?</button>
         </a>
       </div>
 
@@ -228,7 +229,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <span class="price">Rp30.000</span>
         </div>
         <a href="/php/counter.php">
-          <button class="add-to-cart-button">Coba?</button>
+          <button class="add-to-cart-button">Review?</button>
         </a>
       </div>
 
@@ -243,10 +244,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           </div>
           <h3>Navigations</h3>
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Menu</a></li>
+            <li><a href="homepage.php">Home</a></li>
+            <li><a href="../php/counter.php">Menu</a></li>
             <li><a href="orders.html">Orders</a></li>
-            <li><a href="">Help</a></li>
+            <li><a href="../helppage/help.php">Help</a></li>
           </ul>
         </div>
 
@@ -287,6 +288,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </div>
     </footer>
 
-    <script src="/assets/js/index.js"></script>
-        <script src="slideshow.js"></script>
+    <script src="slideshow.js"></script>
+
 </html>

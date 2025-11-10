@@ -18,9 +18,9 @@
 
         <ul class="nav-links">
             <li><a href="../../homepage.php" class="btns">Home</a></li>
-            <li><a href="../../counter1.php" class="active">Menu</a></li>
+            <li><a href="../../counter1.php" class="btns">Menu</a></li>
             <li><a href="../../orders.php" class="btns">Orders</a></li>
-            <li><a href="../../helps.php" class="btns">Helps</a></li>
+            <li><a href="../../helps.php" class="active">Helps</a></li>
         </ul>
 
         </ul>

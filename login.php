@@ -1,56 +1,109 @@
 <?php
-session_start();
-require 'config.php';
+session_start(); // cukup sekali di paling atas
 
-// Jika sudah login, langsung arahkan ke halaman sesuai role
-if (isset($_SESSION['id']) && isset($_SESSION['role'])) {
-    if ($_SESSION['role'] === 'admin') {
-        header("Location: dashboard_admin.php");
-        exit();
-    } elseif ($_SESSION['role'] === 'user') {
-        header("Location: homepage.php");
-        exit();
-    }
-}
+require_once 'vendor/autoload.php';
+require_once 'config.php';       // koneksi database mysqli
+$config_oauth = include 'config_oauth.php'; // client id & secret
+
+use Hybridauth\Hybridauth;
 
 $error = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = trim($_POST['email']);
-    $password = $_POST['password'];
+// Jika sudah login → redirect sesuai role
+if (isset($_SESSION['id']) && isset($_SESSION['role'])) {
+  if ($_SESSION['role'] === 'admin') {
+    header("Location: dashboard_admin.php");
+    exit();
+  } else {
+    header("Location: homepage.php");
+    exit();
+  }
+}
 
+// ===== LOGIN MANUAL (EMAIL & PASSWORD) =====
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $email = trim($_POST['email']);
+  $password = $_POST['password'];
+
+  $stmt = $conn->prepare("SELECT * FROM users WHERE email=? LIMIT 1");
+  $stmt->bind_param("s", $email);
+  $stmt->execute();
+  $result = $stmt->get_result();
+
+  if ($result->num_rows === 1) {
+    $user = $result->fetch_assoc();
+
+    if (password_verify($password, $user['password'])) {
+      $_SESSION['id'] = $user['id'];
+      $_SESSION['name'] = $user['name'];
+      $_SESSION['email'] = $user['email'];
+      $_SESSION['role'] = $user['role'];
+
+      header("Location: " . ($user['role'] === 'admin' ? 'dashboard_admin.php' : 'homepage.php'));
+      exit();
+    } else {
+      $error = "Password salah!";
+    }
+  } else {
+    $error = "Email tidak ditemukan!";
+  }
+}
+
+// ===== LOGIN VIA OAUTH (Google / Facebook) =====
+if (isset($_GET['provider'])) {
+  try {
+    $providerName = $_GET['provider'];
+    $hybridauth = new Hybridauth($config_oauth);
+    $adapter = $hybridauth->getAdapter($providerName);
+    $adapter->authenticate();
+    $userProfile = $adapter->getUserProfile();
+
+    // Ambil data user dari provider
+    $email = $userProfile->email;
+    $name = $userProfile->displayName ?: $email;
+
+    // Cek apakah user sudah ada di DB
     $stmt = $conn->prepare("SELECT * FROM users WHERE email=? LIMIT 1");
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows === 1) {
-        $user = $result->fetch_assoc();
-
-        if (password_verify($password, $user['password'])) {
-            $_SESSION['id'] = $user['id'];
-            $_SESSION['name'] = $user['name'];
-            $_SESSION['email'] = $user['email'];
-            $_SESSION['role'] = $user['role'];
-
-            if ($user['role'] === 'admin') {
-                header("Location: dashboard_admin.php");
-            } else {
-                header("Location: homepage.php");
-            }
-            exit();
-        } else {
-            $error = "Password salah!";
-        }
+      $user = $result->fetch_assoc();
     } else {
-        $error = "Email tidak ditemukan!";
+      // User baru → simpan ke DB
+      $password = password_hash(bin2hex(random_bytes(8)), PASSWORD_DEFAULT);
+      $role = 'user';
+      $stmt = $conn->prepare("INSERT INTO users (name,email,password,role) VALUES (?,?,?,?)");
+      $stmt->bind_param("ssss", $name, $email, $password, $role);
+      $stmt->execute();
+      $user = [
+        'id' => $conn->insert_id,
+        'name' => $name,
+        'email' => $email,
+        'role' => $role
+      ];
     }
+
+    // Simpan session
+    $_SESSION['id'] = $user['id'];
+    $_SESSION['name'] = $user['name'];
+    $_SESSION['email'] = $user['email'];
+    $_SESSION['role'] = $user['role'];
+    $_SESSION['provider'] = $providerName;
+
+    // Tutup koneksi OAuth
+    $adapter->disconnect();
+
+    // Redirect sesuai role
+    header("Location: " . ($user['role'] === 'admin' ? 'dashboard_admin.php' : 'homepage.php'));
+    exit();
+
+  } catch (Exception $e) {
+    $error = "Login gagal: " . $e->getMessage();
+  }
 }
-
-// Kalau mau debugging, kamu bisa uncomment ini:
-// echo $error;
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -62,6 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <style>
     <?php include "assets/css/login.css"; ?>
   </style>
+  <link rel="shortcut icon" href="fcon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -95,10 +149,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       <p class="or-with">Or With</p>
       <div class="socials">
-        <a href="https://www.google.com/"><img src="/assets/img/google.png" alt="Google" /></a>
-        <a href="https://www.facebook.com/"><img src="/assets/img/facebook.png" alt="Facebook" /></a>
-        <a href="https://x.com/"><img src="/assets/img/x.png" alt="X" /></a>
+        <a href="login_google.php"><img src="/assets/img/google.png" alt="Google" /></a>
       </div>
+
+
+
 
       <a href="signup.php" class="signup">
         Don’t have an account? Click <span>here</span>

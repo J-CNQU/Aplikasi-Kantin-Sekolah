@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <li><a href="signup.php" class="btns">Sign Up</a></li>
       <?php endif; ?>
 
-      <li><a href="helps.php">Help</a></li>
+      <li><a href="/helppage/help.php">Help</a></li>
 
     </ul>
 
@@ -104,16 +104,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <img id="slideshow-img" src="./assets/homepage/slideshow-1.png" class="slideshow-img" alt="Slideshow Banner">
   </section>
 
-  <!-- Shop by Counter -->
   <section class="counter">
-    <p>Shop by counter</p>
+    <p>Shop by Counter</p>
     <div class="counter-grid">
-      <img src="/assets/homepage/counter 1.png" alt="Counter 1" />
-      <img src="/assets/homepage/counter 2.png" alt="Counter 2" />
-      <img src="/assets/homepage/counter 3.png" alt="Counter 3" />
-      <img src="/assets/homepage/counter 4.png" alt="Counter 4" />
+      <a href="../php/counter.php" class="counter-item">
+        <img src="/assets/homepage/counter 1.png" alt="Counter 1">
+      </a>
+      <a href="../php/counter.php" class="counter-item">
+        <img src="/assets/homepage/counter 2.png" alt="Counter 2">
+      </a>
+      <a href="../php/counter.php" class="counter-item">
+        <img src="/assets/homepage/counter 3.png" alt="Counter 3">
+      </a>
+      <a href="../php/counter.php" class="counter-item">
+        <img src="/assets/homepage/counter 4.png" alt="Counter 4">
+      </a>
     </div>
   </section>
+
 
   <!-- Promo -->
   <section class="promo">
@@ -164,7 +172,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <p>Nasi goreng spesial khas cafeTaria, gurih - manis, pedas yang nikmat.</p>
           <span class="price">Rp18.000</span>
         </div>
-        <button class="add-to-cart-button">Coba?</button>
+        <button class="add-to-cart-button">Review?</button>
       </div>
 
       <div class="item">
@@ -174,7 +182,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <p>Nasi hainam lembut dengan ayam gurih, kaya rasa oriental.</p>
           <span class="price">Rp27.000</span>
         </div>
-        <button class="add-to-cart-button">Coba?</button>
+        <button class="add-to-cart-button">Review?</button>
       </div>
 
       <div class="item">
@@ -184,7 +192,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <p>Nasi Padang dengan rendang, ayam ubi, sambal ijo, dan bawang.</p>
           <span class="price">Rp25.000</span>
         </div>
-        <button class="add-to-cart-button">Coba?</button>
+        <button class="add-to-cart-button">Review?</button>
       </div>
 
       <div class="item">
@@ -194,7 +202,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <p>Mie ayam dengan bakso kenyal, kuah gurih nikmat.</p>
           <span class="price">Rp22.000</span>
         </div>
-        <button class="add-to-cart-button">Coba?</button>
+        <button class="add-to-cart-button">Review?</button>
       </div>
 
       <div class="item">
@@ -204,7 +212,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <p>Udon lembut dengan kuah kari ayam khas Jepang.</p>
           <span class="price">Rp30.000</span>
         </div>
-        <button class="add-to-cart-button">Coba?</button>
+        <button class="add-to-cart-button">Review?</button>
       </div>
 
     </section>

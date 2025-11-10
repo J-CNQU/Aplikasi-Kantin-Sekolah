@@ -8,6 +8,23 @@ body {
   font-family: myFont, "Roboto", sans-serif;
   background: #fcfcfc;
   color: #333;
+  overflow-x: hidden;
+}
+
+/* Efek membesar saat hover di semua elemen yang bisa diklik */
+a:hover,
+button:hover,
+a img:hover,
+button img:hover {
+  transform: scale(1.01);
+  transition: transform 0.25s ease;
+}
+
+/* Supaya tidak ada layout bergeser saat efek aktif */
+a,
+button {
+  display: inline-block;
+  transition: transform 0.25s ease;
 }
 
 /* Navbar */
@@ -80,7 +97,6 @@ body {
   object-fit: cover;
 }
 
-/* Counter */
 .counter {
   margin: 30px 20px;
 }
@@ -88,42 +104,39 @@ body {
 .counter p {
   color: #d32f2f;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-size: 40px;
   font-family: myFont;
-  margin-left: 100px;
-}
-
-.counter-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 80px);
-  gap: 20px;
-}
-
-.counter-grid button {
-  border: none;
-  width: 80px;
-  height: 80px;
   text-align: center;
-  font-size: 12px;
-  font-weight: bold;
-  cursor: pointer;
 }
 
 .counter-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px; /* jarak antar gambar */
-  justify-items: center; /* biar gambar rata tengah */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
 }
 
-.counter-grid img {
+.counter-item {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.counter-item img {
   width: 180px;
-  height: auto;
+  height: 180px;
   border-radius: 50%;
-  object-fit: cover; /* biar rapi dan nggak melebar aneh */
-  margin-left: 200px;
-  margin-right: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+.counter-item:hover img {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* Promo */
@@ -158,55 +171,81 @@ body {
 
 /* Categories */
 .categories {
-  margin: 30px 20px;
+  margin: 50px 20px;
 }
 
 .categories p {
   color: #d32f2f;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   font-size: 50px;
   font-family: myFont;
-  margin-left: 10px;
+  text-align: center;
 }
 
+/* Container kategori (scrollable horizontal) */
 .category-list {
   display: flex;
-  gap: 15px;
+  justify-content: center;
+  gap: 30px;
   overflow-x: auto;
-  padding-bottom: 10px;
+  padding: 60px 10px;
+  scroll-behavior: smooth;
+  margin: 0 auto;
+  max-width: 95vw; /* biar gak melebihi layar */
+  box-sizing: border-box;
 }
 
+.category-list::-webkit-scrollbar {
+  height: 1px;
+}
+
+.category-list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+.category-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Tombol kategori */
 .category-list button {
   border: 3px solid #fbc02d;
-  border-radius: 10px;
-  padding: 10px;
-  min-width: 80px; /* agak lebih besar biar muat teks */
-  background: #fcfcfc;
-  color: #333; /* teks lebih kontras */
+  border-radius: 15px;
+  padding: 20px 25px;
+  min-width: 140px;
+  background: #ffffff;
+  color: #333;
   text-align: center;
   cursor: pointer;
   display: flex;
-  flex-direction: column; /* biar img di atas, teks di bawah */
-  align-items: center; /* center horizontal */
-  gap: 5px; /* jarak antara img dan teks */
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* jarak antara gambar dan teks */
+  transition: transform 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .category-list button:hover {
   color: #f57f17;
   border-color: #f57f17;
+  transform: scale(1.01);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
+/* Gambar di dalam tombol */
 .category-list img {
-  width: 50%;
+  width: 50%; /* agak kecil dari sebelumnya */
   height: auto;
-  align-items: center;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
+/* Teks kategori */
 .category-list button span {
-  font-size: 24px; /* atur ukuran */
-  color: #f4b942; /* atur warna teks */
-  font-weight: 600; /* biar agak tebal */
+  font-size: 22px;
+  color: #f4b942;
+  font-weight: 600;
   font-family: myFont;
 }
 
@@ -223,16 +262,12 @@ body {
   margin-bottom: 15px;
 }
 
-.hero-card {
-  box-shadow: 0 5px 50px rgba(80, 182, 109, 0.4);
-}
-
 .item {
   display: flex;
   align-items: center;
   gap: 15px;
   background: white;
-  box-shadow: 0 2px 6px rgba(255, 0, 0, 0.4);
+  box-shadow: 0 2px 6px rgba(255, 234, 0, 0.4);
   border-radius: 10px;
   padding: 15px;
   margin-bottom: 15px;
@@ -658,7 +693,6 @@ button {
   left: 0;
   bottom: 0;
   right: 0;
-  display: none;
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.6);
@@ -688,20 +722,23 @@ button {
 @keyframes worm-move {
   0%,
   100% {
-    transform: translateX(0, 0);
+    transform: translateX(300px); /* gerak ke kanan */
   }
   50% {
-    transform: translateX(-50px);
+    transform: translateX(-300px); /* gerak ke kiri */
   }
 }
 
 .btns-user {
-  display: block;
-  animation: worm-move 2.2s ease-in-out infinite;
+  display: inline-block;
+  animation: worm-move 6s ease-in-out infinite;
   font-weight: bold;
   color: #007bff;
-  padding: 20px 40px;
-  border-radius: 15px;
+  padding: 40px 80px; /* bikin kotaknya besar */
+  border-radius: 25px;
   font-size: 80px;
   text-decoration: none;
+  text-align: center;
+  border: 3px solid #007bff; /* biar terlihat kotaknya */
+  box-shadow: 0 0 25px rgba(0, 123, 255, 0.4);
 }
