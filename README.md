@@ -1,4 +1,5 @@
 ```
+
 🍱 Cafeteria Project (UnFixed)
 
 Aplikasi web berbasis PHP Native dan MySQL, dikembangkan menggunakan Laragon.
@@ -314,4 +315,5 @@ Cafeteria Project adalah pondasi sistem kantin digital berbasis PHP yang kuat,
 dengan sistem autentikasi ganda (manual dan sosial media),
 rencana ekspansi ke sistem transaksi, dan desain struktur folder profesional.
 💻 GitHub: Juan Felix
+
 ```
