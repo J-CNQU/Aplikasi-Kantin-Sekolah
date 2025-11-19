@@ -92,11 +92,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <?= htmlspecialchars($_SESSION['name']) ?>
           <br>
           (≧▽≦q)!
-          </a>
-        </div>
+        </a>
+      </div>
       <div class="hero-image" aria-hidden="true"></div>
-      </section>
-    </main>
+    </section>
+  </main>
 
   <!-- Banner -->
   <section class="banner">
@@ -110,13 +110,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <a href="../php/counter.php" class="counter-item">
         <img src="/assets/homepage/counter 1.png" alt="Counter 1">
       </a>
-      <a href="../php/counter.php" class="counter-item">
+      <a href="../php/counter.php?id=2" class="counter-item">
         <img src="/assets/homepage/counter 2.png" alt="Counter 2">
       </a>
-      <a href="../php/counter.php" class="counter-item">
+      <a href="../php/counter.php?id=3" class="counter-item">
         <img src="/assets/homepage/counter 3.png" alt="Counter 3">
       </a>
-      <a href="../php/counter.php" class="counter-item">
+      <a href="../php/counter.php?id=4" class="counter-item">
         <img src="/assets/homepage/counter 4.png" alt="Counter 4">
       </a>
     </div>
@@ -277,8 +277,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div>
           <h4>Download the app</h4>
-          <a href="#"><img src="logo2 footer/apple.png" alt="App Store"></a>
-          <a href="#"><img src="logo2 footer/playstore.png" alt="Play Store"></a>
+          <a href="https://www.apple.com/id/app-store"><img src="logo2 footer/apple.png" alt="App Store"></a>
+          <a href="https://play.google.com/store/games?hl=id"><img src="logo2 footer/playstore.png"
+              alt="Play Store"></a>
         </div>
       </div>
 

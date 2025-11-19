@@ -110,13 +110,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <a href="../php/counter.php" class="counter-item">
         <img src="/assets/homepage/counter 1.png" alt="Counter 1">
       </a>
-      <a href="../php/counter.php" class="counter-item">
+      <a href="../php/counter.php?id=2" class="counter-item">
         <img src="/assets/homepage/counter 2.png" alt="Counter 2">
       </a>
-      <a href="../php/counter.php" class="counter-item">
+      <a href="../php/counter.php?id=3" class="counter-item">
         <img src="/assets/homepage/counter 3.png" alt="Counter 3">
       </a>
-      <a href="../php/counter.php" class="counter-item">
+      <a href="../php/counter.php?id=4" class="counter-item">
         <img src="/assets/homepage/counter 4.png" alt="Counter 4">
       </a>
     </div>

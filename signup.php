@@ -89,7 +89,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
 
 
-      <p class="muted">Sudah punya akun? <a href="logout.php">Login</a></p>
+      <a href="login.php" class="signup">
+        Already have account? Click <span>here</span>
+      </a>
     </div>
   </div>
 

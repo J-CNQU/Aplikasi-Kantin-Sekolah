@@ -170,7 +170,7 @@ body {
 }
 
 .counter-item {
-  font-family: "myFont";
+  font-family: myFont;
   font-weight: 700;
   font-size: 22px;
   color: #bdbdbd;
@@ -356,7 +356,7 @@ body {
 .order-button {
   background-color: #ffa040;
   color: white;
-  font-family: "myFont";
+  font-family: myFont;
   font-size: 25px;
   font-weight: 700;
   border: none;
@@ -372,7 +372,6 @@ body {
 }
 
 footer {
-  background-color: #f4f4f4;
   padding-top: 10px;
   color: #555;
   font-family: "Poppins", sans-serif;
@@ -402,6 +401,7 @@ footer {
 }
 
 .footer-column h3 {
+  font-family: myFont;
   color: #ffa040;
   font-size: 18px;
   margin-bottom: 10px;
@@ -430,8 +430,8 @@ footer {
 .footer-column ul li a {
   text-decoration: none;
   color: #777;
-  font-weight: 500;
   transition: color 0.3s ease;
+  font-weight: 900;
 }
 
 .footer-column ul li a:hover {
@@ -469,7 +469,6 @@ footer {
 
 .footer-bottom {
   background-color: #ffa040;
-  color: white;
   text-align: center;
   padding: 15px;
   font-size: 13px;

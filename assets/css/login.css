@@ -1,5 +1,10 @@
+@font-face {
+  font-family: myFont;
+  src: url(../font/Cocogoose-Pro-Bold-trial.ttf);
+}
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: myFont;
   margin: 0;
   padding: 0;
   background-color: #f8f5f0;

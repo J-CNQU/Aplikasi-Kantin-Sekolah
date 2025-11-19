@@ -8544,3 +8544,2054 @@ authorization: Bearer ya29.a0ATi6K2vT1U7IJ1i0vzNNmVotbpFm2Zsl1jEj3Pb4QQQHvHqC07E
 
 )
 
+debug -- ::1 -- 2025-11-11T00:29:20+00:00 -- Initialize Hybridauth\Provider\Google, config: 
+Array
+(
+    [enabled] => 1
+    [keys] => Array
+        (
+            [id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+            [secret] => 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
+        )
+
+    [scope] => openid profile email https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile
+    [debug_mode] => 1
+    [debug_file] => C:\laragon\scooby-doo\UnFixed/hybridauth.log
+    [callback] => http://localhost:3000/callback.php
+)
+
+info -- ::1 -- 2025-11-11T00:29:20+00:00 -- Hybridauth\Provider\Google::authenticate()
+debug -- ::1 -- 2025-11-11T00:29:20+00:00 -- Hybridauth\Provider\Google::authenticateBegin(), redirecting user to:
+Array
+(
+    [0] => https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback.php&scope=openid+profile+email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=offline&prompt=consent&state=HA-NM29QGBFTKWCJHD1SAO35U6R4EL8ZYVIXP70
+)
+
+debug -- ::1 -- 2025-11-11T00:36:00+00:00 -- Initialize Hybridauth\Provider\Google, config: 
+Array
+(
+    [enabled] => 1
+    [keys] => Array
+        (
+            [id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+            [secret] => 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
+        )
+
+    [scope] => openid profile email https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile
+    [debug_mode] => 1
+    [debug_file] => C:\laragon\scooby-doo\UnFixed/hybridauth.log
+    [callback] => http://localhost:3000/callback.php
+)
+
+info -- ::1 -- 2025-11-11T00:36:00+00:00 -- Hybridauth\Provider\Google::authenticate()
+debug -- ::1 -- 2025-11-11T00:36:00+00:00 -- Hybridauth\Provider\Google::authenticateBegin(), redirecting user to:
+Array
+(
+    [0] => https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback.php&scope=openid+profile+email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=offline&prompt=consent&state=HA-SPMGN7Q8WHZV06KXR2ELCY1D39OIBAU4T5FJ
+)
+
+debug -- ::1 -- 2025-11-12T01:35:13+00:00 -- Initialize Hybridauth\Provider\Google, config: 
+Array
+(
+    [enabled] => 1
+    [keys] => Array
+        (
+            [id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+            [secret] => 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
+        )
+
+    [scope] => openid profile email https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile
+    [debug_mode] => 1
+    [debug_file] => C:\laragon\scooby-doo\UnFixed/hybridauth.log
+    [callback] => http://localhost:3000/callback.php
+)
+
+info -- ::1 -- 2025-11-12T01:35:13+00:00 -- Hybridauth\Provider\Google::authenticate()
+debug -- ::1 -- 2025-11-12T01:35:13+00:00 -- Hybridauth\Provider\Google::authenticateBegin(), redirecting user to:
+Array
+(
+    [0] => https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback.php&scope=openid+profile+email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=offline&prompt=consent&state=HA-MO9PXS2R8CBIY73NJF40DUZAG1L5HWQEKT6V
+)
+
+debug -- ::1 -- 2025-11-16T12:09:36+00:00 -- Initialize Hybridauth\Provider\Google, config: 
+Array
+(
+    [enabled] => 1
+    [keys] => Array
+        (
+            [id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+            [secret] => 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
+        )
+
+    [scope] => openid profile email https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile
+    [debug_mode] => 1
+    [debug_file] => C:\laragon\scooby-doo\UnFixed/hybridauth.log
+    [callback] => http://localhost:3000/callback.php
+)
+
+info -- ::1 -- 2025-11-16T12:09:36+00:00 -- Hybridauth\Provider\Google::authenticate()
+debug -- ::1 -- 2025-11-16T12:09:36+00:00 -- Hybridauth\Provider\Google::authenticateBegin(), redirecting user to:
+Array
+(
+    [0] => https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback.php&scope=openid+profile+email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=offline&prompt=consent&state=HA-M2EB3VN9LQOUW76Y0ZDHTCAFGR8X5KS41IJP
+)
+
+debug -- ::1 -- 2025-11-16T12:10:18+00:00 -- Initialize Hybridauth\Provider\Google, config: 
+Array
+(
+    [enabled] => 1
+    [keys] => Array
+        (
+            [id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+            [secret] => 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
+        )
+
+    [scope] => openid profile email https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile
+    [debug_mode] => 1
+    [debug_file] => C:\laragon\scooby-doo\UnFixed/hybridauth.log
+    [callback] => http://localhost:3000/callback.php
+)
+
+info -- ::1 -- 2025-11-16T12:10:18+00:00 -- Hybridauth\Provider\Google::authenticate()
+debug -- ::1 -- 2025-11-16T12:10:18+00:00 -- Hybridauth\Provider\Google::authenticateFinish(), callback url:
+Array
+(
+    [0] => http://localhost:3000/callback.php?state=HA-M2EB3VN9LQOUW76Y0ZDHTCAFGR8X5KS41IJP&code=4%2F0Ab32j92QdMW2rfLRbRJDTSHmf8zMqeYCeMrf1MGdAi2ad8rxbzCwqIOVN5QzIlVJ9C8zfg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent
+)
+
+debug -- ::1 -- 2025-11-16T12:10:19+00:00 -- Hybridauth\HttpClient\Curl::request( https://oauth2.googleapis.com/token, POST ), response:
+Array
+(
+    [request] => Array
+        (
+            [uri] => https://oauth2.googleapis.com/token
+            [method] => POST
+            [parameters] => Array
+                (
+                    [client_id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+                    [client_secret] => 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
+                    [grant_type] => authorization_code
+                    [redirect_uri] => http://localhost:3000/callback.php
+                    [code] => 4/0Ab32j92QdMW2rfLRbRJDTSHmf8zMqeYCeMrf1MGdAi2ad8rxbzCwqIOVN5QzIlVJ9C8zfg
+                )
+
+            [headers] => Array
+                (
+                    [Accept] => */*
+                    [Cache-Control] => max-age=0
+                    [Connection] => keep-alive
+                    [Expect] => 
+                    [Pragma] => 
+                )
+
+        )
+
+    [response] => Array
+        (
+            [code] => 200
+            [headers] => Array
+                (
+                    [expires] => Mon, 01 Jan 1990 00:00:00 GMT
+                    [cache_control] => no-cache, no-store, max-age=0, must-revalidate
+                    [date] => Sun, 16 Nov 2025 12:10:19 GMT
+                    [pragma] => no-cache
+                    [content_type] => application/json; charset=utf-8
+                    [vary] => Origin,Accept-Encoding
+                    [server] => scaffolding on HTTPServer2
+                    [x_xss_protection] => 0
+                    [x_frame_options] => SAMEORIGIN
+                    [x_content_type_options] => nosniff
+                    [alt_svc] => h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+                    [accept_ranges] => none
+                )
+
+            [body] => {
+  "access_token": "ya29.a0ATi6K2uqOYXCAfx23OYllIy8LHGUAxX7M5-NoGv9SC8kDfc7kSnhvl9etUvgH2ApxJkIi5fN3QT01wSe0YRV9zvljXAvY0OUVN2zYJ-LW94iJiVKdZ-GVct3VwOGsitSdJ1km6UTWUPfYuooIz85qCT47Q6InHimNdUgs3nsMOlKy0d4GYmrj18lXYlSikCwOHSwAAIaCgYKAScSARQSFQHGX2MiJKtZpBhlIO_yNYaNSXVD1g0206",
+  "expires_in": 3599,
+  "refresh_token": "1//0ghGhs9D92GRTCgYIARAAGBASNwF-L9IrL7LT_MCbmwJzcFbChY-5Soh_mrCAjgMdW70kbp19z9JFeSphc9D8PEjhC6inRNJC_Lg",
+  "scope": "openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjRmZWI0NGYwZjdhN2UyN2M3YzQwMzM3OWFmZjIwYWY1YzhjZjUyZGMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI1MjMwNzAxNjU1NzMtdnJhZ3FnbXFzc3IydW9zNmxmZmJ1Z2puc3RqMjcyMGEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI1MjMwNzAxNjU1NzMtdnJhZ3FnbXFzc3IydW9zNmxmZmJ1Z2puc3RqMjcyMGEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDYxMjI1OTM0ODUyMDA4MjI5ODciLCJlbWFpbCI6ImpmZXJ4aWljQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoiMFc0cFhjdTZxYmpLYmdDbXRLRkozUSIsIm5hbWUiOiJKIEZlcnhpaWMiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSWo2bmVaQUxIM21OMVd2V2tmNFNqUVRvOHBGVVV2LW5xcjNrWmRRTjBlTlM4SHhSYz1zOTYtYyIsImdpdmVuX25hbWUiOiJKIiwiZmFtaWx5X25hbWUiOiJGZXJ4aWljIiwiaWF0IjoxNzYzMjk1MDE5LCJleHAiOjE3NjMyOTg2MTl9.WzjJgirPKiWJLPn25gwajXi1V597QznbVSz01yYdOlF7oJUKUcinfSxuUGA-10F4b-8fWhrBXCDyK3vG08-bFwa4f5blTeYGNW2diFedOAbnRiqIiY8lfpvVr7z5MaL9iQ4-3Gr8K1-NEHorhf0UU7ObwMoADweb0nJvqgIWNkYrARnr-WFL8ijsd3wyYC90rtCU0_X0YlCY-c9bJglAxTZ2RonqVlb3x9qjKWKjKSypj7LeTeHAK5ypSYxh6l6CVHJN72uz0HxVk-bAHxRnZW26FYC-VOPLTbYnvjRuMJJG_cEJ_ThUcCQdWoGXzhiZLdOR4VPJ953IKLYg6odT1A"
+}
+        )
+
+    [client] => Array
+        (
+            [error] => 
+            [info] => Array
+                (
+                    [url] => https://oauth2.googleapis.com/token
+                    [content_type] => application/json; charset=utf-8
+                    [http_code] => 200
+                    [header_size] => 478
+                    [request_size] => 313
+                    [filetime] => -1
+                    [ssl_verify_result] => 0
+                    [redirect_count] => 0
+                    [total_time] => 0.807349
+                    [namelookup_time] => 0.160196
+                    [connect_time] => 0.335566
+                    [pretransfer_time] => 0.566425
+                    [size_upload] => 301
+                    [size_download] => 1724
+                    [speed_download] => 2135
+                    [speed_upload] => 372
+                    [download_content_length] => -1
+                    [upload_content_length] => 301
+                    [starttransfer_time] => 0.566437
+                    [redirect_time] => 0
+                    [redirect_url] => 
+                    [primary_ip] => 172.217.194.95
+                    [certinfo] => Array
+                        (
+                        )
+
+                    [primary_port] => 443
+                    [local_ip] => 192.168.100.19
+                    [local_port] => 13225
+                    [http_version] => 3
+                    [protocol] => 2
+                    [ssl_verifyresult] => 0
+                    [scheme] => HTTPS
+                    [appconnect_time_us] => 564591
+                    [connect_time_us] => 335566
+                    [namelookup_time_us] => 160196
+                    [pretransfer_time_us] => 566425
+                    [redirect_time_us] => 0
+                    [starttransfer_time_us] => 566437
+                    [total_time_us] => 807349
+                    [request_header] => POST /token HTTP/2
+Host: oauth2.googleapis.com
+user-agent: Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+accept-encoding: identity
+accept: */*
+cache-control: max-age=0
+connection: keep-alive
+content-length: 301
+content-type: application/x-www-form-urlencoded
+
+
+                )
+
+            [opts] => Array
+                (
+                    [13] => 30
+                    [78] => 30
+                    [64] => 
+                    [81] => 
+                    [19913] => 1
+                    [52] => 1
+                    [68] => 5
+                    [2] => 1
+                    [10102] => identity
+                    [10018] => Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+                    [47] => 1
+                    [10015] => client_id=523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com&client_secret=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&grant_type=authorization_code&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback.php&code=4%2F0Ab32j92QdMW2rfLRbRJDTSHmf8zMqeYCeMrf1MGdAi2ad8rxbzCwqIOVN5QzIlVJ9C8zfg
+                    [10002] => https://oauth2.googleapis.com/token
+                    [10023] => Array
+                        (
+                            [0] => Accept: */*
+                            [1] => Cache-Control: max-age=0
+                            [2] => Connection: keep-alive
+                            [3] => Expect: 
+                            [4] => Pragma: 
+                        )
+
+                    [20079] => *omitted
+                )
+
+        )
+
+)
+
+debug -- ::1 -- 2025-11-16T12:10:20+00:00 -- Hybridauth\HttpClient\Curl::request( https://www.googleapis.com/oauth2/v3/userinfo?, GET ), response:
+Array
+(
+    [request] => Array
+        (
+            [uri] => https://www.googleapis.com/oauth2/v3/userinfo
+            [method] => GET
+            [parameters] => Array
+                (
+                )
+
+            [headers] => Array
+                (
+                    [Accept] => */*
+                    [Cache-Control] => max-age=0
+                    [Connection] => keep-alive
+                    [Expect] => 
+                    [Pragma] => 
+                    [Authorization] => Bearer ya29.a0ATi6K2uqOYXCAfx23OYllIy8LHGUAxX7M5-NoGv9SC8kDfc7kSnhvl9etUvgH2ApxJkIi5fN3QT01wSe0YRV9zvljXAvY0OUVN2zYJ-LW94iJiVKdZ-GVct3VwOGsitSdJ1km6UTWUPfYuooIz85qCT47Q6InHimNdUgs3nsMOlKy0d4GYmrj18lXYlSikCwOHSwAAIaCgYKAScSARQSFQHGX2MiJKtZpBhlIO_yNYaNSXVD1g0206
+                )
+
+        )
+
+    [response] => Array
+        (
+            [code] => 200
+            [headers] => Array
+                (
+                    [expires] => Mon, 01 Jan 1990 00:00:00 GMT
+                    [cache_control] => no-cache, no-store, max-age=0, must-revalidate
+                    [date] => Sun, 16 Nov 2025 12:10:20 GMT
+                    [pragma] => no-cache
+                    [content_type] => application/json; charset=utf-8
+                    [vary] => Origin,Accept-Encoding
+                    [server] => ESF
+                    [x_xss_protection] => 0
+                    [x_frame_options] => SAMEORIGIN
+                    [x_content_type_options] => nosniff
+                    [alt_svc] => h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+                    [accept_ranges] => none
+                )
+
+            [body] => {
+  "sub": "106122593485200822987",
+  "name": "J Ferxiic",
+  "given_name": "J",
+  "family_name": "Ferxiic",
+  "picture": "https://lh3.googleusercontent.com/a/ACg8ocIj6neZALH3mN1WvWkf4SjQTo8pFUUv-nqr3kZdQN0eNS8HxRc\u003ds96-c",
+  "email": "jferxiic@gmail.com",
+  "email_verified": true
+}
+        )
+
+    [client] => Array
+        (
+            [error] => 
+            [info] => Array
+                (
+                    [url] => https://www.googleapis.com/oauth2/v3/userinfo
+                    [content_type] => application/json; charset=utf-8
+                    [http_code] => 200
+                    [header_size] => 455
+                    [request_size] => 530
+                    [filetime] => -1
+                    [ssl_verify_result] => 0
+                    [redirect_count] => 0
+                    [total_time] => 0.985001
+                    [namelookup_time] => 0.190142
+                    [connect_time] => 0.6411
+                    [pretransfer_time] => 0.803413
+                    [size_upload] => 0
+                    [size_download] => 286
+                    [speed_download] => 290
+                    [speed_upload] => 0
+                    [download_content_length] => -1
+                    [upload_content_length] => 0
+                    [starttransfer_time] => 0.984932
+                    [redirect_time] => 0
+                    [redirect_url] => 
+                    [primary_ip] => 64.233.170.95
+                    [certinfo] => Array
+                        (
+                        )
+
+                    [primary_port] => 443
+                    [local_ip] => 192.168.100.19
+                    [local_port] => 13228
+                    [http_version] => 3
+                    [protocol] => 2
+                    [ssl_verifyresult] => 0
+                    [scheme] => HTTPS
+                    [appconnect_time_us] => 803262
+                    [connect_time_us] => 641100
+                    [namelookup_time_us] => 190142
+                    [pretransfer_time_us] => 803413
+                    [redirect_time_us] => 0
+                    [starttransfer_time_us] => 984932
+                    [total_time_us] => 985001
+                    [request_header] => GET /oauth2/v3/userinfo? HTTP/2
+Host: www.googleapis.com
+user-agent: Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+accept-encoding: identity
+accept: */*
+cache-control: max-age=0
+connection: keep-alive
+authorization: Bearer ya29.a0ATi6K2uqOYXCAfx23OYllIy8LHGUAxX7M5-NoGv9SC8kDfc7kSnhvl9etUvgH2ApxJkIi5fN3QT01wSe0YRV9zvljXAvY0OUVN2zYJ-LW94iJiVKdZ-GVct3VwOGsitSdJ1km6UTWUPfYuooIz85qCT47Q6InHimNdUgs3nsMOlKy0d4GYmrj18lXYlSikCwOHSwAAIaCgYKAScSARQSFQHGX2MiJKtZpBhlIO_yNYaNSXVD1g0206
+
+
+                )
+
+            [opts] => Array
+                (
+                    [13] => 30
+                    [78] => 30
+                    [64] => 
+                    [81] => 
+                    [19913] => 1
+                    [52] => 1
+                    [68] => 5
+                    [2] => 1
+                    [10102] => identity
+                    [10018] => Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+                    [10002] => https://www.googleapis.com/oauth2/v3/userinfo?
+                    [10023] => Array
+                        (
+                            [0] => Accept: */*
+                            [1] => Cache-Control: max-age=0
+                            [2] => Connection: keep-alive
+                            [3] => Expect: 
+                            [4] => Pragma: 
+                            [5] => Authorization: Bearer ya29.a0ATi6K2uqOYXCAfx23OYllIy8LHGUAxX7M5-NoGv9SC8kDfc7kSnhvl9etUvgH2ApxJkIi5fN3QT01wSe0YRV9zvljXAvY0OUVN2zYJ-LW94iJiVKdZ-GVct3VwOGsitSdJ1km6UTWUPfYuooIz85qCT47Q6InHimNdUgs3nsMOlKy0d4GYmrj18lXYlSikCwOHSwAAIaCgYKAScSARQSFQHGX2MiJKtZpBhlIO_yNYaNSXVD1g0206
+                        )
+
+                    [20079] => *omitted
+                )
+
+        )
+
+)
+
+debug -- ::1 -- 2025-11-16T12:51:11+00:00 -- Initialize Hybridauth\Provider\Google, config: 
+Array
+(
+    [enabled] => 1
+    [keys] => Array
+        (
+            [id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+            [secret] => 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
+        )
+
+    [scope] => openid profile email https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile
+    [debug_mode] => 1
+    [debug_file] => C:\laragon\scooby-doo\UnFixed/hybridauth.log
+    [callback] => http://localhost:3000/callback.php
+)
+
+info -- ::1 -- 2025-11-16T12:51:11+00:00 -- Hybridauth\Provider\Google::authenticate()
+debug -- ::1 -- 2025-11-16T12:51:11+00:00 -- Hybridauth\Provider\Google::authenticateBegin(), redirecting user to:
+Array
+(
+    [0] => https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback.php&scope=openid+profile+email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=offline&prompt=consent&state=HA-MODF17NBKC4EV50GS3ZPHLRY6A8UTWQJI9X2
+)
+
+debug -- ::1 -- 2025-11-16T12:52:29+00:00 -- Initialize Hybridauth\Provider\Google, config: 
+Array
+(
+    [enabled] => 1
+    [keys] => Array
+        (
+            [id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+            [secret] => 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
+        )
+
+    [scope] => openid profile email https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile
+    [debug_mode] => 1
+    [debug_file] => C:\laragon\scooby-doo\UnFixed/hybridauth.log
+    [callback] => http://localhost:3000/callback.php
+)
+
+info -- ::1 -- 2025-11-16T12:52:29+00:00 -- Hybridauth\Provider\Google::authenticate()
+debug -- ::1 -- 2025-11-16T12:52:29+00:00 -- Hybridauth\Provider\Google::authenticateFinish(), callback url:
+Array
+(
+    [0] => http://localhost:3000/callback.php?state=HA-MODF17NBKC4EV50GS3ZPHLRY6A8UTWQJI9X2&code=4%2F0Ab32j91s4rGeTP5nBKB4Ty3iIlCvyXR9pqHneHkYvzDSul_QTLSWjew-WVdzk0L3XZfITQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent
+)
+
+debug -- ::1 -- 2025-11-16T12:52:29+00:00 -- Hybridauth\HttpClient\Curl::request( https://oauth2.googleapis.com/token, POST ), response:
+Array
+(
+    [request] => Array
+        (
+            [uri] => https://oauth2.googleapis.com/token
+            [method] => POST
+            [parameters] => Array
+                (
+                    [client_id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+                    [client_secret] => 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
+                    [grant_type] => authorization_code
+                    [redirect_uri] => http://localhost:3000/callback.php
+                    [code] => 4/0Ab32j91s4rGeTP5nBKB4Ty3iIlCvyXR9pqHneHkYvzDSul_QTLSWjew-WVdzk0L3XZfITQ
+                )
+
+            [headers] => Array
+                (
+                    [Accept] => */*
+                    [Cache-Control] => max-age=0
+                    [Connection] => keep-alive
+                    [Expect] => 
+                    [Pragma] => 
+                )
+
+        )
+
+    [response] => Array
+        (
+            [code] => 200
+            [headers] => Array
+                (
+                    [cache_control] => no-cache, no-store, max-age=0, must-revalidate
+                    [expires] => Mon, 01 Jan 1990 00:00:00 GMT
+                    [pragma] => no-cache
+                    [date] => Sun, 16 Nov 2025 12:52:29 GMT
+                    [content_type] => application/json; charset=utf-8
+                    [vary] => Origin,Accept-Encoding
+                    [server] => scaffolding on HTTPServer2
+                    [x_xss_protection] => 0
+                    [x_frame_options] => SAMEORIGIN
+                    [x_content_type_options] => nosniff
+                    [alt_svc] => h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+                    [accept_ranges] => none
+                )
+
+            [body] => {
+  "access_token": "ya29.a0ATi6K2slDrH3Sx11puKzRVCbTv49dMqGEHjQhFOqavx0YHqPhBuyMx5eEUuXrm3dMyvDP9XG5bIug7cNHkYIW0Y5azZHn_7XLaEFwx2rwZRmpde9FM_WBXkOdOux2KESH1zcD3EU3SxdfZR7-sGlztFKFQ3DxjDVf_j_QfuJjUw0-bGy-fjc_BVcRP_BiggABOH3NnkaCgYKAQoSARQSFQHGX2Mi0WgMiu8sd6-WV8kCthEMfg0206",
+  "expires_in": 3599,
+  "refresh_token": "1//0g-pgVfHOW2NNCgYIARAAGBASNwF-L9Ir-4GHnO33kHyv63iat9HunH2w84ujGIhGNiLbTTm15X3kYEbN7rLDqlZA8DwRhfs1OG4",
+  "scope": "https://www.googleapis.com/auth/userinfo.profile openid https://www.googleapis.com/auth/userinfo.email",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjRmZWI0NGYwZjdhN2UyN2M3YzQwMzM3OWFmZjIwYWY1YzhjZjUyZGMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI1MjMwNzAxNjU1NzMtdnJhZ3FnbXFzc3IydW9zNmxmZmJ1Z2puc3RqMjcyMGEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI1MjMwNzAxNjU1NzMtdnJhZ3FnbXFzc3IydW9zNmxmZmJ1Z2puc3RqMjcyMGEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDYxMjI1OTM0ODUyMDA4MjI5ODciLCJlbWFpbCI6ImpmZXJ4aWljQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoiVU52b3NGZGtZWVgyUHZ6cWRwd0xPQSIsIm5hbWUiOiJKIEZlcnhpaWMiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSWo2bmVaQUxIM21OMVd2V2tmNFNqUVRvOHBGVVV2LW5xcjNrWmRRTjBlTlM4SHhSYz1zOTYtYyIsImdpdmVuX25hbWUiOiJKIiwiZmFtaWx5X25hbWUiOiJGZXJ4aWljIiwiaWF0IjoxNzYzMjk3NTQ5LCJleHAiOjE3NjMzMDExNDl9.EgWFfmwGidkkui_WB0CzNbchWfXDReNklEBq-mwa6HooxyXgvqWs8_q7th1KRdcKZRWXLYJuDy45TZPLbGQObCGQrpHwQvGaEBZNobi2eDp1SOD62iRDbSxSCqwZ1jXidQOE70P3vbFSxokBQPXpEDCDRO3WfkOoXmZbbPyyvqXc2CTFSxZJvhnz7XlvgrO7qsRY0Lyg9FmBDFCTL0Po8QpqZal9_MvyzhLd1vtogBOVeZYqux_eNrGYc8XvAKhwGdRPJMT9fKk0uWGxPY3Qzbx1LlyAHUS9huWuWfFHxDHo_Uak64YogbM5-u8UjMfifVw46tYhoZwNDzrh6CP4TA"
+}
+        )
+
+    [client] => Array
+        (
+            [error] => 
+            [info] => Array
+                (
+                    [url] => https://oauth2.googleapis.com/token
+                    [content_type] => application/json; charset=utf-8
+                    [http_code] => 200
+                    [header_size] => 478
+                    [request_size] => 313
+                    [filetime] => -1
+                    [ssl_verify_result] => 0
+                    [redirect_count] => 0
+                    [total_time] => 0.278357
+                    [namelookup_time] => 0.046567
+                    [connect_time] => 0.090899
+                    [pretransfer_time] => 0.160232
+                    [size_upload] => 301
+                    [size_download] => 1724
+                    [speed_download] => 6193
+                    [speed_upload] => 1081
+                    [download_content_length] => -1
+                    [upload_content_length] => 301
+                    [starttransfer_time] => 0.16024
+                    [redirect_time] => 0
+                    [redirect_url] => 
+                    [primary_ip] => 142.251.12.95
+                    [certinfo] => Array
+                        (
+                        )
+
+                    [primary_port] => 443
+                    [local_ip] => 192.168.100.19
+                    [local_port] => 28489
+                    [http_version] => 3
+                    [protocol] => 2
+                    [ssl_verifyresult] => 0
+                    [scheme] => HTTPS
+                    [appconnect_time_us] => 160107
+                    [connect_time_us] => 90899
+                    [namelookup_time_us] => 46567
+                    [pretransfer_time_us] => 160232
+                    [redirect_time_us] => 0
+                    [starttransfer_time_us] => 160240
+                    [total_time_us] => 278357
+                    [request_header] => POST /token HTTP/2
+Host: oauth2.googleapis.com
+user-agent: Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+accept-encoding: identity
+accept: */*
+cache-control: max-age=0
+connection: keep-alive
+content-length: 301
+content-type: application/x-www-form-urlencoded
+
+
+                )
+
+            [opts] => Array
+                (
+                    [13] => 30
+                    [78] => 30
+                    [64] => 
+                    [81] => 
+                    [19913] => 1
+                    [52] => 1
+                    [68] => 5
+                    [2] => 1
+                    [10102] => identity
+                    [10018] => Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+                    [47] => 1
+                    [10015] => client_id=523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com&client_secret=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&grant_type=authorization_code&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback.php&code=4%2F0Ab32j91s4rGeTP5nBKB4Ty3iIlCvyXR9pqHneHkYvzDSul_QTLSWjew-WVdzk0L3XZfITQ
+                    [10002] => https://oauth2.googleapis.com/token
+                    [10023] => Array
+                        (
+                            [0] => Accept: */*
+                            [1] => Cache-Control: max-age=0
+                            [2] => Connection: keep-alive
+                            [3] => Expect: 
+                            [4] => Pragma: 
+                        )
+
+                    [20079] => *omitted
+                )
+
+        )
+
+)
+
+debug -- ::1 -- 2025-11-16T12:52:29+00:00 -- Hybridauth\HttpClient\Curl::request( https://www.googleapis.com/oauth2/v3/userinfo?, GET ), response:
+Array
+(
+    [request] => Array
+        (
+            [uri] => https://www.googleapis.com/oauth2/v3/userinfo
+            [method] => GET
+            [parameters] => Array
+                (
+                )
+
+            [headers] => Array
+                (
+                    [Accept] => */*
+                    [Cache-Control] => max-age=0
+                    [Connection] => keep-alive
+                    [Expect] => 
+                    [Pragma] => 
+                    [Authorization] => Bearer ya29.a0ATi6K2slDrH3Sx11puKzRVCbTv49dMqGEHjQhFOqavx0YHqPhBuyMx5eEUuXrm3dMyvDP9XG5bIug7cNHkYIW0Y5azZHn_7XLaEFwx2rwZRmpde9FM_WBXkOdOux2KESH1zcD3EU3SxdfZR7-sGlztFKFQ3DxjDVf_j_QfuJjUw0-bGy-fjc_BVcRP_BiggABOH3NnkaCgYKAQoSARQSFQHGX2Mi0WgMiu8sd6-WV8kCthEMfg0206
+                )
+
+        )
+
+    [response] => Array
+        (
+            [code] => 200
+            [headers] => Array
+                (
+                    [cache_control] => no-cache, no-store, max-age=0, must-revalidate
+                    [expires] => Mon, 01 Jan 1990 00:00:00 GMT
+                    [pragma] => no-cache
+                    [date] => Sun, 16 Nov 2025 12:52:29 GMT
+                    [content_type] => application/json; charset=utf-8
+                    [vary] => Origin,Accept-Encoding
+                    [server] => ESF
+                    [x_xss_protection] => 0
+                    [x_frame_options] => SAMEORIGIN
+                    [x_content_type_options] => nosniff
+                    [alt_svc] => h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+                    [accept_ranges] => none
+                )
+
+            [body] => {
+  "sub": "106122593485200822987",
+  "name": "J Ferxiic",
+  "given_name": "J",
+  "family_name": "Ferxiic",
+  "picture": "https://lh3.googleusercontent.com/a/ACg8ocIj6neZALH3mN1WvWkf4SjQTo8pFUUv-nqr3kZdQN0eNS8HxRc\u003ds96-c",
+  "email": "jferxiic@gmail.com",
+  "email_verified": true
+}
+        )
+
+    [client] => Array
+        (
+            [error] => 
+            [info] => Array
+                (
+                    [url] => https://www.googleapis.com/oauth2/v3/userinfo
+                    [content_type] => application/json; charset=utf-8
+                    [http_code] => 200
+                    [header_size] => 455
+                    [request_size] => 530
+                    [filetime] => -1
+                    [ssl_verify_result] => 0
+                    [redirect_count] => 0
+                    [total_time] => 0.218261
+                    [namelookup_time] => 0.014781
+                    [connect_time] => 0.030287
+                    [pretransfer_time] => 0.057323
+                    [size_upload] => 0
+                    [size_download] => 286
+                    [speed_download] => 1310
+                    [speed_upload] => 0
+                    [download_content_length] => -1
+                    [upload_content_length] => 0
+                    [starttransfer_time] => 0.218181
+                    [redirect_time] => 0
+                    [redirect_url] => 
+                    [primary_ip] => 142.251.12.95
+                    [certinfo] => Array
+                        (
+                        )
+
+                    [primary_port] => 443
+                    [local_ip] => 192.168.100.19
+                    [local_port] => 28492
+                    [http_version] => 3
+                    [protocol] => 2
+                    [ssl_verifyresult] => 0
+                    [scheme] => HTTPS
+                    [appconnect_time_us] => 57123
+                    [connect_time_us] => 30287
+                    [namelookup_time_us] => 14781
+                    [pretransfer_time_us] => 57323
+                    [redirect_time_us] => 0
+                    [starttransfer_time_us] => 218181
+                    [total_time_us] => 218261
+                    [request_header] => GET /oauth2/v3/userinfo? HTTP/2
+Host: www.googleapis.com
+user-agent: Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+accept-encoding: identity
+accept: */*
+cache-control: max-age=0
+connection: keep-alive
+authorization: Bearer ya29.a0ATi6K2slDrH3Sx11puKzRVCbTv49dMqGEHjQhFOqavx0YHqPhBuyMx5eEUuXrm3dMyvDP9XG5bIug7cNHkYIW0Y5azZHn_7XLaEFwx2rwZRmpde9FM_WBXkOdOux2KESH1zcD3EU3SxdfZR7-sGlztFKFQ3DxjDVf_j_QfuJjUw0-bGy-fjc_BVcRP_BiggABOH3NnkaCgYKAQoSARQSFQHGX2Mi0WgMiu8sd6-WV8kCthEMfg0206
+
+
+                )
+
+            [opts] => Array
+                (
+                    [13] => 30
+                    [78] => 30
+                    [64] => 
+                    [81] => 
+                    [19913] => 1
+                    [52] => 1
+                    [68] => 5
+                    [2] => 1
+                    [10102] => identity
+                    [10018] => Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+                    [10002] => https://www.googleapis.com/oauth2/v3/userinfo?
+                    [10023] => Array
+                        (
+                            [0] => Accept: */*
+                            [1] => Cache-Control: max-age=0
+                            [2] => Connection: keep-alive
+                            [3] => Expect: 
+                            [4] => Pragma: 
+                            [5] => Authorization: Bearer ya29.a0ATi6K2slDrH3Sx11puKzRVCbTv49dMqGEHjQhFOqavx0YHqPhBuyMx5eEUuXrm3dMyvDP9XG5bIug7cNHkYIW0Y5azZHn_7XLaEFwx2rwZRmpde9FM_WBXkOdOux2KESH1zcD3EU3SxdfZR7-sGlztFKFQ3DxjDVf_j_QfuJjUw0-bGy-fjc_BVcRP_BiggABOH3NnkaCgYKAQoSARQSFQHGX2Mi0WgMiu8sd6-WV8kCthEMfg0206
+                        )
+
+                    [20079] => *omitted
+                )
+
+        )
+
+)
+
+debug -- ::1 -- 2025-11-19T02:42:16+00:00 -- Initialize Hybridauth\Provider\Google, config: 
+Array
+(
+    [enabled] => 1
+    [keys] => Array
+        (
+            [id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+            [secret] => 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
+        )
+
+    [scope] => openid profile email https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile
+    [debug_mode] => 1
+    [debug_file] => D:\Laragon\www\UnFixed/hybridauth.log
+    [callback] => http://localhost:3000/callback.php
+)
+
+info -- ::1 -- 2025-11-19T02:42:16+00:00 -- Hybridauth\Provider\Google::authenticate()
+debug -- ::1 -- 2025-11-19T02:42:16+00:00 -- Hybridauth\Provider\Google::authenticateBegin(), redirecting user to:
+Array
+(
+    [0] => https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback.php&scope=openid+profile+email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=offline&prompt=consent&state=HA-RJQUYLSMFWNOD16AXITE5KP08H79GCBZ3V24
+)
+
+debug -- ::1 -- 2025-11-19T02:42:52+00:00 -- Initialize Hybridauth\Provider\Google, config: 
+Array
+(
+    [enabled] => 1
+    [keys] => Array
+        (
+            [id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+            [secret] => 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
+        )
+
+    [scope] => openid profile email https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile
+    [debug_mode] => 1
+    [debug_file] => D:\Laragon\www\UnFixed/hybridauth.log
+    [callback] => http://localhost:3000/callback.php
+)
+
+info -- ::1 -- 2025-11-19T02:42:52+00:00 -- Hybridauth\Provider\Google::authenticate()
+debug -- ::1 -- 2025-11-19T02:42:52+00:00 -- Hybridauth\Provider\Google::authenticateFinish(), callback url:
+Array
+(
+    [0] => http://localhost:3000/callback.php?state=HA-RJQUYLSMFWNOD16AXITE5KP08H79GCBZ3V24&code=4%2F0Ab32j927OHDD9t9JiKDP2OPJDg87CwK_GK8k4bkrC3PPcCEdPV5g7f2jbB8BpmoBcJytLg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=1&prompt=consent
+)
+
+debug -- ::1 -- 2025-11-19T02:42:53+00:00 -- Hybridauth\HttpClient\Curl::request( https://oauth2.googleapis.com/token, POST ), response:
+Array
+(
+    [request] => Array
+        (
+            [uri] => https://oauth2.googleapis.com/token
+            [method] => POST
+            [parameters] => Array
+                (
+                    [client_id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+                    [client_secret] => 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
+                    [grant_type] => authorization_code
+                    [redirect_uri] => http://localhost:3000/callback.php
+                    [code] => 4/0Ab32j927OHDD9t9JiKDP2OPJDg87CwK_GK8k4bkrC3PPcCEdPV5g7f2jbB8BpmoBcJytLg
+                )
+
+            [headers] => Array
+                (
+                    [Accept] => */*
+                    [Cache-Control] => max-age=0
+                    [Connection] => keep-alive
+                    [Expect] => 
+                    [Pragma] => 
+                )
+
+        )
+
+    [response] => Array
+        (
+            [code] => 200
+            [headers] => Array
+                (
+                    [cache_control] => no-cache, no-store, max-age=0, must-revalidate
+                    [pragma] => no-cache
+                    [date] => Wed, 19 Nov 2025 02:43:01 GMT
+                    [expires] => Mon, 01 Jan 1990 00:00:00 GMT
+                    [content_type] => application/json; charset=utf-8
+                    [vary] => Origin,Accept-Encoding
+                    [server] => scaffolding on HTTPServer2
+                    [x_xss_protection] => 0
+                    [x_frame_options] => SAMEORIGIN
+                    [x_content_type_options] => nosniff
+                    [alt_svc] => h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+                    [accept_ranges] => none
+                )
+
+            [body] => {
+  "access_token": "ya29.a0ATi6K2vZUMcq2ny8UXNPhz8oAGbxklxcSNLzDpa_GNw3geAL8TzMmrqg9H9R91ah7EEgAoZHFaxSyqT3XQ_BbUMrzI4hnjzafMKULy-C8aF6GK5ssnZ49a_Pe28NTzVF-4QqCU8Nu4euUwlDhwWqeoLl6mb4DPo6wP2YGwfe13BDAZoiD1Bkhc6AF5wzGJe6AHUu6vIaCgYKAUkSARQSFQHGX2MiZYauDjcLEQSsE-H7Y0T4qg0206",
+  "expires_in": 3599,
+  "refresh_token": "1//0g4zIN4zQK1cpCgYIARAAGBASNwF-L9Irk3zVauFp-rohaH16b2aB89WXxmjhAGhi3yF-GyEmIrXspL3LHTF_eu6yfnSA1kwaW1A",
+  "scope": "openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImE1NzMzYmJiZDgxOGFhNWRiMTk1MTk5Y2Q1NjhlNWQ2ODUxMzJkM2YiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI1MjMwNzAxNjU1NzMtdnJhZ3FnbXFzc3IydW9zNmxmZmJ1Z2puc3RqMjcyMGEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI1MjMwNzAxNjU1NzMtdnJhZ3FnbXFzc3IydW9zNmxmZmJ1Z2puc3RqMjcyMGEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDM2NDQzOTAyOTgyMjQ5ODA2MzkiLCJlbWFpbCI6ImJyaXRhbmlhZmlzaWNoZWxsYUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6ImJZdXR2MzhvTmtBT2lZM0pXdHdDQkEiLCJuYW1lIjoiVGFubmlhYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMd3RHN1lMVzNmN0JNc21xSmFaVW40UnFJUUJ3R05mcFZQelpBSF90U1ZxeWZwSGdpYT1zOTYtYyIsImdpdmVuX25hbWUiOiJUYW5uaWFhIiwiaWF0IjoxNzYzNTIwMTgxLCJleHAiOjE3NjM1MjM3ODF9.y3nWG-ggB41Ko1ArrqOuch0Tm1_kN57jd7kK_U6Ox156f5JVsMQUwMO6KWFaKQElpeifo88uS3gP5FM7EuJ3GPTcJTwE92YtaC8qoyVzTK3o74UG6gF51YsDAGP7O2rgI2iYIYXzQDt988wnOGEWf910d4lL2P8BtaEnOG22hsegyJuS14lvUAuOkiVmYiTpm1-Q_8AsED4nmSHOa0P6zjrHThsW6iJCp1wDbpnweUe2es1xIgW97uPaqjb8a-JITkDq8Y27OrPWCMXu0Y0gMZmtSkAOTEEePVPz3cTo0nQQHhzeANwBcpQCTKC6vDgKye8lVtRsuyHzaagqS5y5LA"
+}
+        )
+
+    [client] => Array
+        (
+            [error] => 
+            [info] => Array
+                (
+                    [url] => https://oauth2.googleapis.com/token
+                    [content_type] => application/json; charset=utf-8
+                    [http_code] => 200
+                    [header_size] => 478
+                    [request_size] => 313
+                    [filetime] => -1
+                    [ssl_verify_result] => 0
+                    [redirect_count] => 0
+                    [total_time] => 0.311496
+                    [namelookup_time] => 0.050473
+                    [connect_time] => 0.128317
+                    [pretransfer_time] => 0.204868
+                    [size_upload] => 301
+                    [size_download] => 1712
+                    [speed_download] => 5496
+                    [speed_upload] => 966
+                    [download_content_length] => -1
+                    [upload_content_length] => 301
+                    [starttransfer_time] => 0.204887
+                    [redirect_time] => 0
+                    [redirect_url] => 
+                    [primary_ip] => 74.125.200.95
+                    [certinfo] => Array
+                        (
+                        )
+
+                    [primary_port] => 443
+                    [local_ip] => 154.154.1.213
+                    [local_port] => 63931
+                    [http_version] => 3
+                    [protocol] => 2
+                    [ssl_verifyresult] => 0
+                    [scheme] => HTTPS
+                    [appconnect_time_us] => 204281
+                    [connect_time_us] => 128317
+                    [namelookup_time_us] => 50473
+                    [pretransfer_time_us] => 204868
+                    [redirect_time_us] => 0
+                    [starttransfer_time_us] => 204887
+                    [total_time_us] => 311496
+                    [request_header] => POST /token HTTP/2
+Host: oauth2.googleapis.com
+user-agent: Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+accept-encoding: identity
+accept: */*
+cache-control: max-age=0
+connection: keep-alive
+content-length: 301
+content-type: application/x-www-form-urlencoded
+
+
+                )
+
+            [opts] => Array
+                (
+                    [13] => 30
+                    [78] => 30
+                    [64] => 
+                    [81] => 
+                    [19913] => 1
+                    [52] => 1
+                    [68] => 5
+                    [2] => 1
+                    [10102] => identity
+                    [10018] => Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+                    [47] => 1
+                    [10015] => client_id=523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com&client_secret=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&grant_type=authorization_code&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback.php&code=4%2F0Ab32j927OHDD9t9JiKDP2OPJDg87CwK_GK8k4bkrC3PPcCEdPV5g7f2jbB8BpmoBcJytLg
+                    [10002] => https://oauth2.googleapis.com/token
+                    [10023] => Array
+                        (
+                            [0] => Accept: */*
+                            [1] => Cache-Control: max-age=0
+                            [2] => Connection: keep-alive
+                            [3] => Expect: 
+                            [4] => Pragma: 
+                        )
+
+                    [20079] => *omitted
+                )
+
+        )
+
+)
+
+debug -- ::1 -- 2025-11-19T02:42:53+00:00 -- Hybridauth\HttpClient\Curl::request( https://www.googleapis.com/oauth2/v3/userinfo?, GET ), response:
+Array
+(
+    [request] => Array
+        (
+            [uri] => https://www.googleapis.com/oauth2/v3/userinfo
+            [method] => GET
+            [parameters] => Array
+                (
+                )
+
+            [headers] => Array
+                (
+                    [Accept] => */*
+                    [Cache-Control] => max-age=0
+                    [Connection] => keep-alive
+                    [Expect] => 
+                    [Pragma] => 
+                    [Authorization] => Bearer ya29.a0ATi6K2vZUMcq2ny8UXNPhz8oAGbxklxcSNLzDpa_GNw3geAL8TzMmrqg9H9R91ah7EEgAoZHFaxSyqT3XQ_BbUMrzI4hnjzafMKULy-C8aF6GK5ssnZ49a_Pe28NTzVF-4QqCU8Nu4euUwlDhwWqeoLl6mb4DPo6wP2YGwfe13BDAZoiD1Bkhc6AF5wzGJe6AHUu6vIaCgYKAUkSARQSFQHGX2MiZYauDjcLEQSsE-H7Y0T4qg0206
+                )
+
+        )
+
+    [response] => Array
+        (
+            [code] => 200
+            [headers] => Array
+                (
+                    [cache_control] => no-cache, no-store, max-age=0, must-revalidate
+                    [pragma] => no-cache
+                    [date] => Wed, 19 Nov 2025 02:43:02 GMT
+                    [expires] => Mon, 01 Jan 1990 00:00:00 GMT
+                    [content_type] => application/json; charset=utf-8
+                    [vary] => Origin,Accept-Encoding
+                    [server] => ESF
+                    [x_xss_protection] => 0
+                    [x_frame_options] => SAMEORIGIN
+                    [x_content_type_options] => nosniff
+                    [alt_svc] => h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+                    [accept_ranges] => none
+                )
+
+            [body] => {
+  "sub": "103644390298224980639",
+  "name": "Tanniaa",
+  "given_name": "Tanniaa",
+  "picture": "https://lh3.googleusercontent.com/a/ACg8ocLwtG7YLW3f7BMsmqJaZUn4RqIQBwGNfpVPzZAH_tSVqyfpHgia\u003ds96-c",
+  "email": "britaniafisichella@gmail.com",
+  "email_verified": true
+}
+        )
+
+    [client] => Array
+        (
+            [error] => 
+            [info] => Array
+                (
+                    [url] => https://www.googleapis.com/oauth2/v3/userinfo
+                    [content_type] => application/json; charset=utf-8
+                    [http_code] => 200
+                    [header_size] => 455
+                    [request_size] => 530
+                    [filetime] => -1
+                    [ssl_verify_result] => 0
+                    [redirect_count] => 0
+                    [total_time] => 0.453184
+                    [namelookup_time] => 0.057362
+                    [connect_time] => 0.130764
+                    [pretransfer_time] => 0.385848
+                    [size_upload] => 0
+                    [size_download] => 273
+                    [speed_download] => 602
+                    [speed_upload] => 0
+                    [download_content_length] => -1
+                    [upload_content_length] => 0
+                    [starttransfer_time] => 0.453026
+                    [redirect_time] => 0
+                    [redirect_url] => 
+                    [primary_ip] => 74.125.200.95
+                    [certinfo] => Array
+                        (
+                        )
+
+                    [primary_port] => 443
+                    [local_ip] => 154.154.1.213
+                    [local_port] => 63934
+                    [http_version] => 3
+                    [protocol] => 2
+                    [ssl_verifyresult] => 0
+                    [scheme] => HTTPS
+                    [appconnect_time_us] => 385589
+                    [connect_time_us] => 130764
+                    [namelookup_time_us] => 57362
+                    [pretransfer_time_us] => 385848
+                    [redirect_time_us] => 0
+                    [starttransfer_time_us] => 453026
+                    [total_time_us] => 453184
+                    [request_header] => GET /oauth2/v3/userinfo? HTTP/2
+Host: www.googleapis.com
+user-agent: Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+accept-encoding: identity
+accept: */*
+cache-control: max-age=0
+connection: keep-alive
+authorization: Bearer ya29.a0ATi6K2vZUMcq2ny8UXNPhz8oAGbxklxcSNLzDpa_GNw3geAL8TzMmrqg9H9R91ah7EEgAoZHFaxSyqT3XQ_BbUMrzI4hnjzafMKULy-C8aF6GK5ssnZ49a_Pe28NTzVF-4QqCU8Nu4euUwlDhwWqeoLl6mb4DPo6wP2YGwfe13BDAZoiD1Bkhc6AF5wzGJe6AHUu6vIaCgYKAUkSARQSFQHGX2MiZYauDjcLEQSsE-H7Y0T4qg0206
+
+
+                )
+
+            [opts] => Array
+                (
+                    [13] => 30
+                    [78] => 30
+                    [64] => 
+                    [81] => 
+                    [19913] => 1
+                    [52] => 1
+                    [68] => 5
+                    [2] => 1
+                    [10102] => identity
+                    [10018] => Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+                    [10002] => https://www.googleapis.com/oauth2/v3/userinfo?
+                    [10023] => Array
+                        (
+                            [0] => Accept: */*
+                            [1] => Cache-Control: max-age=0
+                            [2] => Connection: keep-alive
+                            [3] => Expect: 
+                            [4] => Pragma: 
+                            [5] => Authorization: Bearer ya29.a0ATi6K2vZUMcq2ny8UXNPhz8oAGbxklxcSNLzDpa_GNw3geAL8TzMmrqg9H9R91ah7EEgAoZHFaxSyqT3XQ_BbUMrzI4hnjzafMKULy-C8aF6GK5ssnZ49a_Pe28NTzVF-4QqCU8Nu4euUwlDhwWqeoLl6mb4DPo6wP2YGwfe13BDAZoiD1Bkhc6AF5wzGJe6AHUu6vIaCgYKAUkSARQSFQHGX2MiZYauDjcLEQSsE-H7Y0T4qg0206
+                        )
+
+                    [20079] => *omitted
+                )
+
+        )
+
+)
+
+debug -- ::1 -- 2025-11-19T02:51:30+00:00 -- Initialize Hybridauth\Provider\Google, config: 
+Array
+(
+    [enabled] => 1
+    [keys] => Array
+        (
+            [id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+            [secret] => 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
+        )
+
+    [scope] => openid profile email https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile
+    [debug_mode] => 1
+    [debug_file] => D:\Laragon\www\UnFixed/hybridauth.log
+    [callback] => http://localhost:3000/callback.php
+)
+
+info -- ::1 -- 2025-11-19T02:51:30+00:00 -- Hybridauth\Provider\Google::authenticate()
+debug -- ::1 -- 2025-11-19T02:51:30+00:00 -- Hybridauth\Provider\Google::authenticateBegin(), redirecting user to:
+Array
+(
+    [0] => https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback.php&scope=openid+profile+email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=offline&prompt=consent&state=HA-RFI5GU8AJ0SQ7Z6ND2LCXHMO1YKT3B4PWEV9
+)
+
+debug -- ::1 -- 2025-11-19T02:51:36+00:00 -- Initialize Hybridauth\Provider\Google, config: 
+Array
+(
+    [enabled] => 1
+    [keys] => Array
+        (
+            [id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+            [secret] => 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
+        )
+
+    [scope] => openid profile email https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile
+    [debug_mode] => 1
+    [debug_file] => D:\Laragon\www\UnFixed/hybridauth.log
+    [callback] => http://localhost:3000/callback.php
+)
+
+info -- ::1 -- 2025-11-19T02:51:36+00:00 -- Hybridauth\Provider\Google::authenticate()
+debug -- ::1 -- 2025-11-19T02:51:36+00:00 -- Hybridauth\Provider\Google::authenticateFinish(), callback url:
+Array
+(
+    [0] => http://localhost:3000/callback.php?state=HA-RFI5GU8AJ0SQ7Z6ND2LCXHMO1YKT3B4PWEV9&code=4%2F0Ab32j92oGMYkVQ8s-MXSBdTNzqlQc52qQk9vvxxjTFE0JSVfnM1jv_enMB3s-nIfQ3NmFg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=1&prompt=consent
+)
+
+debug -- ::1 -- 2025-11-19T02:51:36+00:00 -- Hybridauth\HttpClient\Curl::request( https://oauth2.googleapis.com/token, POST ), response:
+Array
+(
+    [request] => Array
+        (
+            [uri] => https://oauth2.googleapis.com/token
+            [method] => POST
+            [parameters] => Array
+                (
+                    [client_id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+                    [client_secret] => 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
+                    [grant_type] => authorization_code
+                    [redirect_uri] => http://localhost:3000/callback.php
+                    [code] => 4/0Ab32j92oGMYkVQ8s-MXSBdTNzqlQc52qQk9vvxxjTFE0JSVfnM1jv_enMB3s-nIfQ3NmFg
+                )
+
+            [headers] => Array
+                (
+                    [Accept] => */*
+                    [Cache-Control] => max-age=0
+                    [Connection] => keep-alive
+                    [Expect] => 
+                    [Pragma] => 
+                )
+
+        )
+
+    [response] => Array
+        (
+            [code] => 200
+            [headers] => Array
+                (
+                    [pragma] => no-cache
+                    [cache_control] => no-cache, no-store, max-age=0, must-revalidate
+                    [expires] => Mon, 01 Jan 1990 00:00:00 GMT
+                    [date] => Wed, 19 Nov 2025 02:51:45 GMT
+                    [content_type] => application/json; charset=utf-8
+                    [vary] => Origin,Accept-Encoding
+                    [server] => scaffolding on HTTPServer2
+                    [x_xss_protection] => 0
+                    [x_frame_options] => SAMEORIGIN
+                    [x_content_type_options] => nosniff
+                    [alt_svc] => h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+                    [accept_ranges] => none
+                )
+
+            [body] => {
+  "access_token": "ya29.a0ATi6K2tXXfWJi9dG45K0N8GFkdrDo3n-L7iQlcZuhFXpWENB8Nf8dsCwJNLwfcTxgBtMTE7ZetcLzZg8QdcCiJ4YYcdt9J9-XdFdfZ0H-AL741YFL65_udManoM2CztzXj8Zj7KMmHtqpuZ7oMt-T_mLhy35LQf7VXsH66iHYCV2-89RbvDp5VNUV4x40iZ45MKKvLQaCgYKATwSARQSFQHGX2Mim3gcUjdpnHYeJe1WY78H5A0206",
+  "expires_in": 3599,
+  "refresh_token": "1//0g68-vVFIZjuSCgYIARAAGBASNwF-L9Irli3K0xdehp0t7ckSRS7jwTw5BPczRLS60ZTPimFL4IOtx1qzHbmpdArDpYM7PgXfqWM",
+  "scope": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImE1NzMzYmJiZDgxOGFhNWRiMTk1MTk5Y2Q1NjhlNWQ2ODUxMzJkM2YiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI1MjMwNzAxNjU1NzMtdnJhZ3FnbXFzc3IydW9zNmxmZmJ1Z2puc3RqMjcyMGEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI1MjMwNzAxNjU1NzMtdnJhZ3FnbXFzc3IydW9zNmxmZmJ1Z2puc3RqMjcyMGEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDM2NDQzOTAyOTgyMjQ5ODA2MzkiLCJlbWFpbCI6ImJyaXRhbmlhZmlzaWNoZWxsYUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6IkxVOXlXako5c0g3QnVOQkM5bjhLUlEiLCJuYW1lIjoiVGFubmlhYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMd3RHN1lMVzNmN0JNc21xSmFaVW40UnFJUUJ3R05mcFZQelpBSF90U1ZxeWZwSGdpYT1zOTYtYyIsImdpdmVuX25hbWUiOiJUYW5uaWFhIiwiaWF0IjoxNzYzNTIwNzA1LCJleHAiOjE3NjM1MjQzMDV9.YZfStccdzaqKDmCEj-TlHE4wB4SBWa8mYNje2kOdpBKWxyjy13OYM4qLJiJ7nJZZjV_KrkjNRuq6uSpHD7ySqGGKoz5yEb60zxQAXgn6u1CqUA5_jAzub4LaZqOMLFYtCwn1AUCxlAwRm8DtscoMhhrlLyyAqaxpf82tZ_9m5otSZfnYrifvonxHLYAiFboxCChgn2Aae8mco84H1bAxYCOccxBfX9GwmAxjCXu0souciQvtLN82exzkNt-rBVjIOTKstyr0jtbcFfHIRvhrqNvSFjboIq171TqAiZBCPp52muMbaHI087ba-gR9f1_wtys46v5x3En71giRLpVl2w"
+}
+        )
+
+    [client] => Array
+        (
+            [error] => 
+            [info] => Array
+                (
+                    [url] => https://oauth2.googleapis.com/token
+                    [content_type] => application/json; charset=utf-8
+                    [http_code] => 200
+                    [header_size] => 478
+                    [request_size] => 313
+                    [filetime] => -1
+                    [ssl_verify_result] => 0
+                    [redirect_count] => 0
+                    [total_time] => 0.334411
+                    [namelookup_time] => 0.105294
+                    [connect_time] => 0.153205
+                    [pretransfer_time] => 0.232458
+                    [size_upload] => 301
+                    [size_download] => 1712
+                    [speed_download] => 5119
+                    [speed_upload] => 900
+                    [download_content_length] => -1
+                    [upload_content_length] => 301
+                    [starttransfer_time] => 0.232473
+                    [redirect_time] => 0
+                    [redirect_url] => 
+                    [primary_ip] => 172.217.194.95
+                    [certinfo] => Array
+                        (
+                        )
+
+                    [primary_port] => 443
+                    [local_ip] => 154.154.1.213
+                    [local_port] => 50491
+                    [http_version] => 3
+                    [protocol] => 2
+                    [ssl_verifyresult] => 0
+                    [scheme] => HTTPS
+                    [appconnect_time_us] => 232226
+                    [connect_time_us] => 153205
+                    [namelookup_time_us] => 105294
+                    [pretransfer_time_us] => 232458
+                    [redirect_time_us] => 0
+                    [starttransfer_time_us] => 232473
+                    [total_time_us] => 334411
+                    [request_header] => POST /token HTTP/2
+Host: oauth2.googleapis.com
+user-agent: Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+accept-encoding: identity
+accept: */*
+cache-control: max-age=0
+connection: keep-alive
+content-length: 301
+content-type: application/x-www-form-urlencoded
+
+
+                )
+
+            [opts] => Array
+                (
+                    [13] => 30
+                    [78] => 30
+                    [64] => 
+                    [81] => 
+                    [19913] => 1
+                    [52] => 1
+                    [68] => 5
+                    [2] => 1
+                    [10102] => identity
+                    [10018] => Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+                    [47] => 1
+                    [10015] => client_id=523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com&client_secret=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&grant_type=authorization_code&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback.php&code=4%2F0Ab32j92oGMYkVQ8s-MXSBdTNzqlQc52qQk9vvxxjTFE0JSVfnM1jv_enMB3s-nIfQ3NmFg
+                    [10002] => https://oauth2.googleapis.com/token
+                    [10023] => Array
+                        (
+                            [0] => Accept: */*
+                            [1] => Cache-Control: max-age=0
+                            [2] => Connection: keep-alive
+                            [3] => Expect: 
+                            [4] => Pragma: 
+                        )
+
+                    [20079] => *omitted
+                )
+
+        )
+
+)
+
+debug -- ::1 -- 2025-11-19T02:51:36+00:00 -- Hybridauth\HttpClient\Curl::request( https://www.googleapis.com/oauth2/v3/userinfo?, GET ), response:
+Array
+(
+    [request] => Array
+        (
+            [uri] => https://www.googleapis.com/oauth2/v3/userinfo
+            [method] => GET
+            [parameters] => Array
+                (
+                )
+
+            [headers] => Array
+                (
+                    [Accept] => */*
+                    [Cache-Control] => max-age=0
+                    [Connection] => keep-alive
+                    [Expect] => 
+                    [Pragma] => 
+                    [Authorization] => Bearer ya29.a0ATi6K2tXXfWJi9dG45K0N8GFkdrDo3n-L7iQlcZuhFXpWENB8Nf8dsCwJNLwfcTxgBtMTE7ZetcLzZg8QdcCiJ4YYcdt9J9-XdFdfZ0H-AL741YFL65_udManoM2CztzXj8Zj7KMmHtqpuZ7oMt-T_mLhy35LQf7VXsH66iHYCV2-89RbvDp5VNUV4x40iZ45MKKvLQaCgYKATwSARQSFQHGX2Mim3gcUjdpnHYeJe1WY78H5A0206
+                )
+
+        )
+
+    [response] => Array
+        (
+            [code] => 200
+            [headers] => Array
+                (
+                    [pragma] => no-cache
+                    [cache_control] => no-cache, no-store, max-age=0, must-revalidate
+                    [expires] => Mon, 01 Jan 1990 00:00:00 GMT
+                    [date] => Wed, 19 Nov 2025 02:51:45 GMT
+                    [content_type] => application/json; charset=utf-8
+                    [vary] => Origin,Accept-Encoding
+                    [server] => ESF
+                    [x_xss_protection] => 0
+                    [x_frame_options] => SAMEORIGIN
+                    [x_content_type_options] => nosniff
+                    [alt_svc] => h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+                    [accept_ranges] => none
+                )
+
+            [body] => {
+  "sub": "103644390298224980639",
+  "name": "Tanniaa",
+  "given_name": "Tanniaa",
+  "picture": "https://lh3.googleusercontent.com/a/ACg8ocLwtG7YLW3f7BMsmqJaZUn4RqIQBwGNfpVPzZAH_tSVqyfpHgia\u003ds96-c",
+  "email": "britaniafisichella@gmail.com",
+  "email_verified": true
+}
+        )
+
+    [client] => Array
+        (
+            [error] => 
+            [info] => Array
+                (
+                    [url] => https://www.googleapis.com/oauth2/v3/userinfo
+                    [content_type] => application/json; charset=utf-8
+                    [http_code] => 200
+                    [header_size] => 455
+                    [request_size] => 530
+                    [filetime] => -1
+                    [ssl_verify_result] => 0
+                    [redirect_count] => 0
+                    [total_time] => 0.277285
+                    [namelookup_time] => 0.078921
+                    [connect_time] => 0.170282
+                    [pretransfer_time] => 0.226813
+                    [size_upload] => 0
+                    [size_download] => 273
+                    [speed_download] => 984
+                    [speed_upload] => 0
+                    [download_content_length] => -1
+                    [upload_content_length] => 0
+                    [starttransfer_time] => 0.27717
+                    [redirect_time] => 0
+                    [redirect_url] => 
+                    [primary_ip] => 172.217.194.95
+                    [certinfo] => Array
+                        (
+                        )
+
+                    [primary_port] => 443
+                    [local_ip] => 154.154.1.213
+                    [local_port] => 50494
+                    [http_version] => 3
+                    [protocol] => 2
+                    [ssl_verifyresult] => 0
+                    [scheme] => HTTPS
+                    [appconnect_time_us] => 226599
+                    [connect_time_us] => 170282
+                    [namelookup_time_us] => 78921
+                    [pretransfer_time_us] => 226813
+                    [redirect_time_us] => 0
+                    [starttransfer_time_us] => 277170
+                    [total_time_us] => 277285
+                    [request_header] => GET /oauth2/v3/userinfo? HTTP/2
+Host: www.googleapis.com
+user-agent: Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+accept-encoding: identity
+accept: */*
+cache-control: max-age=0
+connection: keep-alive
+authorization: Bearer ya29.a0ATi6K2tXXfWJi9dG45K0N8GFkdrDo3n-L7iQlcZuhFXpWENB8Nf8dsCwJNLwfcTxgBtMTE7ZetcLzZg8QdcCiJ4YYcdt9J9-XdFdfZ0H-AL741YFL65_udManoM2CztzXj8Zj7KMmHtqpuZ7oMt-T_mLhy35LQf7VXsH66iHYCV2-89RbvDp5VNUV4x40iZ45MKKvLQaCgYKATwSARQSFQHGX2Mim3gcUjdpnHYeJe1WY78H5A0206
+
+
+                )
+
+            [opts] => Array
+                (
+                    [13] => 30
+                    [78] => 30
+                    [64] => 
+                    [81] => 
+                    [19913] => 1
+                    [52] => 1
+                    [68] => 5
+                    [2] => 1
+                    [10102] => identity
+                    [10018] => Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+                    [10002] => https://www.googleapis.com/oauth2/v3/userinfo?
+                    [10023] => Array
+                        (
+                            [0] => Accept: */*
+                            [1] => Cache-Control: max-age=0
+                            [2] => Connection: keep-alive
+                            [3] => Expect: 
+                            [4] => Pragma: 
+                            [5] => Authorization: Bearer ya29.a0ATi6K2tXXfWJi9dG45K0N8GFkdrDo3n-L7iQlcZuhFXpWENB8Nf8dsCwJNLwfcTxgBtMTE7ZetcLzZg8QdcCiJ4YYcdt9J9-XdFdfZ0H-AL741YFL65_udManoM2CztzXj8Zj7KMmHtqpuZ7oMt-T_mLhy35LQf7VXsH66iHYCV2-89RbvDp5VNUV4x40iZ45MKKvLQaCgYKATwSARQSFQHGX2Mim3gcUjdpnHYeJe1WY78H5A0206
+                        )
+
+                    [20079] => *omitted
+                )
+
+        )
+
+)
+
+debug -- ::1 -- 2025-11-19T02:58:10+00:00 -- Initialize Hybridauth\Provider\Google, config: 
+Array
+(
+    [enabled] => 1
+    [keys] => Array
+        (
+            [id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+            [secret] => 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
+        )
+
+    [scope] => openid profile email https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile
+    [debug_mode] => 1
+    [debug_file] => D:\Laragon\www\UnFixed/hybridauth.log
+    [callback] => http://localhost:3000/callback.php
+)
+
+info -- ::1 -- 2025-11-19T02:58:10+00:00 -- Hybridauth\Provider\Google::authenticate()
+debug -- ::1 -- 2025-11-19T02:58:10+00:00 -- Hybridauth\Provider\Google::authenticateBegin(), redirecting user to:
+Array
+(
+    [0] => https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback.php&scope=openid+profile+email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=offline&prompt=consent&state=HA-SPZNXRJ9Q15C4Y3UV2MLWOB680EDIGA7KHFT
+)
+
+debug -- ::1 -- 2025-11-19T02:58:16+00:00 -- Initialize Hybridauth\Provider\Google, config: 
+Array
+(
+    [enabled] => 1
+    [keys] => Array
+        (
+            [id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+            [secret] => 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
+        )
+
+    [scope] => openid profile email https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile
+    [debug_mode] => 1
+    [debug_file] => D:\Laragon\www\UnFixed/hybridauth.log
+    [callback] => http://localhost:3000/callback.php
+)
+
+info -- ::1 -- 2025-11-19T02:58:16+00:00 -- Hybridauth\Provider\Google::authenticate()
+debug -- ::1 -- 2025-11-19T02:58:16+00:00 -- Hybridauth\Provider\Google::authenticateFinish(), callback url:
+Array
+(
+    [0] => http://localhost:3000/callback.php?state=HA-SPZNXRJ9Q15C4Y3UV2MLWOB680EDIGA7KHFT&code=4%2F0Ab32j93AG3mw84GgckI8w0U5Og5VmvcXGsIqaSQilrieA6UO6d8gpFn_5QLFur2j7j2ZCw&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=1&prompt=consent
+)
+
+debug -- ::1 -- 2025-11-19T02:58:17+00:00 -- Hybridauth\HttpClient\Curl::request( https://oauth2.googleapis.com/token, POST ), response:
+Array
+(
+    [request] => Array
+        (
+            [uri] => https://oauth2.googleapis.com/token
+            [method] => POST
+            [parameters] => Array
+                (
+                    [client_id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+                    [client_secret] => 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
+                    [grant_type] => authorization_code
+                    [redirect_uri] => http://localhost:3000/callback.php
+                    [code] => 4/0Ab32j93AG3mw84GgckI8w0U5Og5VmvcXGsIqaSQilrieA6UO6d8gpFn_5QLFur2j7j2ZCw
+                )
+
+            [headers] => Array
+                (
+                    [Accept] => */*
+                    [Cache-Control] => max-age=0
+                    [Connection] => keep-alive
+                    [Expect] => 
+                    [Pragma] => 
+                )
+
+        )
+
+    [response] => Array
+        (
+            [code] => 200
+            [headers] => Array
+                (
+                    [pragma] => no-cache
+                    [expires] => Mon, 01 Jan 1990 00:00:00 GMT
+                    [cache_control] => no-cache, no-store, max-age=0, must-revalidate
+                    [date] => Wed, 19 Nov 2025 02:58:25 GMT
+                    [content_type] => application/json; charset=utf-8
+                    [vary] => Origin,Accept-Encoding
+                    [server] => scaffolding on HTTPServer2
+                    [x_xss_protection] => 0
+                    [x_frame_options] => SAMEORIGIN
+                    [x_content_type_options] => nosniff
+                    [alt_svc] => h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+                    [accept_ranges] => none
+                )
+
+            [body] => {
+  "access_token": "ya29.a0ATi6K2tCe1OVONWJPLPGJyms6he-AdYT48nSPbAHfSdcXWcwMCLCDMp70Wh-B7mVrVfpyXPqsINr_iWT9-US-J-cFAoZiWEt3XtejetKCQaRMCLGWh5KoniWh3CnXikPNDQVnhYhsFb5-UkXv96Gdbei5egFveNXAAnFHb0-97oKuQCctmXEPbEg0V2vZLaXx1oWwOAaCgYKAZMSARQSFQHGX2MiPkUTl62N-lCQn7pjum83DQ0206",
+  "expires_in": 3599,
+  "refresh_token": "1//0gsY5jjK5mV_dCgYIARAAGBASNwF-L9IryKagDG9u2gf7M02Ah2OoHAuh9FHiBk-70fhJ_FV8ed27J_I-sR_Ew3kl8Yf2LxSh_d8",
+  "scope": "https://www.googleapis.com/auth/userinfo.email openid https://www.googleapis.com/auth/userinfo.profile",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImE1NzMzYmJiZDgxOGFhNWRiMTk1MTk5Y2Q1NjhlNWQ2ODUxMzJkM2YiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI1MjMwNzAxNjU1NzMtdnJhZ3FnbXFzc3IydW9zNmxmZmJ1Z2puc3RqMjcyMGEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI1MjMwNzAxNjU1NzMtdnJhZ3FnbXFzc3IydW9zNmxmZmJ1Z2puc3RqMjcyMGEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDM2NDQzOTAyOTgyMjQ5ODA2MzkiLCJlbWFpbCI6ImJyaXRhbmlhZmlzaWNoZWxsYUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6Ing4REFPeWtYUnA4Tmt0VmYwTUJZR0EiLCJuYW1lIjoiVGFubmlhYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMd3RHN1lMVzNmN0JNc21xSmFaVW40UnFJUUJ3R05mcFZQelpBSF90U1ZxeWZwSGdpYT1zOTYtYyIsImdpdmVuX25hbWUiOiJUYW5uaWFhIiwiaWF0IjoxNzYzNTIxMTA1LCJleHAiOjE3NjM1MjQ3MDV9.La2hXiy25DWj_MTM30-R6AWEQEz4A24EmvLyP7g2mRDT8e7voEq9mhUrQlQPhGwAqMMGH4OmR4iisn-LCSgqk4b6KM2XMVTrkb6Do974L1G7oD6d0jQibl5wbdvM_VveeqsHfDhRKXLVk_27Ku16DSvbeKy6MRy6cPFehFhPvlaAFEEa2VDGUJpvXxshYLrEUVvptUoOE77XTFOEvpFAhK8LpPu5rTAYZ6l5FtQ3hHF9oSY8-3PNKMyrgs_TVs2Ja1rEJr-7lHjfUOJP2Br0ZACkQiVl69ZoH9VZ6t0Mo7rxGOY7bEwCFRrHth8io_e3StYNTEXwEBSstwppA0QiWQ"
+}
+        )
+
+    [client] => Array
+        (
+            [error] => 
+            [info] => Array
+                (
+                    [url] => https://oauth2.googleapis.com/token
+                    [content_type] => application/json; charset=utf-8
+                    [http_code] => 200
+                    [header_size] => 478
+                    [request_size] => 313
+                    [filetime] => -1
+                    [ssl_verify_result] => 0
+                    [redirect_count] => 0
+                    [total_time] => 0.40039
+                    [namelookup_time] => 0.024518
+                    [connect_time] => 0.094488
+                    [pretransfer_time] => 0.227207
+                    [size_upload] => 301
+                    [size_download] => 1712
+                    [speed_download] => 4275
+                    [speed_upload] => 751
+                    [download_content_length] => -1
+                    [upload_content_length] => 301
+                    [starttransfer_time] => 0.227226
+                    [redirect_time] => 0
+                    [redirect_url] => 
+                    [primary_ip] => 172.253.118.95
+                    [certinfo] => Array
+                        (
+                        )
+
+                    [primary_port] => 443
+                    [local_ip] => 154.154.1.213
+                    [local_port] => 60391
+                    [http_version] => 3
+                    [protocol] => 2
+                    [ssl_verifyresult] => 0
+                    [scheme] => HTTPS
+                    [appconnect_time_us] => 226761
+                    [connect_time_us] => 94488
+                    [namelookup_time_us] => 24518
+                    [pretransfer_time_us] => 227207
+                    [redirect_time_us] => 0
+                    [starttransfer_time_us] => 227226
+                    [total_time_us] => 400390
+                    [request_header] => POST /token HTTP/2
+Host: oauth2.googleapis.com
+user-agent: Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+accept-encoding: identity
+accept: */*
+cache-control: max-age=0
+connection: keep-alive
+content-length: 301
+content-type: application/x-www-form-urlencoded
+
+
+                )
+
+            [opts] => Array
+                (
+                    [13] => 30
+                    [78] => 30
+                    [64] => 
+                    [81] => 
+                    [19913] => 1
+                    [52] => 1
+                    [68] => 5
+                    [2] => 1
+                    [10102] => identity
+                    [10018] => Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+                    [47] => 1
+                    [10015] => client_id=523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com&client_secret=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&grant_type=authorization_code&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback.php&code=4%2F0Ab32j93AG3mw84GgckI8w0U5Og5VmvcXGsIqaSQilrieA6UO6d8gpFn_5QLFur2j7j2ZCw
+                    [10002] => https://oauth2.googleapis.com/token
+                    [10023] => Array
+                        (
+                            [0] => Accept: */*
+                            [1] => Cache-Control: max-age=0
+                            [2] => Connection: keep-alive
+                            [3] => Expect: 
+                            [4] => Pragma: 
+                        )
+
+                    [20079] => *omitted
+                )
+
+        )
+
+)
+
+debug -- ::1 -- 2025-11-19T02:58:17+00:00 -- Hybridauth\HttpClient\Curl::request( https://www.googleapis.com/oauth2/v3/userinfo?, GET ), response:
+Array
+(
+    [request] => Array
+        (
+            [uri] => https://www.googleapis.com/oauth2/v3/userinfo
+            [method] => GET
+            [parameters] => Array
+                (
+                )
+
+            [headers] => Array
+                (
+                    [Accept] => */*
+                    [Cache-Control] => max-age=0
+                    [Connection] => keep-alive
+                    [Expect] => 
+                    [Pragma] => 
+                    [Authorization] => Bearer ya29.a0ATi6K2tCe1OVONWJPLPGJyms6he-AdYT48nSPbAHfSdcXWcwMCLCDMp70Wh-B7mVrVfpyXPqsINr_iWT9-US-J-cFAoZiWEt3XtejetKCQaRMCLGWh5KoniWh3CnXikPNDQVnhYhsFb5-UkXv96Gdbei5egFveNXAAnFHb0-97oKuQCctmXEPbEg0V2vZLaXx1oWwOAaCgYKAZMSARQSFQHGX2MiPkUTl62N-lCQn7pjum83DQ0206
+                )
+
+        )
+
+    [response] => Array
+        (
+            [code] => 200
+            [headers] => Array
+                (
+                    [pragma] => no-cache
+                    [expires] => Mon, 01 Jan 1990 00:00:00 GMT
+                    [cache_control] => no-cache, no-store, max-age=0, must-revalidate
+                    [date] => Wed, 19 Nov 2025 02:58:25 GMT
+                    [content_type] => application/json; charset=utf-8
+                    [vary] => Origin,Accept-Encoding
+                    [server] => ESF
+                    [x_xss_protection] => 0
+                    [x_frame_options] => SAMEORIGIN
+                    [x_content_type_options] => nosniff
+                    [alt_svc] => h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+                    [accept_ranges] => none
+                )
+
+            [body] => {
+  "sub": "103644390298224980639",
+  "name": "Tanniaa",
+  "given_name": "Tanniaa",
+  "picture": "https://lh3.googleusercontent.com/a/ACg8ocLwtG7YLW3f7BMsmqJaZUn4RqIQBwGNfpVPzZAH_tSVqyfpHgia\u003ds96-c",
+  "email": "britaniafisichella@gmail.com",
+  "email_verified": true
+}
+        )
+
+    [client] => Array
+        (
+            [error] => 
+            [info] => Array
+                (
+                    [url] => https://www.googleapis.com/oauth2/v3/userinfo
+                    [content_type] => application/json; charset=utf-8
+                    [http_code] => 200
+                    [header_size] => 455
+                    [request_size] => 530
+                    [filetime] => -1
+                    [ssl_verify_result] => 0
+                    [redirect_count] => 0
+                    [total_time] => 0.214724
+                    [namelookup_time] => 0.013509
+                    [connect_time] => 0.045909
+                    [pretransfer_time] => 0.141137
+                    [size_upload] => 0
+                    [size_download] => 273
+                    [speed_download] => 1271
+                    [speed_upload] => 0
+                    [download_content_length] => -1
+                    [upload_content_length] => 0
+                    [starttransfer_time] => 0.214554
+                    [redirect_time] => 0
+                    [redirect_url] => 
+                    [primary_ip] => 74.125.130.95
+                    [certinfo] => Array
+                        (
+                        )
+
+                    [primary_port] => 443
+                    [local_ip] => 154.154.1.213
+                    [local_port] => 60394
+                    [http_version] => 3
+                    [protocol] => 2
+                    [ssl_verifyresult] => 0
+                    [scheme] => HTTPS
+                    [appconnect_time_us] => 140880
+                    [connect_time_us] => 45909
+                    [namelookup_time_us] => 13509
+                    [pretransfer_time_us] => 141137
+                    [redirect_time_us] => 0
+                    [starttransfer_time_us] => 214554
+                    [total_time_us] => 214724
+                    [request_header] => GET /oauth2/v3/userinfo? HTTP/2
+Host: www.googleapis.com
+user-agent: Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+accept-encoding: identity
+accept: */*
+cache-control: max-age=0
+connection: keep-alive
+authorization: Bearer ya29.a0ATi6K2tCe1OVONWJPLPGJyms6he-AdYT48nSPbAHfSdcXWcwMCLCDMp70Wh-B7mVrVfpyXPqsINr_iWT9-US-J-cFAoZiWEt3XtejetKCQaRMCLGWh5KoniWh3CnXikPNDQVnhYhsFb5-UkXv96Gdbei5egFveNXAAnFHb0-97oKuQCctmXEPbEg0V2vZLaXx1oWwOAaCgYKAZMSARQSFQHGX2MiPkUTl62N-lCQn7pjum83DQ0206
+
+
+                )
+
+            [opts] => Array
+                (
+                    [13] => 30
+                    [78] => 30
+                    [64] => 
+                    [81] => 
+                    [19913] => 1
+                    [52] => 1
+                    [68] => 5
+                    [2] => 1
+                    [10102] => identity
+                    [10018] => Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+                    [10002] => https://www.googleapis.com/oauth2/v3/userinfo?
+                    [10023] => Array
+                        (
+                            [0] => Accept: */*
+                            [1] => Cache-Control: max-age=0
+                            [2] => Connection: keep-alive
+                            [3] => Expect: 
+                            [4] => Pragma: 
+                            [5] => Authorization: Bearer ya29.a0ATi6K2tCe1OVONWJPLPGJyms6he-AdYT48nSPbAHfSdcXWcwMCLCDMp70Wh-B7mVrVfpyXPqsINr_iWT9-US-J-cFAoZiWEt3XtejetKCQaRMCLGWh5KoniWh3CnXikPNDQVnhYhsFb5-UkXv96Gdbei5egFveNXAAnFHb0-97oKuQCctmXEPbEg0V2vZLaXx1oWwOAaCgYKAZMSARQSFQHGX2MiPkUTl62N-lCQn7pjum83DQ0206
+                        )
+
+                    [20079] => *omitted
+                )
+
+        )
+
+)
+
+debug -- ::1 -- 2025-11-19T03:08:29+00:00 -- Initialize Hybridauth\Provider\Google, config: 
+Array
+(
+    [enabled] => 1
+    [keys] => Array
+        (
+            [id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+            [secret] => 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
+        )
+
+    [scope] => openid profile email https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile
+    [debug_mode] => 1
+    [debug_file] => D:\Laragon\www\UnFixed/hybridauth.log
+    [callback] => http://localhost:3000/callback.php
+)
+
+info -- ::1 -- 2025-11-19T03:08:29+00:00 -- Hybridauth\Provider\Google::authenticate()
+debug -- ::1 -- 2025-11-19T03:08:29+00:00 -- Hybridauth\Provider\Google::authenticateBegin(), redirecting user to:
+Array
+(
+    [0] => https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback.php&scope=openid+profile+email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=offline&prompt=consent&state=HA-LFP4JV96ED0Q5GOZUTSWNH1MI72BYXR83ACK
+)
+
+debug -- ::1 -- 2025-11-19T03:08:35+00:00 -- Initialize Hybridauth\Provider\Google, config: 
+Array
+(
+    [enabled] => 1
+    [keys] => Array
+        (
+            [id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+            [secret] => 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
+        )
+
+    [scope] => openid profile email https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile
+    [debug_mode] => 1
+    [debug_file] => D:\Laragon\www\UnFixed/hybridauth.log
+    [callback] => http://localhost:3000/callback.php
+)
+
+info -- ::1 -- 2025-11-19T03:08:35+00:00 -- Hybridauth\Provider\Google::authenticate()
+debug -- ::1 -- 2025-11-19T03:08:35+00:00 -- Hybridauth\Provider\Google::authenticateFinish(), callback url:
+Array
+(
+    [0] => http://localhost:3000/callback.php?state=HA-LFP4JV96ED0Q5GOZUTSWNH1MI72BYXR83ACK&code=4%2F0Ab32j904OtzXNwdCtUyUuVrczd0RuvQ7EsP5j_cFV3GJc9gGU1qP_RceJMXFtOmeGQDijg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=1&prompt=consent
+)
+
+debug -- ::1 -- 2025-11-19T03:08:35+00:00 -- Hybridauth\HttpClient\Curl::request( https://oauth2.googleapis.com/token, POST ), response:
+Array
+(
+    [request] => Array
+        (
+            [uri] => https://oauth2.googleapis.com/token
+            [method] => POST
+            [parameters] => Array
+                (
+                    [client_id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+                    [client_secret] => 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
+                    [grant_type] => authorization_code
+                    [redirect_uri] => http://localhost:3000/callback.php
+                    [code] => 4/0Ab32j904OtzXNwdCtUyUuVrczd0RuvQ7EsP5j_cFV3GJc9gGU1qP_RceJMXFtOmeGQDijg
+                )
+
+            [headers] => Array
+                (
+                    [Accept] => */*
+                    [Cache-Control] => max-age=0
+                    [Connection] => keep-alive
+                    [Expect] => 
+                    [Pragma] => 
+                )
+
+        )
+
+    [response] => Array
+        (
+            [code] => 200
+            [headers] => Array
+                (
+                    [cache_control] => no-cache, no-store, max-age=0, must-revalidate
+                    [pragma] => no-cache
+                    [expires] => Mon, 01 Jan 1990 00:00:00 GMT
+                    [date] => Wed, 19 Nov 2025 03:08:44 GMT
+                    [content_type] => application/json; charset=utf-8
+                    [vary] => Origin,Accept-Encoding
+                    [server] => scaffolding on HTTPServer2
+                    [x_xss_protection] => 0
+                    [x_frame_options] => SAMEORIGIN
+                    [x_content_type_options] => nosniff
+                    [alt_svc] => h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+                    [accept_ranges] => none
+                )
+
+            [body] => {
+  "access_token": "ya29.a0ATi6K2vqbXnr9w1qzopHMTSR8H59_-00y9bzTFzMih5S5hcDr12_3d_hWi6ZBu8oAOBR0O88WxNWy9pPCJTJ2DKRAs6qXoo8enOm33Wc5UR4freHB71kQHyXM0Y4QQra4WITkxzUDsAiiX0y36betimJvWLQoSwScH8VB4zSmrM0oLvadn9RY7sr-6LMLU-emLCvt1kaCgYKAWoSARQSFQHGX2MiOxQ-nLMYeUU3pvZLg9cirA0206",
+  "expires_in": 3599,
+  "refresh_token": "1//0gLoyQEm1I7KZCgYIARAAGBASNwF-L9IrrzcDEfPWpVyg-hjcH3U5UQT4S-o7nFKLq7QKkOE6jDB5-55Tc9khcJ1O9mPKaEmxJ0s",
+  "scope": "https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email openid",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImE1NzMzYmJiZDgxOGFhNWRiMTk1MTk5Y2Q1NjhlNWQ2ODUxMzJkM2YiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI1MjMwNzAxNjU1NzMtdnJhZ3FnbXFzc3IydW9zNmxmZmJ1Z2puc3RqMjcyMGEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI1MjMwNzAxNjU1NzMtdnJhZ3FnbXFzc3IydW9zNmxmZmJ1Z2puc3RqMjcyMGEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDM2NDQzOTAyOTgyMjQ5ODA2MzkiLCJlbWFpbCI6ImJyaXRhbmlhZmlzaWNoZWxsYUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6IlNXSTEzNEYySnoxb0dMZUxaekM3MHciLCJuYW1lIjoiVGFubmlhYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMd3RHN1lMVzNmN0JNc21xSmFaVW40UnFJUUJ3R05mcFZQelpBSF90U1ZxeWZwSGdpYT1zOTYtYyIsImdpdmVuX25hbWUiOiJUYW5uaWFhIiwiaWF0IjoxNzYzNTIxNzI0LCJleHAiOjE3NjM1MjUzMjR9.Zyca82xzsi64s5YGntqaBOzZ2SXj0VOodWTbhBfzP3hTbjzYyyQ1eBshPjCnpKW2oHnzbNQr5BjdfIEb5GZ1OJXpBRt_5Fp_VkBTyLMWVfXo9CT_Q6M8uulaicuSdtZKZHfifgI6TD58mriUJnPjmJ1_HwWjWntZITUTF-FwkNeNG68fvpyAZKUDa44W-Ch-WNa_duDhScxEjkpBCRlKGNUv2wHmNZjVwnwVcZELUCz4-wHwUI_Nl_sCISOdAyW-mcYblbO33-MIm54UzRvsNFfrQkdPwM0hSXLcFChyBgEO9emai7SV1NZvmjAyf_xBtB7wxEdmI7B6VVTBJZ0X5A"
+}
+        )
+
+    [client] => Array
+        (
+            [error] => 
+            [info] => Array
+                (
+                    [url] => https://oauth2.googleapis.com/token
+                    [content_type] => application/json; charset=utf-8
+                    [http_code] => 200
+                    [header_size] => 478
+                    [request_size] => 313
+                    [filetime] => -1
+                    [ssl_verify_result] => 0
+                    [redirect_count] => 0
+                    [total_time] => 0.228521
+                    [namelookup_time] => 0.038509
+                    [connect_time] => 0.070813
+                    [pretransfer_time] => 0.156159
+                    [size_upload] => 301
+                    [size_download] => 1712
+                    [speed_download] => 7491
+                    [speed_upload] => 1317
+                    [download_content_length] => -1
+                    [upload_content_length] => 301
+                    [starttransfer_time] => 0.15618
+                    [redirect_time] => 0
+                    [redirect_url] => 
+                    [primary_ip] => 142.250.4.95
+                    [certinfo] => Array
+                        (
+                        )
+
+                    [primary_port] => 443
+                    [local_ip] => 154.154.1.213
+                    [local_port] => 55546
+                    [http_version] => 3
+                    [protocol] => 2
+                    [ssl_verifyresult] => 0
+                    [scheme] => HTTPS
+                    [appconnect_time_us] => 155653
+                    [connect_time_us] => 70813
+                    [namelookup_time_us] => 38509
+                    [pretransfer_time_us] => 156159
+                    [redirect_time_us] => 0
+                    [starttransfer_time_us] => 156180
+                    [total_time_us] => 228521
+                    [request_header] => POST /token HTTP/2
+Host: oauth2.googleapis.com
+user-agent: Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+accept-encoding: identity
+accept: */*
+cache-control: max-age=0
+connection: keep-alive
+content-length: 301
+content-type: application/x-www-form-urlencoded
+
+
+                )
+
+            [opts] => Array
+                (
+                    [13] => 30
+                    [78] => 30
+                    [64] => 
+                    [81] => 
+                    [19913] => 1
+                    [52] => 1
+                    [68] => 5
+                    [2] => 1
+                    [10102] => identity
+                    [10018] => Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+                    [47] => 1
+                    [10015] => client_id=523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com&client_secret=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&grant_type=authorization_code&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback.php&code=4%2F0Ab32j904OtzXNwdCtUyUuVrczd0RuvQ7EsP5j_cFV3GJc9gGU1qP_RceJMXFtOmeGQDijg
+                    [10002] => https://oauth2.googleapis.com/token
+                    [10023] => Array
+                        (
+                            [0] => Accept: */*
+                            [1] => Cache-Control: max-age=0
+                            [2] => Connection: keep-alive
+                            [3] => Expect: 
+                            [4] => Pragma: 
+                        )
+
+                    [20079] => *omitted
+                )
+
+        )
+
+)
+
+debug -- ::1 -- 2025-11-19T03:08:35+00:00 -- Hybridauth\HttpClient\Curl::request( https://www.googleapis.com/oauth2/v3/userinfo?, GET ), response:
+Array
+(
+    [request] => Array
+        (
+            [uri] => https://www.googleapis.com/oauth2/v3/userinfo
+            [method] => GET
+            [parameters] => Array
+                (
+                )
+
+            [headers] => Array
+                (
+                    [Accept] => */*
+                    [Cache-Control] => max-age=0
+                    [Connection] => keep-alive
+                    [Expect] => 
+                    [Pragma] => 
+                    [Authorization] => Bearer ya29.a0ATi6K2vqbXnr9w1qzopHMTSR8H59_-00y9bzTFzMih5S5hcDr12_3d_hWi6ZBu8oAOBR0O88WxNWy9pPCJTJ2DKRAs6qXoo8enOm33Wc5UR4freHB71kQHyXM0Y4QQra4WITkxzUDsAiiX0y36betimJvWLQoSwScH8VB4zSmrM0oLvadn9RY7sr-6LMLU-emLCvt1kaCgYKAWoSARQSFQHGX2MiOxQ-nLMYeUU3pvZLg9cirA0206
+                )
+
+        )
+
+    [response] => Array
+        (
+            [code] => 200
+            [headers] => Array
+                (
+                    [cache_control] => no-cache, no-store, max-age=0, must-revalidate
+                    [pragma] => no-cache
+                    [expires] => Mon, 01 Jan 1990 00:00:00 GMT
+                    [date] => Wed, 19 Nov 2025 03:08:44 GMT
+                    [content_type] => application/json; charset=utf-8
+                    [vary] => Origin,Accept-Encoding
+                    [server] => ESF
+                    [x_xss_protection] => 0
+                    [x_frame_options] => SAMEORIGIN
+                    [x_content_type_options] => nosniff
+                    [alt_svc] => h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+                    [accept_ranges] => none
+                )
+
+            [body] => {
+  "sub": "103644390298224980639",
+  "name": "Tanniaa",
+  "given_name": "Tanniaa",
+  "picture": "https://lh3.googleusercontent.com/a/ACg8ocLwtG7YLW3f7BMsmqJaZUn4RqIQBwGNfpVPzZAH_tSVqyfpHgia\u003ds96-c",
+  "email": "britaniafisichella@gmail.com",
+  "email_verified": true
+}
+        )
+
+    [client] => Array
+        (
+            [error] => 
+            [info] => Array
+                (
+                    [url] => https://www.googleapis.com/oauth2/v3/userinfo
+                    [content_type] => application/json; charset=utf-8
+                    [http_code] => 200
+                    [header_size] => 455
+                    [request_size] => 530
+                    [filetime] => -1
+                    [ssl_verify_result] => 0
+                    [redirect_count] => 0
+                    [total_time] => 0.187849
+                    [namelookup_time] => 0.010881
+                    [connect_time] => 0.043716
+                    [pretransfer_time] => 0.113339
+                    [size_upload] => 0
+                    [size_download] => 273
+                    [speed_download] => 1453
+                    [speed_upload] => 0
+                    [download_content_length] => -1
+                    [upload_content_length] => 0
+                    [starttransfer_time] => 0.187678
+                    [redirect_time] => 0
+                    [redirect_url] => 
+                    [primary_ip] => 74.125.24.95
+                    [certinfo] => Array
+                        (
+                        )
+
+                    [primary_port] => 443
+                    [local_ip] => 154.154.1.213
+                    [local_port] => 55549
+                    [http_version] => 3
+                    [protocol] => 2
+                    [ssl_verifyresult] => 0
+                    [scheme] => HTTPS
+                    [appconnect_time_us] => 112961
+                    [connect_time_us] => 43716
+                    [namelookup_time_us] => 10881
+                    [pretransfer_time_us] => 113339
+                    [redirect_time_us] => 0
+                    [starttransfer_time_us] => 187678
+                    [total_time_us] => 187849
+                    [request_header] => GET /oauth2/v3/userinfo? HTTP/2
+Host: www.googleapis.com
+user-agent: Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+accept-encoding: identity
+accept: */*
+cache-control: max-age=0
+connection: keep-alive
+authorization: Bearer ya29.a0ATi6K2vqbXnr9w1qzopHMTSR8H59_-00y9bzTFzMih5S5hcDr12_3d_hWi6ZBu8oAOBR0O88WxNWy9pPCJTJ2DKRAs6qXoo8enOm33Wc5UR4freHB71kQHyXM0Y4QQra4WITkxzUDsAiiX0y36betimJvWLQoSwScH8VB4zSmrM0oLvadn9RY7sr-6LMLU-emLCvt1kaCgYKAWoSARQSFQHGX2MiOxQ-nLMYeUU3pvZLg9cirA0206
+
+
+                )
+
+            [opts] => Array
+                (
+                    [13] => 30
+                    [78] => 30
+                    [64] => 
+                    [81] => 
+                    [19913] => 1
+                    [52] => 1
+                    [68] => 5
+                    [2] => 1
+                    [10102] => identity
+                    [10018] => Hybridauth, PHP Social Authentication Library (https://github.com/hybridauth/hybridauth)
+                    [10002] => https://www.googleapis.com/oauth2/v3/userinfo?
+                    [10023] => Array
+                        (
+                            [0] => Accept: */*
+                            [1] => Cache-Control: max-age=0
+                            [2] => Connection: keep-alive
+                            [3] => Expect: 
+                            [4] => Pragma: 
+                            [5] => Authorization: Bearer ya29.a0ATi6K2vqbXnr9w1qzopHMTSR8H59_-00y9bzTFzMih5S5hcDr12_3d_hWi6ZBu8oAOBR0O88WxNWy9pPCJTJ2DKRAs6qXoo8enOm33Wc5UR4freHB71kQHyXM0Y4QQra4WITkxzUDsAiiX0y36betimJvWLQoSwScH8VB4zSmrM0oLvadn9RY7sr-6LMLU-emLCvt1kaCgYKAWoSARQSFQHGX2MiOxQ-nLMYeUU3pvZLg9cirA0206
+                        )
+
+                    [20079] => *omitted
+                )
+
+        )
+
+)
+

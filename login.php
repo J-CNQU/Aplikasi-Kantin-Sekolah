@@ -111,10 +111,11 @@ if (isset($_GET['provider'])) {
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sign In</title>
+  <title>Login</title>
   <style>
     <?php include "assets/css/login.css"; ?>
   </style>
+  <link href="assets/css/login.css" rel="stylesheet" />
   <link rel="shortcut icon" href="fcon.png" type="image/x-icon">
 </head>
 
