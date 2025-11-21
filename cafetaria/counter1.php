@@ -73,7 +73,7 @@
 
             <div class="list-menu" data-menu="nasi-goreng" data-name="Nasi Goreng Spesial" data-price="15000">
                 <div class="menu-image">
-                    <a href="descriptions/counter1/nasigoreng.php">
+                    <a href="../deskripsi/deskripsi.php">
                         <img src="counter 1/1. nasi goreng.png" alt="nasi goreng">
                     </a>
                 </div>

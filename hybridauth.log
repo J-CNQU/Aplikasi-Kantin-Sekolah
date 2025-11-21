@@ -10595,3 +10595,49 @@ authorization: Bearer ya29.a0ATi6K2vqbXnr9w1qzopHMTSR8H59_-00y9bzTFzMih5S5hcDr12
 
 )
 
+debug -- ::1 -- 2025-11-21T01:50:58+00:00 -- Initialize Hybridauth\Provider\Google, config: 
+Array
+(
+    [enabled] => 1
+    [keys] => Array
+        (
+            [id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+            [secret] => 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
+        )
+
+    [scope] => openid profile email https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile
+    [debug_mode] => 1
+    [debug_file] => C:\laragon\scooby-doo\UnFixed/hybridauth.log
+    [callback] => http://localhost:3000/callback.php
+)
+
+info -- ::1 -- 2025-11-21T01:50:58+00:00 -- Hybridauth\Provider\Google::authenticate()
+debug -- ::1 -- 2025-11-21T01:50:58+00:00 -- Hybridauth\Provider\Google::authenticateBegin(), redirecting user to:
+Array
+(
+    [0] => https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback.php&scope=openid+profile+email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=offline&prompt=consent&state=HA-N1ZIMV6EX92WT7FOQDLK4CS0HYJ3RPABGU85
+)
+
+debug -- ::1 -- 2025-11-21T10:03:46+00:00 -- Initialize Hybridauth\Provider\Google, config: 
+Array
+(
+    [enabled] => 1
+    [keys] => Array
+        (
+            [id] => 523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com
+            [secret] => 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
+        )
+
+    [scope] => openid profile email https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile
+    [debug_mode] => 1
+    [debug_file] => C:\laragon\scooby-doo\UnFixed/hybridauth.log
+    [callback] => http://localhost:3000/callback.php
+)
+
+info -- ::1 -- 2025-11-21T10:03:46+00:00 -- Hybridauth\Provider\Google::authenticate()
+debug -- ::1 -- 2025-11-21T10:03:46+00:00 -- Hybridauth\Provider\Google::authenticateBegin(), redirecting user to:
+Array
+(
+    [0] => https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=523070165573-vragqgmqssr2uos6lffbugjnstj2720a.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback.php&scope=openid+profile+email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=offline&prompt=consent&state=HA-256K4QXRI9LGD1WSNEJMU7AHZC3OPY0FTBV8
+)
+

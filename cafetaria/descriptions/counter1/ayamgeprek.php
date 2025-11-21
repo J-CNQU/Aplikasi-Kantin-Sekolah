@@ -23,12 +23,6 @@
       <a href="#">Orders</a>
       <a href="#">Help</a>
     </nav>
-
-    <div class="icons">
-      <img src="../../../icons/search.png" alt="search">
-      <img src="../../../icons/cart.png" alt="cart">
-      <img src="../../../icons/person.png" alt="person">
-    </div>
   </header>
 
   <section class="description-page">
@@ -132,11 +126,7 @@
           <img src="../../logo deskripsi/arrow_abu2right.png" alt=">">
         </button>
       </div>
-
     </div>
-
-    <a href="../../counter1.php"><button class="tombol-orders">Orders</button></a>
-  </section>
 
   <footer class="footer">
     <div class="footer-container">
