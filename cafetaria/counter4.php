@@ -70,7 +70,7 @@
         <h1 class="h1">Menu</h1>
 
         <div class="menu-grid">
-            <div class="list-menu">
+            <div class="list-menu" data-menu="SateKambing" data-name="Sate Kambing" data-price="18000">
                 <div class="menu-image">
                     <img src="counter 4/4.sate-kambing.png" alt="sate kambing">
                 </div>
@@ -90,7 +90,7 @@
                 </div>
             </div>
 
-            <div class="list-menu">
+            <div class="list-menu" data-menu="SateAyam" data-name="Sate Ayam" data-price="16000">
                 <div class="menu-image">
                     <img src="counter 4/4.sate-ayam.png" alt="sate ayam">
                 </div>
@@ -110,7 +110,7 @@
                 </div>
             </div>
 
-            <div class="list-menu">
+            <div class="list-menu" data-menu="BaksoUrat" data-name="Bakso Urat" data-price="19000">
                 <div class="menu-image">
                     <img src="counter 4/4.bakso-urat.png" alt="bakso urat">
                 </div>
@@ -129,7 +129,7 @@
                 </div>
             </div>
 
-            <div class="list-menu">
+            <div class="list-menu" data-menu="BaksoBiasa" data-name="Bakso Biasa" data-price="16000">
                 <div class="menu-image">
                     <img src="counter 4/4.bakso-biasa.png" alt="bakso biasa">
                 </div>
@@ -148,7 +148,7 @@
                 </div>
             </div>
 
-            <div class="list-menu">
+            <div class="list-menu" data-menu="BaksoKomplit" data-name="Bakso Komplit" data-price="24000">
                 <div class="menu-image">
                     <img src="counter 4/4.bakso-komplit.png" alt="bakso komplit">
                 </div>
@@ -167,7 +167,7 @@
                 </div>
             </div>
 
-            <div class="list-menu">
+            <div class="list-menu" data-menu="GadoGado" data-name="Gado-Gado" data-price="20000">
                 <div class="menu-image">
                     <img src="counter 4/4.gado-gado.png" alt="gado gado">
                 </div>
@@ -186,10 +186,10 @@
                 </div>
             </div>
 
+        </div>
     </section>
-
     <div class="order-button-container">
-        <button class="order-button">Order</button>
+        <a href="../../orders.php"><button class="order-button">Order</button></a>
     </div>
 
     <br><br><br><br><br><br><br><br><br><br>

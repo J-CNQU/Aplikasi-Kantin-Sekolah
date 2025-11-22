@@ -25,15 +25,13 @@
     </nav>
 
     <div class="icons">
-      <img src="../../../icons/search.png" alt="search">
-      <img src="../../../icons/cart.png" alt="cart">
-      <img src="../../../icons/person.png" alt="person">
     </div>
   </header>
 
+
   <section class="description-page">
     <div class="desc-header">
-      <a href="/counter1.html">
+      <a href="../../counter1.php">
         <button class="back-btn">
           <img src="../../logo deskripsi/arrow_red.png" alt="Back">
         </button>
@@ -66,6 +64,7 @@
               <img src="../../icons/minus.png" alt="-">
             </button>
           </div>
+          <br>
 
           <div class="rating">
             <span class="rating-label">Rating:</span>
@@ -130,12 +129,10 @@
           <img src="../../logo deskripsi/arrow_abu2right.png" alt=">">
         </button>
       </div>
-
     </div>
+    <br><br><br><br><br><br><br><br><br>
 
-    <a href="../../counter1.php"><button class="tombol-orders">Orders</button></a>
   </section>
-
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-column">
@@ -169,16 +166,16 @@
     <div class="footer-social">
       <div>
         <h4>Connect with us</h4>
-        <a href="#"><img src="../../logo2 footer/facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="../../logo2 footer/instagram.png" alt="Instagram"></a>
-        <a href="#"><img src="../../logo2 footer/twitter.png" alt="Twitter"></a>
-        <a href="#"><img src="../../logo2 footer/youtube.png" alt="YouTube"></a>
+        <a href="#"><img src="/logo2 footer/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="/logo2 footer/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="/logo2 footer/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="/logo2 footer/youtube.png" alt="YouTube"></a>
       </div>
 
       <div>
         <h4>Download the app</h4>
-        <a href="#"><img src="../../logo2 footer/apple.png" alt="App Store"></a>
-        <a href="#"><img src="../../logo2 footer/playstore.png" alt="Play Store"></a>
+        <a href="#"><img src="/logo2 footer/apple.png" alt="App Store"></a>
+        <a href="#"><img src="/logo2 footer/playstore.png" alt="Play Store"></a>
       </div>
     </div>
 

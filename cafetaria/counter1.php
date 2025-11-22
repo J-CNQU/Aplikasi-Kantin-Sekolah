@@ -6,13 +6,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Cafeteria Sekolah - Counter</title>
     <link rel="shortcut icon" href="/assets/img/fcon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/cafetaria/counter.css">
+    <link rel="stylesheet" href="/cafetaria/counter1.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/style-index.css">
 
 </head>
-
-<script src="/counter.js"></script>
 
 <body class="site-bg">
     <nav class="navbar">
@@ -73,7 +71,7 @@
 
             <div class="list-menu" data-menu="nasi-goreng" data-name="Nasi Goreng Spesial" data-price="15000">
                 <div class="menu-image">
-                    <a href="../deskripsi/deskripsi.php">
+                    <a href="../../cafetaria/descriptions/counter1/nasigoreng.php">
                         <img src="counter 1/1. nasi goreng.png" alt="nasi goreng">
                     </a>
                 </div>
@@ -87,7 +85,7 @@
                             <button class="qty-btn plus"><img src="icons/plus.png" alt="+"></button>
                             <span class="qty-number">0</span>
                             <button class="qty-btn minus"><img src="icons/minus.png" alt="-"></button>
-                        </div>
+                        </div>                
                     </div>
                 </div>
             </div>
@@ -231,7 +229,7 @@
 
             <div class="list-menu" data-menu="ayam-geprek" data-name="Nasi Ayam Geprek" data-price="18000">
                 <div class="menu-image">
-                    <a href="../cafetaria/descriptions/counter1/ayamgeprek.php">
+                    <a href="../../deskripsi/deskripsi.php">
                         <img src="counter 1/1. ayam geprek.png" alt="nasi ayam geprek">
                     </a>
                 </div>
@@ -255,7 +253,6 @@
 
     <div class="order-button-container">
         <a href="../../orders.php"><button class="order-button">Order</button></a>
-
     </div>
 
     <br><br><br><br><br><br><br><br><br><br>
@@ -312,6 +309,7 @@
         </div>
     </footer>
 
-    <script src="../assets/js/counter.js"></script>
+    <script src="counter.js"></script>
 </body>
+
 </html>

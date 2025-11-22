@@ -1,3 +1,8 @@
+@font-face {
+  font-family: myFont;
+  src: url(/assets/font/Cocogoose-Pro-Bold-trial.ttf);
+}
+
 footer { 
  background-color: #f4f4f4;
   padding-top: 10px;

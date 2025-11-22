@@ -38,7 +38,6 @@
     </nav>
 
 
-
     <section class="counters">
         <div class="counter-content">
             <div class="counter-background">
@@ -71,7 +70,7 @@
         <h1 class="h1">Menu</h1>
 
         <div class="menu-grid">
-            <div class="list-menu">
+            <div class="list-menu" data-menu="Oyakodon" data-name="Oyakodon" data-price="28000">
                 <div class="menu-image">
                     <img src="counter 3/3.oyakodon.png" alt="oyakodon">
                 </div>
@@ -91,7 +90,7 @@
                 </div>
             </div>
 
-            <div class="list-menu">
+            <div class="list-menu" data-menu="ChickenKatsu" data-name="Chicken Katsu" data-price="26000">
                 <div class="menu-image">
                     <img src="counter 3/3.chicken-katsu.png" alt="chicken katsu">
                 </div>
@@ -111,7 +110,7 @@
                 </div>
             </div>
 
-            <div class="list-menu">
+            <div class="list-menu" data-menu="ChickenTeriyaki" data-name="Chicken Teriyaki" data-price="28000">
                 <div class="menu-image">
                     <img src="counter 3/3.chicken-teriyaki.png" alt="chicken teriyaki">
                 </div>
@@ -131,7 +130,7 @@
                 </div>
             </div>
 
-            <div class="list-menu">
+            <div class="list-menu" data-menu="Gyudon" data-name="Gyudon" data-price="32000">
                 <div class="menu-image">
                     <img src="counter 3/3.gyudon.png" alt="gyudon">
                 </div>
@@ -151,7 +150,7 @@
                 </div>
             </div>
 
-            <div class="list-menu">
+            <div class="list-menu" data-menu="Bibimbap" data-name="Bibimbap" data-price="30000">
                 <div class="menu-image">
                     <img src="counter 3/3.bibimbap.png" alt="bibimbap">
                 </div>
@@ -171,7 +170,7 @@
                 </div>
             </div>
 
-            <div class="list-menu">
+            <div class="list-menu" data-menu="AyamCabeGaram" data-name="Ayam Cabe Garam" data-price="27000">
                 <div class="menu-image">
                     <img src="counter 3/3.ayam-cabe-garam.png" alt="ayam cabe garam">
                 </div>
@@ -191,10 +190,12 @@
                 </div>
             </div>
 
+        </div>
+
     </section>
 
     <div class="order-button-container">
-        <button class="order-button">Order</button>
+        <a href="../../orders.php"><button class="order-button">Order</button></a>
     </div>
 
     <br><br><br><br><br><br><br><br><br><br>

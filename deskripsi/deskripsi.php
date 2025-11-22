@@ -3,31 +3,30 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-// ambil nama file, default = ayamgeprek
+// Ambil file dari query
 $id = isset($_GET['id']) ? strtolower($_GET['id']) : 'ayamgeprek';
 
-// daftar file yang diizinkan
+// File valid
 $allowedFiles = [
     'ayamgeprek',
     'nasigoreng',
     'nasihainam',
-    'nasiduduk'
+    'nasiuduk'
 ];
 
-// kalau bukan file yang valid → paksa ke ayamgeprek
 if (!in_array($id, $allowedFiles)) {
     $id = 'ayamgeprek';
 }
 
-// lokasi folder descriptions/counter1
-$deskripsiDir = realpath(__DIR__ . '/descriptions/counter1');
+// Path folder → disesuaikan dengan struktur kamu
+$deskripsiDir = realpath(__DIR__ . '/../cafetaria/descriptions/counter1');
 
 if (!$deskripsiDir || !is_dir($deskripsiDir)) {
     echo "<h2 style='text-align:center;margin-top:40px;color:red;'>❌ Folder descriptions/counter1 tidak ditemukan.</h2>";
     exit;
 }
 
-// path file .php
+// Path file php
 $deskripsiFile = $deskripsiDir . "/{$id}.php";
 
 if (!file_exists($deskripsiFile)) {
@@ -35,15 +34,14 @@ if (!file_exists($deskripsiFile)) {
     exit;
 }
 
-// buffer output file
+// Ambil isi file
 ob_start();
 include $deskripsiFile;
 $content = ob_get_clean();
 
-// base url untuk relative path gambar/css/js
-$baseUrl = '/descriptions/counter1/';
+// Base href
+$baseUrl = '/cafetaria/descriptions/counter1/';
 
-// tambahkan base tag jika ada <head>
 if (stripos($content, '<head') !== false) {
     $content = preg_replace(
         '/(<head[^>]*>)/i',
@@ -53,6 +51,6 @@ if (stripos($content, '<head') !== false) {
     );
 }
 
-// tampilkan halaman
 echo $content;
+
 ?>

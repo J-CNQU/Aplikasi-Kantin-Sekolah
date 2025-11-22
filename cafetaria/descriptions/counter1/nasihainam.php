@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,11 +25,9 @@
     </nav>
 
     <div class="icons">
-      <img src="../../icons/search.png" alt="search">
-      <img src="../../icons/cart.png" alt="cart">
-      <img src="../../icons/person.png" alt="person">
     </div>
   </header>
+
 
   <section class="description-page">
     <div class="desc-header">
@@ -64,6 +63,7 @@
               <img src="../../icons/minus.png" alt="-">
             </button>
           </div>
+          <br>
 
           <div class="rating">
             <span class="rating-label">Rating:</span>
@@ -128,16 +128,16 @@
           <img src="../../logo deskripsi/arrow_abu2right.png" alt=">">
         </button>
       </div>
-
     </div>
-    
-    <a href="../../counter1.php"><button class="tombol-orders">Orders</button></a>
-  </section>
+    <br><br><br><br><br><br><br><br><br>  
   
+  </section>
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-column">
-        <div class="title"><h2>CafeTaria</h2></div>
+        <div class="title">
+          <h2>CafeTaria</h2>
+        </div>
         <h3>Navigations</h3>
         <ul>
           <li><a href="">Home</a></li>
@@ -145,42 +145,45 @@
           <li><a href="">Orders</a></li>
           <li><a href="">Help</a></li>
         </ul>
-      </div>  
-      
+      </div>
+
       <div class="footer-column about">
         <h3>About Us</h3>
         <p>
-          CafeTaria hadir untuk memudahkan guru, staf, dan siswa memesan makanan favorit dengan cepat, praktis, dan tanpa ribet.
+          CafeTaria hadir untuk memudahkan guru, staf, dan siswa memesan makanan favorit dengan cepat, praktis, dan
+          tanpa ribet.
         </p>
       </div>
-      
+
       <div class="footer-column contact">
         <h3>Contact</h3>
         <p>WhatsApp: 0000-0000-0000</p>
         <p>Email: CafeTaria@gmail.com</p>
       </div>
     </div>
-    
+
     <div class="footer-social">
       <div>
         <h4>Connect with us</h4>
-        <a href="#"><img src="../../logo2 footer/facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="../../logo2 footer/instagram.png" alt="Instagram"></a>
-        <a href="#"><img src="../../logo2 footer/twitter.png" alt="Twitter"></a>
-        <a href="#"><img src="../../logo2 footer/youtube.png" alt="YouTube"></a>
+        <a href="#"><img src="/logo2 footer/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="/logo2 footer/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="/logo2 footer/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="/logo2 footer/youtube.png" alt="YouTube"></a>
       </div>
-      
+
       <div>
         <h4>Download the app</h4>
-        <a href="#"><img src="../../logo2 footer/apple.png" alt="App Store"></a>
-        <a href="#"><img src="../../logo2 footer/playstore.png" alt="Play Store"></a>
+        <a href="#"><img src="/logo2 footer/apple.png" alt="App Store"></a>
+        <a href="#"><img src="/logo2 footer/playstore.png" alt="Play Store"></a>
       </div>
     </div>
-    
+
     <div class="footer-bottom">
-      <p>©2025 CafeTaria | CafeTaria is a simple online place for school teachers, staff, and students to order their favorite meals.</p>
+      <p>©2025 CafeTaria | CafeTaria is a simple online place for school teachers, staff, and students to order their
+        favorite meals.</p>
     </div>
   </footer>
 
 </body>
+
 </html>

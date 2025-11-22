@@ -44,9 +44,6 @@
     </ul>
 
     <div class="nav-icons">
-      <button><i class="fas fa-search"></i></button>
-      <button><i class="fas fa-user"></i></button>
-      <button><i class="fas fa-shopping-cart"></i></button>
     </div>
   </nav>
   <main class="orders-container">

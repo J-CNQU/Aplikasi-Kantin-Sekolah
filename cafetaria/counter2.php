@@ -71,7 +71,7 @@
 
         <div class="menu-grid">
 
-            <div class="list-menu">
+            <div class="list-menu" data-menu="BakmieBiasa" data-name="Bakmie Biasa" data-price="25000">
                 <div class="menu-image">
                     <img src="counter 2/2.bakmie-biasa.png">
                 </div>
@@ -85,12 +85,12 @@
                             <button class="qty-btn plus"><img src="icons/plus.png" alt="+"></button>
                             <span class="qty-number">0</span>
                             <button class="qty-btn minus"><img src="icons/minus.png" alt="-"></button>
-                        </div>
+                        </div>    
                     </div>
                 </div>
             </div>
 
-            <div class="list-menu">
+            <div class="list-menu" data-menu="FettuccineAlfredo" data-name="Fettuccine Alfredo" data-price="37000">
                 <div class="menu-image">
                     <img src="counter 2/2.fettuccine.png" alt="fettuccine alfredo">
                 </div>
@@ -104,12 +104,12 @@
                             <button class="qty-btn plus"><img src="icons/plus.png" alt="+"></button>
                             <span class="qty-number">0</span>
                             <button class="qty-btn minus"><img src="icons/minus.png" alt="-"></button>
-                        </div>
+                        </div>    
                     </div>
                 </div>
             </div>
 
-            <div class="list-menu">
+            <div class="list-menu" data-menu="UdonChickenCurry" data-name="Udon Chicken Curry" data-price="35000">
                 <div class="menu-image">
                     <img src="counter 2/2.udon-chicken-curry.png" alt="udon chicken curry">
                 </div>
@@ -123,12 +123,12 @@
                             <button class="qty-btn plus"><img src="icons/plus.png" alt="+"></button>
                             <span class="qty-number">0</span>
                             <button class="qty-btn minus"><img src="icons/minus.png" alt="-"></button>
-                        </div>
+                        </div>    
                     </div>
                 </div>
             </div>
 
-            <div class="list-menu">
+            <div class="list-menu" data-menu="UdonBeef" data-name="Udon Beef" data-price="30000">
                 <div class="menu-image">
                     <img src="counter 2/2.udon-beef.png" alt="udon beef">
                 </div>
@@ -142,12 +142,12 @@
                             <button class="qty-btn plus"><img src="icons/plus.png" alt="+"></button>
                             <span class="qty-number">0</span>
                             <button class="qty-btn minus"><img src="icons/minus.png" alt="-"></button>
-                        </div>
+                        </div>    
                     </div>
                 </div>
             </div>
 
-            <div class="list-menu">
+            <div class="list-menu" data-menu="KwetiauBiasa" data-name="Kwetiau Biasa" data-price="19000">
                 <div class="menu-image">
                     <img src="counter 2/2.kwetiau-biasa.png" alt="kwetiau biasa">
                 </div>
@@ -162,15 +162,17 @@
                             <button class="qty-btn plus"><img src="icons/plus.png" alt="+"></button>
                             <span class="qty-number">0</span>
                             <button class="qty-btn minus"><img src="icons/minus.png" alt="-"></button>
-                        </div>
+                        </div>    
                     </div>
                 </div>
             </div>
 
-    </section>
+        </div>
 
+    </section>
+    
     <div class="order-button-container">
-        <button class="order-button">Order</button>
+        <a href="../../orders.php"><button class="order-button">Order</button></a>
     </div>
 
     <br><br><br><br><br><br><br><br><br><br>
@@ -226,7 +228,6 @@
                 their favorite meals.</p>
         </div>
     </footer>
-
     <script src="counter.js"></script>
 </body>
 

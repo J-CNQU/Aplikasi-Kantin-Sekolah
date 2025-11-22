@@ -1,17 +1,13 @@
 @font-face {
   font-family: myFont;
-  src: url(/assets/font/Cocogoose-Pro-Bold-trial.ttf);
+  src: url(../../assets/font/Cocogoose-Pro-Bold-trial.ttf);
 }
 
-body {
+* {
   margin: 0;
-  font-family: myFont, "Roboto", sans-serif;
-  background: #f4f4f4;
-  color: #333;
-}
-
-a {
-  text-decoration: none;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: myFont;
 }
 
 body {
@@ -24,7 +20,7 @@ body {
   justify-content: space-between;
   padding: 12px 60px;
   background-color: white;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
 }
 
 .logo {
@@ -32,7 +28,7 @@ body {
   align-items: center;
   gap: 10px;
   font-weight: 700;
-  color: #c30003;
+  color: #C30003;
   font-size: 20px;
 }
 
@@ -56,7 +52,7 @@ body {
 }
 
 .links a.active {
-  color: #c30003;
+  color: #C30003;
 }
 
 .links a.active::after {
@@ -66,7 +62,7 @@ body {
   left: 0;
   width: 100%;
   height: 2px;
-  background: #c30003;
+  background: #C30003;
 }
 
 .icons img {
@@ -78,7 +74,7 @@ body {
 }
 
 .icons img:hover {
-  opacity: 0.7;
+  opacity: 0.7; 
 }
 
 .description-page {
@@ -112,12 +108,12 @@ body {
 .back-btn img {
   width: 40px;
   height: 40px;
-  object-fit: contain;
+  object-fit: contain;      
 }
 
 .desc-title {
   font-size: 1.8rem;
-  color: #c30003;
+  color: #C30003;
   font-weight: 700;
 }
 
@@ -132,7 +128,7 @@ body {
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   object-fit: cover;
 }
 
@@ -142,7 +138,7 @@ body {
 
 .food-name {
   font-size: 1.5rem;
-  color: #ffa040;
+  color: #FFA040;
   margin-bottom: 10px;
   font-weight: 700;
 }
@@ -161,14 +157,12 @@ body {
 }
 
 .menu-qty {
-  font-family: "Franklin Gothic Medium";
-  font-weight: bolder;
   display: flex;
   align-items: center;
-  background: #f4f4f4;
+  background: #F4F4F4;
   border-radius: 10px;
   padding: 4px 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
   font-size: 0.9rem;
   height: 32px;
   justify-content: center;
@@ -203,6 +197,7 @@ body {
   color: #333;
   min-width: 20px;
   text-align: center;
+  font-family: monospace;
 }
 
 .rating {
@@ -212,7 +207,7 @@ body {
 }
 
 .rating-label {
-  color: #c30003;
+  color: #C30003;
   font-weight: 700;
 }
 
@@ -231,13 +226,11 @@ body {
 .comments-section {
   margin-top: 10px;
   margin-bottom: -100px;
-  font-family: "Franklin Gothic Medium";
-  font-family: myFont;
 }
 
 .comments-title {
   font-size: 1.4rem;
-  color: #c30003;
+  color: #C30003;
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -279,7 +272,7 @@ body {
 }
 
 .comment-info h4 {
-  color: #ffa040;
+  color: #FFA040;
   margin: 0;
   font-weight: 700;
   font-size: 1rem;
@@ -294,15 +287,15 @@ body {
 
 .comment-next {
   position: absolute;
-  right: 5px;
+  right: 1px;
   top: 40%;
   transform: translateY(-50%);
   background: white;
   border: none;
   border-radius: 50%;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-  width: 38px;
-  height: 30%;
+  width: 40px;
+  height:35%;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -316,13 +309,13 @@ body {
 
 .comment-next img {
   width: 18px;
-  height: 18px;
+  height: 25px;
 }
 
 .tombol-orders {
   border-radius: 70px;
   padding: 10px 65px;
-  background-color: #ffa040;
+  background-color: #FFA040;
   color: #fff;
   font-size: 30px;
   font-weight: 800;
@@ -338,115 +331,116 @@ body {
 }
 
 footer {
-  background-color: #f4f4f4;
-  padding-top: 10px;
-  color: #555;
-  font-family: myFont;
+    background-color: #F4F4F4;
+    padding-top: 10px;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
 }
 
 .footer-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 120px;
-  flex-wrap: wrap;
-  padding: 40px 60px 30px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 120px;
+    flex-wrap: wrap;
+    padding: 40px 60px 30px 60px;
 }
 
 .footer-column {
-  flex: 1;
-  min-width: 250px;
+    flex: 1;
+    min-width: 250px;
 }
 
 .footer-column h2 {
-  color: #c30003;
-  font-weight: 800;
-  margin-bottom: 15px;
-  margin-top: 0;
-  padding: 0;
+    color: #C30003;
+    font-weight: 800;
+    margin-bottom: 15px;
+    margin-top: 0;
+    padding: 0;
 }
 
 .footer-column h3 {
-  color: #ffa040;
-  font-size: 18px;
-  margin-bottom: 10px;
-  margin-top: 40px;
-  font-weight: 800;
+    color: #FFA040;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    font-weight: 800;
 }
 
 .footer-column p {
-  font-size: 16px;
-  color: #777;
-  line-height: 1.6;
-  max-width: 260px;
-  margin-bottom: 10px;
+    font-size: 16px;
+    color: #777;
+    line-height: 1.6;
+    max-width: 260px;
+    margin-bottom: 10px;
 }
 
 .footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-column ul li {
-  margin-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 .footer-column ul li a {
-  text-decoration: none;
-  color: #777;
-  font-weight: 500;
-  transition: color 0.3s ease;
+    text-decoration: none;
+    color: #777;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .footer-column ul li a:hover {
-  color: #ffa040;
+    color: #FFA040;
 }
 
-.footer-column.about {
-  margin-top: 36px;
-}
 
+.footer-column.about,
 .footer-column.contact {
   margin-top: 36px;
-  margin-top: 36px;
-  font-family: "Courier New", Courier, monospace;
+}
+
+.footer-column.contact > p {
+  font-family: monospace;
+  font-weight: 900;
 }
 
 .footer-social {
-  color: #ffa040;
-  font-size: 18px;
-  font-weight: 900;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 120px;
-  flex-wrap: wrap;
-  margin-top: 15px;
-  padding: 0 60px;
-}
+    color: #FFA040;
+    font-size: 18px;
+    font-weight: 900;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 120px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    padding: 0 60px;
+    }
 
 .footer-social img {
-  width: 60px;
-  margin-right: 10px;
-  transition: transform 0.3s ease;
+    width: 60px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
 }
 
 .footer-social img:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .footer-bottom {
-  background-color: #ffa040;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  font-size: 13px;
-  margin-top: 30px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  font-family: "Courier New", Courier, monospace;
+    background-color: #FFA040;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+    margin-top: 30px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
 }
+
 
 @media (max-width: 768px) {
   .footer-container {

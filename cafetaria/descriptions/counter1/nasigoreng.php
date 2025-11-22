@@ -25,9 +25,6 @@
     </nav>
 
     <div class="icons">
-      <img src="../../icons/search.png" alt="search">
-      <img src="../../icons/cart.png" alt="cart">
-      <img src="../../icons/person.png" alt="person">
     </div>
   </header>
 
@@ -67,6 +64,7 @@
             </button>
           </div>
         </div>
+        <br>
 
         <div class="rating">
           <span class="rating-label">Rating:</span>
@@ -131,10 +129,7 @@
           <img src="../../logo deskripsi/arrow_abu2right.png" alt=">">
         </button>
       </div>
-
-    </div>
-    <a href="../../counter1.php"><button class="tombol-orders">Orders</button></a>
-
+      <br><br><br><br><br><br><br><br><br>
   </section>
   <footer class="footer">
     <div class="footer-container">

@@ -1,4 +1,8 @@
 /* assets/css/pop-up.css */
+@font-face {
+  font-family: myFont;
+  src: url(/assets/font/Cocogoose-Pro-Bold-trial.ttf);
+}
 
 .modal-backdrop {
     position: fixed;

@@ -23,6 +23,9 @@
       <a href="#">Orders</a>
       <a href="#">Help</a>
     </nav>
+
+    <div class="icons">
+    </div>
   </header>
 
   <section class="description-page">
@@ -59,20 +62,20 @@
 
             <button class="qty-btn minus">
               <img src="../../icons/minus.png" alt="-">
-            </button>
+            </button> 
+          </div>
+          <br>
+
+          <div class="rating">
+            <span class="rating-label">Rating:</span>
+            <img src="../../logo deskripsi/star.png" alt="star">
+            <img src="../../logo deskripsi/star.png" alt="star">
+            <img src="../../logo deskripsi/star.png" alt="star">
+            <img src="../../logo deskripsi/star.png" alt="star">
+            <img src="../../logo deskripsi/star.png" alt="star">
           </div>
         </div>
-
-        <div class="rating">
-          <span class="rating-label">Rating:</span>
-          <img src="../../logo deskripsi/star.png" alt="star">
-          <img src="../../logo deskripsi/star.png" alt="star">
-          <img src="../../logo deskripsi/star.png" alt="star">
-          <img src="../../logo deskripsi/star.png" alt="star">
-          <img src="../../logo deskripsi/star.png" alt="star">
-        </div>
       </div>
-    </div>
     </div>
 
     <hr class="divider">
@@ -127,6 +130,8 @@
         </button>
       </div>
     </div>
+  </section>
+  <br><br><br><br><br><br><br><br><br>
 
   <footer class="footer">
     <div class="footer-container">
@@ -179,7 +184,6 @@
         favorite meals.</p>
     </div>
   </footer>
-
 </body>
 
 </html>
