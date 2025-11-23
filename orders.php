@@ -1,7 +1,8 @@
 <?php
-// Tambahkan session start jika diperlukan untuk PHP
-// session_start(); 
-// include 'config.php'; // Contoh include file config
+// orders.php
+// Tambahkan session start jika diperlukan untuk PHP, misalnya untuk status login
+session_start();
+// include 'config.php'; // Tidak perlu include config di sini karena orders page fokus pada JS/Local Storage
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -10,10 +11,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Detail Pesanan - CafeTaria</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/homepage.css">
-  <link rel="stylesheet" href="assets/css/orders.css">
-  <link rel="stylesheet" href="assets/css/pop-up.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/homepage.css">
+  <link rel="stylesheet" href="/assets/css/orders.css">
+  <link rel="stylesheet" href="/assets/css/pop-up.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="shortcut icon" href="assets/img/fcon.png" type="image/x-icon">
 </head>
@@ -22,7 +23,6 @@
   <nav class="navbar">
     <div class="logo">
       <a href="/homepage.php"><img src="assets/img/logo-copy.png" class="logo" alt="Logo"></a>
-
       <span>CafeTaria</span>
     </div>
 
@@ -55,7 +55,7 @@
       <h3 class="section-title">🛒 Item Pesanan</h3>
 
       <div id="ordersContent" class="orders-content">
-      </div>
+        </div>
 
     </section>
   </main>
@@ -67,12 +67,12 @@
         <span id="subtotalAmount">Rp0</span>
       </div>
       <div class="summary-row tax-row">
-        <span>PPN (10%):</span>
+        <span>PPN <span id="subtotalAmount">(10%):</span></span>
         <span id="taxAmount">Rp0</span>
       </div>
       <div class="summary-row total-row">
         <span>Total Akhir:</span>
-        <strong id="finalTotalAmount">Rp0</strong>
+        <strong id="subtotalAmount"><span id="subtotalAmount">Rp0</span></strong>
       </div>
     </div>
     <button id="checkoutBtn" class="primary-btn" disabled>Pesan Sekarang</button>
@@ -130,7 +130,7 @@
     </div>
   </footer>
   <script src="slideshow.js"></script>
-  <script src="assets/js/orders.js"></script>
+  <script src="/orders.js"></script>
 </body>
 
 </html>

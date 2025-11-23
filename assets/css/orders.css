@@ -1,428 +1,403 @@
-/* assets/css/orders.css */
-
-/*
-Warna utama:
-  - BG: #f3e9d9 (Krem Lembut)
-  - Primary/Text: #991b1b (Merah Tua/Maroon)
-  - Accent: #fb923c (Oranye Terang)
-  - Secondary Accent (Tombol): #f97316 (Oranye Lebih Gelap, untuk kontras)
-*/
-
-/* --- Global & Typography (Simulasi Font Modern) --- */
-/* Asumsi font-family seperti 'Poppins' atau 'Inter' telah di-import */
-body {
-  font-family: "Inter", "Poppins", sans-serif;
-  color: #444; /* Warna teks umum yang lebih lembut */
+@font-face {
+    font-family: myFont;
+    src: url(../font/Cocogoose-Pro-Bold-trial.ttf);
 }
 
+:root {
+    --color-bg-site: #f3e9d9;
+    --color-bg-card: #ffffff;
+    --color-text-main: #444444;
+    --color-text-light: #777777;
+    --color-border-light: #eeeeee;
+    --color-primary: #991b1b;
+    --color-accent-light: #fb923c;
+    --color-accent-dark: #f97316;
+}
+
+/* GLOBAL FONT SETTINGS */
+body {
+    font-family: myFont, "Inter", sans-serif;
+    color: var(--color-text-main);
+}
+
+/* FONT KHUSUS ANGKA */
+.qty-number,
+.item-total,
+.total-row span:last-child,
+.summary-row span:last-child,
+.item-price {
+    font-family: sans-serif;
+}
+
+/* 1. GLOBAL & STRUKTUR HALAMAN */
 .site-bg {
-  background-color: #f3e9d9;
-  min-height: 100vh;
-  padding-bottom: 120px; /* Tambahan padding bawah untuk memberi ruang pada fixed checkout bar */
+    background-color: var(--color-bg-site);
+    min-height: 100vh;
+    padding-bottom: 120px;
 }
 
 .orders-container {
-  padding: 100px 15px 50px 15px; /* Padding samping lebih kecil untuk mobile */
-  max-width: 900px;
-  margin: 0 auto;
+    padding: 100px 5% 50px 5%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .order-page-header {
-  text-align: center;
-  margin-bottom: 40px;
-  color: #991b1b;
-  font-size: 2.5em; /* Ukuran lebih besar */
-  font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--color-primary);
+    font-size: 2.5em;
+    font-weight: 900;
 }
 
 .section-title {
-  font-size: 1.6em;
-  color: #991b1b; /* Menggunakan warna primer untuk judul */
-  border-bottom: 3px solid #fb923c; /* Garis aksen lebih tebal */
-  padding-bottom: 10px;
-  margin-bottom: 25px;
-  font-weight: 600;
+    font-size: 1.6em;
+    color: var(--color-primary);
+    border-bottom: 3px solid var(--color-accent-light);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-weight: 900;
 }
 
-/* --- Daftar Item Pesanan --- */
+/* 2. DAFTAR ITEM PESANAN (ORDERS LIST) */
 .orders-content {
-  display: flex;
-  flex-direction: column;
-  gap: 0; /* Menghilangkan gap agar border item bersentuhan */
-  background-color: #fff;
-  border-radius: 12px; /* Lebih rounded */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1), 0 0 0 1px #fb923c22; /* Shadow modern yang lebih halus & border tipis aksen */
-  overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg-card);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1), 0 0 0 1px #fb923c22;
+    overflow: hidden;
 }
 
 .empty-cart-message {
-  text-align: center;
-  padding: 50px;
-  color: #777;
-  font-size: 1.3em;
-  font-style: italic;
-  background-color: #fff;
+    text-align: center;
+    padding: 50px;
+    color: var(--color-text-light);
+    font-size: 1.3em;
+    font-style: italic;
+    background-color: var(--color-bg-card);
 }
 
 .order-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 25px; /* Padding lebih besar */
-  border-bottom: 1px solid #eee; /* Border lebih terang */
-  transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px;
+    border-bottom: 1px solid var(--color-border-light);
+    transition: background-color 0.3s ease;
 }
 
 .order-item:last-child {
-  border-bottom: none; /* Hilangkan border pada item terakhir */
+    border-bottom: none;
 }
 
 .order-item:hover {
-  background-color: #f3e9d980; /* Hover yang lebih transparan di atas putih */
-}
-
-.item-info {
-  flex-grow: 1;
+    background-color: #f3e9d980;
 }
 
 .item-name {
-  margin: 0 0 3px 0;
-  font-size: 1.15em;
-  color: #222; /* Warna teks item lebih gelap */
-  font-weight: 500;
+    margin: 0 0 3px 0;
+    font-size: 1.15em;
+    color: #222;
+    font-weight: 900;
 }
 
 .item-price {
-  margin: 0;
-  color: #777;
-  font-size: 0.95em;
+    margin: 0;
+    color: var(--color-text-light);
+    font-size: 0.95em;
 }
 
 .item-controls {
-  display: flex;
-  align-items: center;
-  gap: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
 .item-total {
-  font-weight: 700; /* Lebih bold */
-  color: #991b1b;
-  min-width: 100px;
-  text-align: right;
-  font-size: 1.2em; /* Ukuran lebih besar */
+    font-weight: 900;
+    color: var(--color-primary);
+    min-width: 100px;
+    text-align: right;
+    font-size: 1.2em;
 }
 
 .item-qty-controls {
-  display: flex;
-  align-items: center;
-  border-radius: 6px; /* Lebih rounded */
-  overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    overflow: hidden;
 }
 
 .qty-number {
-  padding: 6px 14px;
-  background-color: #fff;
-  color: #444;
-  font-weight: 500;
+    padding: 6px 14px;
+    background-color: var(--color-bg-card);
+    color: var(--color-text-main);
+    font-weight: 900;
 }
 
 .qty-btn {
-  background-color: #991b1b; /* Menggunakan warna primer */
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  padding: 6px 14px;
-  transition: background-color 0.3s;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 900;
+    padding: 6px 14px;
+    transition: background-color 0.3s;
 }
 
 .qty-btn:hover {
-  background-color: #b91c1c; /* Sedikit lebih terang saat hover */
+    background-color: #b91c1c;
 }
 
-/* --- Checkout Bar Styling --- */
+/* 3. CHECKOUT BAR */
 .checkout-bar {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: white;
-  border-top: 4px solid #fb923c; /* Aksen oranye lebih tebal */
-  padding: 18px 5%; /* Padding lebih besar */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.15); /* Shadow lebih menonjol */
-  z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: var(--color-bg-card);
+    border-top: 4px solid var(--color-accent-light);
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
 }
 
 .summary-display {
-  flex-grow: 1;
-  max-width: 500px;
-  margin-right: 30px;
+    flex-grow: 1;
+    max-width: 500px;
+    margin-right: 30px;
 }
 
 .summary-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 7px;
-  font-size: 1em;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    font-size: 1em;
 }
 
 .tax-row {
-  border-top: 1px solid #ddd; /* Garis padat yang lebih jelas */
-  padding-top: 8px;
-  margin-top: 8px;
-  font-size: 0.95em;
-  color: #666;
+    border-top: 1px solid #ddd;
+    padding-top: 8px;
+    margin-top: 8px;
+    font-size: 0.95em;
+    color: #666;
 }
 
 .total-row {
-  font-size: 1.5em; /* Lebih menonjol */
-  font-weight: 800;
-  color: #991b1b;
-  margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: 900;
+    color: var(--color-primary);
+    margin-top: 10px;
 }
 
 .primary-btn {
-  padding: 14px 30px; /* Padding lebih besar */
-  background-color: #f97316; /* Warna oranye terang */
-  color: white;
-  border: none;
-  border-radius: 8px; /* Lebih rounded */
-  font-size: 1.2em;
-  cursor: pointer;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  transition: background-color 0.3s, transform 0.1s;
-  box-shadow: 0 4px 10px #f9731655; /* Shadow yang menonjolkan tombol */
+    padding: 14px 30px;
+    background-color: var(--color-accent-dark);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 10px #f9731655;
 }
 
 .primary-btn:hover {
-  background-color: #fb923c;
-  transform: translateY(-2px); /* Efek lift saat hover */
-  box-shadow: 0 6px 15px #f9731677;
+    background-color: var(--color-accent-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px #f9731677;
 }
 
 .primary-btn:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 10px #f9731655;
+    transform: translateY(0);
+    box-shadow: 0 4px 10px #f9731655;
 }
 
 .primary-btn:disabled {
-  background-color: #ccc;
-  color: #777;
-  cursor: not-allowed;
-  box-shadow: none;
-  transform: none;
+    background-color: #ccc;
+    color: #777;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
 }
 
-/* --- Media Queries untuk Responsivitas --- */
-@media (max-width: 600px) {
-  .order-page-header {
-    font-size: 2em;
-  }
-
-  .order-item {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
-  }
-
-  .item-controls {
-    width: 100%;
-    margin-top: 10px;
-    justify-content: space-between; /* Kontrol dan total sejajar di bawah */
-  }
-
-  .item-total {
-    min-width: unset;
-    text-align: right;
-    font-size: 1.1em;
-  }
-
-  .checkout-bar {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 15px 5%;
-  }
-
-  .summary-display {
-    max-width: 100%;
-    margin-right: 0;
-    margin-bottom: 15px;
-  }
-
-  .primary-btn {
-    width: 100%;
-  }
-}
-
-/* --- Modal & Pop-up Styling --- */
-
+/* 4. MODAL / POPUP */
 .modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.65); /* Latar belakang gelap */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2000;
-  backdrop-filter: blur(4px); /* Efek blur yang lebih kuat */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    backdrop-filter: blur(4px);
 }
 
 .modal-content {
-  background-color: #ffffff;
-  padding: 35px 45px; /* Padding lebih luas untuk kesan premium */
-  border-radius: 12px;
-  width: 90%;
-  max-width: 480px; /* Ukuran modal sedikit lebih besar */
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35); /* Shadow lebih menonjol */
-  text-align: center;
-  transform: translateY(20px);
-  opacity: 0;
-  animation: modal-fade-in 0.4s forwards ease-out;
-  border: 1px solid #991b1b33; /* Border tipis untuk kesan klasik */
+    background-color: var(--color-bg-card);
+    padding: 35px 45px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 480px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+    text-align: center;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: modal-fade-in 0.4s forwards ease-out;
+    border: 1px solid #991b1b33;
 }
 
 @keyframes modal-fade-in {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .modal-content h3 {
-  color: #991b1b; /* Maroon */
-  font-size: 2em;
-  font-weight: 800;
-  margin-bottom: 15px;
-  letter-spacing: 0.5px;
-}
-
-.modal-content p {
-  color: #555;
-  font-size: 1.1em;
-  margin-bottom: 25px;
+    color: var(--color-primary);
+    font-size: 2em;
+    font-weight: 900;
+    margin-bottom: 15px;
 }
 
 .modal-content strong {
-  color: #f97316; /* Oranye Tombol */
-  font-weight: 900;
+    color: var(--color-accent-dark);
+    font-weight: 900;
 }
 
-/* --- Payment Options --- */
 .payment-options {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
 }
 
 .payment-option-btn {
-  padding: 16px;
-  background-color: #f3e9d9; /* Krem Lembut sebagai latar tombol */
-  color: #991b1b; /* Teks Maroon */
-  border: 2px solid #fb923c; /* Border oranye aksen */
-  border-radius: 8px;
-  font-size: 1.1em;
-  cursor: pointer;
-  font-weight: 700;
-  transition: all 0.2s ease;
-  text-transform: uppercase;
+    padding: 16px;
+    background-color: var(--color-bg-site);
+    color: var(--color-primary);
+    border: 2px solid var(--color-accent-light);
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 900;
+    transition: all 0.2s ease;
 }
 
 .payment-option-btn:hover {
-  background-color: #fb923c;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(251, 146, 60, 0.4);
+    background-color: var(--color-accent-light);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(251, 146, 60, 0.4);
 }
 
-/* --- Cancel Button / Secondary Action --- */
 .cancel-btn {
-  width: 100%;
-  padding: 12px;
-  background: none;
-  color: #777;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 1em;
-  cursor: pointer;
-  font-weight: 500;
-  margin-top: 10px;
-  transition: background-color 0.2s, color 0.2s;
+    width: 100%;
+    padding: 12px;
+    background: none;
+    color: var(--color-text-light);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 900;
+    margin-top: 10px;
 }
 
 .cancel-btn:hover {
-  background-color: #eee;
-  color: #444;
+    background-color: #eee;
+    color: #444;
 }
 
-/* --- Success Pop-up Specific Styling --- */
 .success-modal .modal-content {
-  border: 5px solid #991b1b; /* Border Maroon tebal untuk kesan kuat */
+    border: 5px solid var(--color-primary);
 }
 
 .success-content h3 {
-  color: #f97316; /* Judul sukses menggunakan warna oranye */
+    color: var(--color-accent-dark);
 }
 
 .check-animation {
-  margin: 0 auto 20px auto;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #991b1b; /* Latar Maroon */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: success-pulse 1.5s infinite;
+    margin: 0 auto 20px auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: success-pulse 1.5s infinite;
 }
 
 .check-mark {
-  font-size: 40px;
-  color: #f3e9d9; /* Tanda centang warna Krem Lembut */
+    font-size: 40px;
+    color: var(--color-bg-site);
 }
 
 @keyframes success-pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(153, 27, 27, 0.4);
-  }
-  70% {
-    box-shadow: 0 0 0 20px rgba(153, 27, 27, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(153, 27, 27, 0);
-  }
+    0% { box-shadow: 0 0 0 0 rgba(153, 27, 27, 0.4); }
+    70% { box-shadow: 0 0 0 20px rgba(153, 27, 27, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(153, 27, 27, 0); }
 }
 
 #close-success-btn {
-  /* Menggunakan gaya Primary Button yang diperluas */
-  width: 80%;
-  margin-top: 25px;
-  /* (Mewarisi properti dari .primary-btn di orders.css) */
+    width: 80%;
+    margin-top: 25px;
 }
 
-/* Media Query untuk Responsivitas Pop-up */
-@media (max-width: 300px) {
-  .modal-content {
-    margin: 15px;
-    padding: 25px 30px;
-  }
-  .modal-content h3 {
-    font-size: 1.5em;
-  }
-  .check-animation {
-    width: 30px;
-    height: 30px;
-  }
-  .check-mark {
-    font-size: 1em;
-  }
-  #close-success-btn {
-    width: 100%;
-  }
+/* 5. MEDIA QUERIES */
+@media (max-width: 600px) {
+    .order-page-header {
+        font-size: 2em;
+    }
+
+    .order-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    .item-controls {
+        width: 100%;
+        margin-top: 10px;
+        justify-content: space-between;
+    }
+
+    .item-total {
+        min-width: unset;
+        text-align: right;
+        font-size: 1.1em;
+    }
+
+    .checkout-bar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px 5%;
+    }
+
+    .summary-display {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .primary-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .modal-content {
+        padding: 25px 30px;
+    }
+    .modal-content h3 {
+        font-size: 1.5em;
+    }
 }

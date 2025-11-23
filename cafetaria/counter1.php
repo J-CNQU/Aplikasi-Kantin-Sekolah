@@ -1,3 +1,24 @@
+<?php
+include("../config.php");
+
+$sql = "SELECT name, price, image, category FROM menu ORDER BY category, name";
+
+$result = $conn->query($sql);
+
+$menus = [];
+if ($result && $result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        $category = $row['category'];
+        if (!isset($menus[$category])) {
+            $menus[$category] = [];
+        }
+        $menus[$category][] = $row;
+    }
+}
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 
