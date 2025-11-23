@@ -459,10 +459,17 @@ Kami merencanakan fitur-fitur berikut untuk iterasi berikutnya:
  Notifikasi: Penambahan fitur notifikasi status pesanan (misalnya: Pesanan diterima, Sedang diproses).
  Optimasi: Peningkatan responsifitas tampilan di perangkat mobile.
 
- 🧑‍💻 Kontributor Proyek
+**Tim Kontributor dan Pembagian Tugas**
+Juan Felix Katoro (Fullstack Developer)
 
-| Nama | Email | GitHub |
-| :--- | :--- | :--- |
-| Juan Felix Katoroj | `jferxiic@gmail.com` | [J-CNQU](https://github.com/J-CNQU) |
+Fokus Tugas: Pengembangan Back-end (PHP/MySQL), Logika Autentikasi, Struktur Database, dan Front-end Pendukung.
+
+Britannia (Front-end Engineer)
+
+Fokus Tugas: Implementasi Design dan Pengembangan Front-end (HTML, CSS, JavaScript), termasuk responsivitas dan interaktivitas UI.
+
+Ethan (UI/UX Designer)
+
+Fokus Tugas: Perancangan User Interface dan User Experience (Design Proyek), dan Implementasi Front-end Desain.
 
 ```
