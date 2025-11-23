@@ -1,64 +1,133 @@
 ```
+# 🍱 Cafeteria Project | Sistem Kantin Digital Sekolah
 
-🍱 Cafeteria Project (UnFixed)
+[![Status Proyek](https://img.shields.io/badge/Status-Development%20in%20Progress-yellow.svg)](https://github.com/J-CNQU/cafeteria)
+[![Dibuat dengan](https://img.shields.io/badge/PHP-Native-8892BF)](https://www.php.net/)
+[![GitHub stars](https://img.shields.io/github/stars/J-CNQU/cafeteria?style=social)](https://github.com/J-CNQU/cafeteria/stargazers)
 
-Aplikasi web berbasis PHP Native dan MySQL, dikembangkan menggunakan Laragon.
-Proyek ini dirancang sebagai sistem kantin digital sekolah dengan fitur autentikasi lengkap (manual dan sosial media), sistem menu, serta manajemen pesanan sederhana.
+Aplikasi web berbasis **PHP Native** dan **MySQL**, dikembangkan menggunakan lingkungan server lokal **Laragon**. Proyek ini dirancang sebagai fondasi sistem kantin digital sekolah dengan fokus utama pada fitur autentikasi, sistem menu, dan manajemen pesanan.
 
-Proyek masih dalam pengembangan aktif dan terus diperluas ke arah sistem transaksi dan pengelolaan stok otomatis.
+Proyek ini masih dalam fase pengembangan aktif dan berencana untuk diperluas ke sistem transaksi penuh dan pengelolaan stok otomatis.
 
-🚀 Fitur Utama
-🧩 Autentikasi
+---
 
-✅ Login dan Signup Manual dengan password_hash() & password_verify()
+## 🚀 Fitur Utama & Fungsionalitas
 
-✅ Login Menggunakan Google dan Facebook via HybridAuth
+### 1. Autentikasi yang Komprehensif
+| Modul | Status | Keterangan |
+| :--- | :--- | :--- |
+| **Login & Signup Manual** | ✅ Selesai | Implementasi aman dengan `password_hash()` & `password_verify()`. |
+| **Login Sosial Media** | ✅ Selesai | Terintegrasi penuh dengan **Google** dan **Facebook** via **HybridAuth v3**. |
+| **Sistem Logout Aman** | ✅ Selesai | Menggunakan `session_destroy()` untuk pembersihan sesi yang tuntas. |
+| **Pemeriksaan Sesi** | ✅ Selesai | Pop-up login otomatis muncul jika pengguna belum terautentikasi. |
 
-✅ Sistem Logout Aman dengan session destroy
+### 2. Menu & Manajemen Pesanan (Dalam Progres)
+| Modul | Status | Keterangan |
+| :--- | :--- | :--- |
+| **Halaman Menu** | 🟡 Dalam Progres | Tampilan menu yang dikategorikan berdasarkan jenis makanan (Nasi, Mie, Sate, Bakso). |
+| **Sistem Cart** | 🛒 Struktur Awal | Struktur dasar *cart* / keranjang pesanan telah disiapkan. |
+| **Transaksi & Laporan** | 💵 Rencana | Rencana integrasi sistem pembayaran, *checkout*, dan laporan transaksi. |
 
-✅ Pop-up login otomatis jika user belum login
+---
 
-🍔 Menu & Pesanan (Under Development)
+## ⚙️ Teknologi & Tools
 
-🧾 Halaman Menu berdasarkan kategori (Nasi, Mie, Sate, Bakso)
+| Kategori | Komponen | Keterangan |
+| :--- | :--- | :--- |
+| **Backend** | PHP 8+ (Native) | Digunakan untuk logika server-side. |
+| **Frontend** | HTML5, CSS3, JavaScript | Murni Native (Vanilla JS) |
+| **Database** | MySQL | Digunakan untuk penyimpanan data. |
+| **Server Lokal** | Laragon | Lingkungan pengembangan yang direkomendasikan. |
+| **Library OAuth** | HybridAuth v3 | Digunakan untuk mengelola login sosial media. |
+| **Versi Kontrol** | Git + GitHub | |
 
-🛒 Struktur awal sistem cart / keranjang pesanan
+---
 
-💵 Rencana integrasi sistem pembayaran & laporan transaksi
+## 🛠️ Panduan Instalasi Lokal
 
-⚙️ Teknologi & Tools
+Ikuti langkah-langkah detail ini untuk menyiapkan dan menjalankan proyek.
 
-Frontend: HTML5, CSS3, JavaScript (Native)
-
-Backend: PHP 8+
-
-Database: MySQL
-
-Server Lokal: Laragon
-
-OAuth Library: HybridAuth v3
-
-Version Control: Git + GitHub
-
-⚙️ Cara Instalasi
-
-Clone repository
-
-git clone https://github.com/username/cafeteria.git
+### 1. Kloning Repositori
+Gunakan Git untuk mendapatkan salinan proyek:
+```bash
+git clone [https://github.com/username/cafeteria.git](https://github.com/username/cafeteria.git)
 cd cafeteria
 
+2. Konfigurasi Database
+Buka phpMyAdmin pada Laragon Anda.
 
-Buat database di phpMyAdmin
+Buat database baru dengan nama: cafeteria.
 
-Nama database: cafeteria
+Impor skema database dari file: /databases/db.sql.
 
-Import file SQL dari folder:
+Baik, ini adalah README.md dengan detail yang kaya dan format yang profesional, mengacu pada panjang dan kedalaman informasi dari versi awal, namun dengan penataan yang lebih terstruktur.
 
-/Databases/db.sql
+Markdown
 
+# 🍱 Cafeteria Project | Sistem Kantin Digital Sekolah
 
-Konfigurasi koneksi database
-Edit file config.php:
+[![Status Proyek](https://img.shields.io/badge/Status-Development%20in%20Progress-yellow.svg)](https://github.com/J-CNQU/cafeteria)
+[![Dibuat dengan](https://img.shields.io/badge/PHP-Native-8892BF)](https://www.php.net/)
+[![GitHub stars](https://img.shields.io/github/stars/J-CNQU/cafeteria?style=social)](https://github.com/J-CNQU/cafeteria/stargazers)
+
+Aplikasi web berbasis **PHP Native** dan **MySQL**, dikembangkan menggunakan lingkungan server lokal **Laragon**. Proyek ini dirancang sebagai fondasi sistem kantin digital sekolah dengan fokus utama pada fitur autentikasi, sistem menu, dan manajemen pesanan.
+
+Proyek ini masih dalam fase pengembangan aktif dan berencana untuk diperluas ke sistem transaksi penuh dan pengelolaan stok otomatis.
+
+---
+
+## 🚀 Fitur Utama & Fungsionalitas
+
+### 1. Autentikasi yang Komprehensif
+| Modul | Status | Keterangan |
+| :--- | :--- | :--- |
+| **Login & Signup Manual** | ✅ Selesai | Implementasi aman dengan `password_hash()` & `password_verify()`. |
+| **Login Sosial Media** | ✅ Selesai | Terintegrasi penuh dengan **Google** dan **Facebook** via **HybridAuth v3**. |
+| **Sistem Logout Aman** | ✅ Selesai | Menggunakan `session_destroy()` untuk pembersihan sesi yang tuntas. |
+| **Pemeriksaan Sesi** | ✅ Selesai | Pop-up login otomatis muncul jika pengguna belum terautentikasi. |
+
+### 2. Menu & Manajemen Pesanan (Dalam Progres)
+| Modul | Status | Keterangan |
+| :--- | :--- | :--- |
+| **Halaman Menu** | 🟡 Dalam Progres | Tampilan menu yang dikategorikan berdasarkan jenis makanan (Nasi, Mie, Sate, Bakso). |
+| **Sistem Cart** | 🛒 Struktur Awal | Struktur dasar *cart* / keranjang pesanan telah disiapkan. |
+| **Transaksi & Laporan** | 💵 Rencana | Rencana integrasi sistem pembayaran, *checkout*, dan laporan transaksi. |
+
+---
+
+## ⚙️ Teknologi & Tools
+
+| Kategori | Komponen | Keterangan |
+| :--- | :--- | :--- |
+| **Backend** | PHP 8+ (Native) | Digunakan untuk logika server-side. |
+| **Frontend** | HTML5, CSS3, JavaScript | Murni Native (Vanilla JS) |
+| **Database** | MySQL | Digunakan untuk penyimpanan data. |
+| **Server Lokal** | Laragon | Lingkungan pengembangan yang direkomendasikan. |
+| **Library OAuth** | HybridAuth v3 | Digunakan untuk mengelola login sosial media. |
+| **Versi Kontrol** | Git + GitHub | |
+
+---
+
+## 🛠️ Panduan Instalasi Lokal
+
+Ikuti langkah-langkah detail ini untuk menyiapkan dan menjalankan proyek.
+
+### 1. Kloning Repositori
+Gunakan Git untuk mendapatkan salinan proyek:
+```bash
+git clone [https://github.com/username/cafeteria.git](https://github.com/username/cafeteria.git)
+cd cafeteria
+2. Konfigurasi Database
+Buka phpMyAdmin pada Laragon Anda.
+
+Buat database baru dengan nama: cafeteria.
+
+Impor skema database dari file: /databases/db.sql.
+
+3. Konfigurasi Koneksi Database
+Edit file config.php di direktori utama:
+
+PHP
 
 <?php
 $host = "localhost";
@@ -67,9 +136,83 @@ $pass = "";
 $db   = "cafeteria";
 ?>
 
+Baik, ini adalah README.md dengan detail yang kaya dan format yang profesional, mengacu pada panjang dan kedalaman informasi dari versi awal, namun dengan penataan yang lebih terstruktur.
 
-Konfigurasi Login Google & Facebook (OAuth)
-Edit file config_oauth.php:
+Markdown
+
+# 🍱 Cafeteria Project | Sistem Kantin Digital Sekolah
+
+[![Status Proyek](https://img.shields.io/badge/Status-Development%20in%20Progress-yellow.svg)](https://github.com/J-CNQU/cafeteria)
+[![Dibuat dengan](https://img.shields.io/badge/PHP-Native-8892BF)](https://www.php.net/)
+[![GitHub stars](https://img.shields.io/github/stars/J-CNQU/cafeteria?style=social)](https://github.com/J-CNQU/cafeteria/stargazers)
+
+Aplikasi web berbasis **PHP Native** dan **MySQL**, dikembangkan menggunakan lingkungan server lokal **Laragon**. Proyek ini dirancang sebagai fondasi sistem kantin digital sekolah dengan fokus utama pada fitur autentikasi, sistem menu, dan manajemen pesanan.
+
+Proyek ini masih dalam fase pengembangan aktif dan berencana untuk diperluas ke sistem transaksi penuh dan pengelolaan stok otomatis.
+
+---
+
+## 🚀 Fitur Utama & Fungsionalitas
+
+### 1. Autentikasi yang Komprehensif
+| Modul | Status | Keterangan |
+| :--- | :--- | :--- |
+| **Login & Signup Manual** | ✅ Selesai | Implementasi aman dengan `password_hash()` & `password_verify()`. |
+| **Login Sosial Media** | ✅ Selesai | Terintegrasi penuh dengan **Google** dan **Facebook** via **HybridAuth v3**. |
+| **Sistem Logout Aman** | ✅ Selesai | Menggunakan `session_destroy()` untuk pembersihan sesi yang tuntas. |
+| **Pemeriksaan Sesi** | ✅ Selesai | Pop-up login otomatis muncul jika pengguna belum terautentikasi. |
+
+### 2. Menu & Manajemen Pesanan (Dalam Progres)
+| Modul | Status | Keterangan |
+| :--- | :--- | :--- |
+| **Halaman Menu** | 🟡 Dalam Progres | Tampilan menu yang dikategorikan berdasarkan jenis makanan (Nasi, Mie, Sate, Bakso). |
+| **Sistem Cart** | 🛒 Struktur Awal | Struktur dasar *cart* / keranjang pesanan telah disiapkan. |
+| **Transaksi & Laporan** | 💵 Rencana | Rencana integrasi sistem pembayaran, *checkout*, dan laporan transaksi. |
+
+---
+
+## ⚙️ Teknologi & Tools
+
+| Kategori | Komponen | Keterangan |
+| :--- | :--- | :--- |
+| **Backend** | PHP 8+ (Native) | Digunakan untuk logika server-side. |
+| **Frontend** | HTML5, CSS3, JavaScript | Murni Native (Vanilla JS) |
+| **Database** | MySQL | Digunakan untuk penyimpanan data. |
+| **Server Lokal** | Laragon | Lingkungan pengembangan yang direkomendasikan. |
+| **Library OAuth** | HybridAuth v3 | Digunakan untuk mengelola login sosial media. |
+| **Versi Kontrol** | Git + GitHub | |
+
+---
+
+## 🛠️ Panduan Instalasi Lokal
+
+Ikuti langkah-langkah detail ini untuk menyiapkan dan menjalankan proyek.
+
+### 1. Kloning Repositori
+Gunakan Git untuk mendapatkan salinan proyek:
+```bash
+git clone [https://github.com/username/cafeteria.git](https://github.com/username/cafeteria.git)
+cd cafeteria
+2. Konfigurasi Database
+Buka phpMyAdmin pada Laragon Anda.
+
+Buat database baru dengan nama: cafeteria.
+
+Impor skema database dari file: /databases/db.sql.
+
+3. Konfigurasi Koneksi Database
+Edit file config.php di direktori utama:
+
+PHP
+
+<?php
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db   = "cafeteria";
+?>
+4. Konfigurasi Login Sosial Media (OAuth)
+Edit file config_oauth.php untuk memasukkan kredensial aplikasi Anda:
 
 <?php
 return [
@@ -92,228 +235,234 @@ return [
     ],
 ];
 ?>
-
-
-Pastikan Authorized Redirect URL di Google & Facebook Developer Console sesuai:
+Perhatian Redirect URL: Pastikan URL Alihan yang Diotorisasi di Konsol Developer Google & Facebook disetel dengan tepat sesuai jalur proyek Laragon Anda:
 
 http://localhost/cafeteria/callback.php?provider=Google
+
 http://localhost/cafeteria/callback-facebook.php?provider=Facebook
 
+Baik, ini adalah README.md dengan detail yang kaya dan format yang profesional, mengacu pada panjang dan kedalaman informasi dari versi awal, namun dengan penataan yang lebih terstruktur.
 
-Jalankan project via Laragon
+Markdown
 
-Start Apache & MySQL
+# 🍱 Cafeteria Project | Sistem Kantin Digital Sekolah
 
-Buka http://localhost/cafeteria
+[![Status Proyek](https://img.shields.io/badge/Status-Development%20in%20Progress-yellow.svg)](https://github.com/J-CNQU/cafeteria)
+[![Dibuat dengan](https://img.shields.io/badge/PHP-Native-8892BF)](https://www.php.net/)
+[![GitHub stars](https://img.shields.io/github/stars/J-CNQU/cafeteria?style=social)](https://github.com/J-CNQU/cafeteria/stargazers)
 
-🔑 Akun Login Default (Testing)
-Email / Username	Password
-fishicella@gmail.co
-	user123
-🗂️ Struktur Folder & File
+Aplikasi web berbasis **PHP Native** dan **MySQL**, dikembangkan menggunakan lingkungan server lokal **Laragon**. Proyek ini dirancang sebagai fondasi sistem kantin digital sekolah dengan fokus utama pada fitur autentikasi, sistem menu, dan manajemen pesanan.
+
+Proyek ini masih dalam fase pengembangan aktif dan berencana untuk diperluas ke sistem transaksi penuh dan pengelolaan stok otomatis.
+
+---
+
+## 🚀 Fitur Utama & Fungsionalitas
+
+### 1. Autentikasi yang Komprehensif
+| Modul | Status | Keterangan |
+| :--- | :--- | :--- |
+| **Login & Signup Manual** | ✅ Selesai | Implementasi aman dengan `password_hash()` & `password_verify()`. |
+| **Login Sosial Media** | ✅ Selesai | Terintegrasi penuh dengan **Google** dan **Facebook** via **HybridAuth v3**. |
+| **Sistem Logout Aman** | ✅ Selesai | Menggunakan `session_destroy()` untuk pembersihan sesi yang tuntas. |
+| **Pemeriksaan Sesi** | ✅ Selesai | Pop-up login otomatis muncul jika pengguna belum terautentikasi. |
+
+### 2. Menu & Manajemen Pesanan (Dalam Progres)
+| Modul | Status | Keterangan |
+| :--- | :--- | :--- |
+| **Halaman Menu** | 🟡 Dalam Progres | Tampilan menu yang dikategorikan berdasarkan jenis makanan (Nasi, Mie, Sate, Bakso). |
+| **Sistem Cart** | 🛒 Struktur Awal | Struktur dasar *cart* / keranjang pesanan telah disiapkan. |
+| **Transaksi & Laporan** | 💵 Rencana | Rencana integrasi sistem pembayaran, *checkout*, dan laporan transaksi. |
+
+---
+
+## ⚙️ Teknologi & Tools
+
+| Kategori | Komponen | Keterangan |
+| :--- | :--- | :--- |
+| **Backend** | PHP 8+ (Native) | Digunakan untuk logika server-side. |
+| **Frontend** | HTML5, CSS3, JavaScript | Murni Native (Vanilla JS) |
+| **Database** | MySQL | Digunakan untuk penyimpanan data. |
+| **Server Lokal** | Laragon | Lingkungan pengembangan yang direkomendasikan. |
+| **Library OAuth** | HybridAuth v3 | Digunakan untuk mengelola login sosial media. |
+| **Versi Kontrol** | Git + GitHub | |
+
+---
+
+## 🛠️ Panduan Instalasi Lokal
+
+Ikuti langkah-langkah detail ini untuk menyiapkan dan menjalankan proyek.
+
+### 1. Kloning Repositori
+Gunakan Git untuk mendapatkan salinan proyek:
+```bash
+git clone [https://github.com/username/cafeteria.git](https://github.com/username/cafeteria.git)
+cd cafeteria
+2. Konfigurasi Database
+Buka phpMyAdmin pada Laragon Anda.
+
+Buat database baru dengan nama: cafeteria.
+
+Impor skema database dari file: /databases/db.sql.
+
+3. Konfigurasi Koneksi Database
+Edit file config.php di direktori utama:
+
+PHP
+
+<?php
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db   = "cafeteria";
+?>
+4. Konfigurasi Login Sosial Media (OAuth)
+Edit file config_oauth.php untuk memasukkan kredensial aplikasi Anda:
+
+PHP
+
+<?php
+return [
+    'callback' => 'http://localhost/cafeteria/callback.php',
+    'providers' => [
+        'Google' => [
+            'enabled' => true,
+            'keys' => [
+                'id' => 'YOUR_GOOGLE_CLIENT_ID',
+                'secret' => 'YOUR_GOOGLE_CLIENT_SECRET'
+            ],
+        ],
+        'Facebook' => [
+            'enabled' => true,
+            'keys' => [
+                'id' => 'YOUR_FACEBOOK_APP_ID',
+                'secret' => 'YOUR_FACEBOOK_APP_SECRET'
+            ],
+        ],
+    ],
+];
+?>
+Perhatian Redirect URL: Pastikan URL Alihan yang Diotorisasi di Konsol Developer Google & Facebook disetel dengan tepat sesuai jalur proyek Laragon Anda:
+
+http://localhost/cafeteria/callback.php?provider=Google
+
+http://localhost/cafeteria/callback-facebook.php?provider=Facebook
+
+5. Menjalankan Aplikasi
+Mulai Apache & MySQL di Laragon.
+
+Akses proyek melalui URL: http://localhost/cafeteria
+
+🔑 Akun Login Default (Pengujian)
+Email / UsernamePassword
+fishicella@gmail.com / user123
+
+🗂️ Struktur Folder & File Proyek
+Struktur folder proyek dirancang untuk memisahkan logika utama dengan aset dan modul:
+
 cafeteria/
-├── auth_check.php
-├── callback.php                        # Callback untuk Google OAuth
-├── composer.json
-├── composer.lock
-├── config.php                          # Konfigurasi koneksi database
-├── config_oauth.php                    # Konfigurasi OAuth (Google)
-├── fcon.png
-├── hash.php                            # Proses hashing password
-├── homepage.php
-├── hybridauth.log
-├── hybridauth_config.php               # Config tambahan HybridAuth
-├── index.php                           # Halaman utama / landing page
-├── login.php                           # Login manual
-├── login_google.php                    # Login via Google
-├── login_social.php                    # Routing login sosial media
-├── logout.php                          # Logout session
-├── orders.php
-├── signup.php                          # Form signup
-├── README.md                           # Dokumentasi project
+├── auth_check.php          # Pemeriksaan sesi
+├── callback.php            # Callback untuk Google OAuth
+├── config.php              # Konfigurasi koneksi database
+├── config_oauth.php        # Konfigurasi OAuth
+├── homepage.php            # Halaman utama setelah login
+├── index.php               # Halaman utama / landing page
+├── login.php               # Login manual
+├── login_google.php        # Routing login via Google
+├── login_social.php        # Routing login sosial media
+├── logout.php              # Pengelolaan logout
+├── orders.php              # Halaman pesanan
+├── signup.php              # Form registrasi
 │
 ├── assets/
-│   ├── css/
-│   │   ├── footer.css
-│   │   ├── homepage.css
-│   │   ├── login.css
-│   │   ├── pop-up.css
-│   │   ├── signup.css
-│   │   ├── style-index.css
-│   │   └── style.css
-│   │
-│   ├── font/
-│   │   └── Cocogoose-Pro-Bold-trial.ttf
-│   │
-│   ├── homepage/
-│   │   ├── slideshow-1.png
-│   │   ├── slideshow-2.png
-│   │   ├── slideshow-3.png
-│   │   ├── iklan help.png
-│   │   ├── fried rice.jpeg
-│   │   ├── hainam.jpeg
-│   │   └── categories/
-│   │       ├── 1.png
-│   │       ├── 2.png
-│   │       ├── 3.png
-│   │       ├── 4.png
-│   │       └── 5.png
-│   │
-│   ├── img/
-│   │   ├── facebook.png
-│   │   ├── google.png
-│   │   ├── keranjang.png
-│   │   ├── logo.png
-│   │   └── x.png
-│   │
-│   └── js/
-│       ├── index.js
-│       └── slideshow.js
+│   ├── css/                # Semua file styling (*.css)
+│   ├── font/               # Font kustom
+│   ├── homepage/           # Aset gambar homepage
+│   ├── img/                # Ikon & logo
+│   └── js/                 # File JavaScript
 │
-├── cafetaria/
-│   ├── counter1.php
-│   ├── counter2.php
-│   ├── counter3.php
-│   ├── counter4.php
-│   ├── counter.js
-│   ├── counter.css
-│   └── logo.png
-│
-├── categories/
-│   ├── bakso.php
-│   ├── noodles.php
-│   ├── rice.php
-│   ├── sate.php
-│   ├── counter.js
-│   └── counter.css
-│
+├── cafetaria/              # Modul counter/konter pemesanan
+├── categories/             # Modul kategori menu (rice.php, sate.php, dll)
 ├── databases/
-│   └── db.sql
-│
-├── Css-AfterLogin/
-│   └── Counter-1.css
-│
-├── Menu-AfterLogin/
-│   └── Counter-1.php
-│
-├── orderpage/
-│   └── orderpage.php
-│
-├── helppage/
-│   ├── help.php
-│   └── help.css
-│
-├── php/
-│   └── counter.php
-│
+│   └── db.sql              # Skema Database
+├── Css-AfterLogin/         # Styling untuk tampilan pasca-login
+├── Menu-AfterLogin/        # Halaman menu pasca-login
+├── orderpage/              # Halaman detail pesanan
+├── helppage/               # Halaman bantuan
 └── vendor/
-    └── hybridauth/                    # Library untuk login sosial media
+    └── hybridauth/         # Library OAuth
 
-🧮 Struktur Database (db.sql)
-Tabel users
-Kolom	Tipe	Keterangan
-id	INT (AI, PK)	ID unik user
-email	VARCHAR(255)	Email pengguna
-password	VARCHAR(255)	Password terenkripsi
-name	VARCHAR(100)	Nama pengguna
-created_at	DATETIME	Tanggal registrasi
-Tabel Rencana (akan dikembangkan)
+	🧑‍💻 Struktur Tabel users
+id : INT (AI, PK)
 
-menu – daftar makanan/minuman
+Keterangan: ID unik pengguna. Ini adalah Primary Key dan Auto Increment (nilai bertambah otomatis).
 
-orders – data pesanan user
+email : VARCHAR(255)
 
-order_items – rincian isi pesanan
+Keterangan: Alamat email pengguna.
 
-transactions – pencatatan transaksi
+password : VARCHAR(255)
 
-stok_log – log perubahan stok produk
+Keterangan: Password pengguna yang sudah dienkripsi.
 
-🔄 Alur Aplikasi
+name : VARCHAR(100)
 
-User membuka halaman utama (index.php)
+Keterangan: Nama lengkap pengguna.
 
-Jika belum login → muncul pop-up login/signup
+created_at : DATETIME
 
-Setelah login → diarahkan ke homepage.php
+Keterangan: Tanggal dan waktu registrasi pengguna.
 
-User dapat memilih kategori (Nasi, Mie, Bakso, dll)
+# 🍜 Cafeteria Ordering System (Web PHP Native)
 
-Sistem menyiapkan struktur untuk:
+Sistem pemesanan makanan/minuman berbasis web yang dikembangkan menggunakan PHP Native.
 
-menambah ke keranjang,
+## 🚀 Fitur Utama & Alur Aplikasi
 
-menghitung total pesanan,
+### 🔄 Alur Penggunaan Singkat
 
-dan checkout (belum aktif)
+1.  **Akses**: Pengguna mengakses halaman utama (`index.php`).
+2.  **Otentikasi**: Jika belum login, muncul *pop-up* **Login/Sign-up**.
+3.  **Halaman Utama**: Setelah login, pengguna diarahkan ke `homepage.php`.
+4.  **Pemesanan**: Pengguna dapat memilih kategori menu (Nasi, Mie, Bakso, dll.).
+5.  **Checkout (Tahap Selanjutnya)**: Sistem saat ini menyiapkan logika untuk penambahan ke keranjang, penghitungan total, dan *checkout*.
+6.  **Logout**: Proses *logout* akan menghapus sesi dan mengembalikan pengguna ke halaman utama.
 
-Logout akan menghapus session dan mengembalikan ke halaman utama.
+### 🌐 Detail Integrasi Login Sosial Media (OAuth)
 
-🌐 Integrasi Login Sosial Media
-🔹 Login dengan Google
+Proyek ini menggunakan **HybridAuth** untuk mengelola proses OAuth. Log otorisasi tersimpan otomatis di `hybridauth.log`.
 
-Menggunakan HybridAuth Provider Google.php
+| Provider | File Konfigurasi | Redirect URL |
+| :--- | :--- | :--- |
+| **Google** | `config_oauth.php` | `http://localhost/cafeteria/callback.php?provider=Google` |
+| **Facebook** | `config_oauth.php` | `http://localhost/cafeteria/callback-facebook.php?provider=Facebook` |
 
-Memerlukan Client ID dan Client Secret
+> **Catatan Kegagalan Login Sosial Media:** Jika proses otorisasi gagal, pastikan `callback.php` dan `config_oauth.php` sesuai dengan *path* lingkungan Anda (misalnya Laragon), dan **URL Pengalihan** di Konsol Developer sudah diverifikasi dan benar.
 
-Redirect ke:
-http://localhost/cafeteria/callback.php?provider=Google
+## 🗄️ Struktur Database (Rencana Pengembangan Lanjutan)
 
-🔹 Login dengan Facebook
+Berikut adalah tabel yang direncanakan untuk pengembangan sistem lebih lanjut:
 
-Menggunakan HybridAuth Provider Facebook.php
+* **`menu`**: Daftar makanan/minuman yang tersedia.
+* **`orders`**: Data pesanan utama pengguna (misalnya ID pengguna, tanggal pesan, total).
+* **`order_items`**: Rincian isi dari setiap pesanan.
+* **`transactions`**: Pencatatan riwayat transaksi dan pembayaran.
+* **`stok_log`**: Log atau riwayat perubahan stok produk.
 
-Memerlukan App ID dan App Secret
+## 🧭 Roadmap Pengembangan Selanjutnya
 
-Redirect ke:
-http://localhost/cafeteria/callback-facebook.php?provider=Facebook
+Kami merencanakan fitur-fitur berikut untuk iterasi berikutnya:
 
-Semua log proses tersimpan otomatis di file hybridauth.log
+* **Keranjang Pesanan Dinamis**: Implementasi sistem keranjang pesanan berbasis *session* yang fungsional.
+* **Admin Panel**: Pembuatan *dashboard* admin untuk manajemen menu dan pemrosesan pesanan.
+* **Pembayaran Simulasi**: Implementasi alur pembayaran dan konfirmasi.
+* **Notifikasi**: Penambahan fitur notifikasi status pesanan (misalnya: Pesanan diterima, Sedang diproses).
+* **Optimasi**: Peningkatan responsifitas tampilan di perangkat *mobile*.
 
-🧑‍💻 Author
+## 🧑‍💻 Kontributor Proyek
 
-Juan Felix Katoro
-📧 Email: jferxiic@gmail.com
-
-💻 GitHub: J-CNQU
-
-📊 Status Proyek
-Komponen	Status	Catatan
-Login & Signup Manual	✅ Selesai	Aman & stabil
-OAuth Google & Facebook	✅ Selesai	Gunakan config_oauth.php
-Homepage & Menu	🟡 Dalam Progres	Struktur sudah tersedia
-Pesanan & Checkout	🔴 Belum Dimulai	Akan menggunakan session cart
-Dashboard User	🟡 Prototipe	Dalam perancangan UI
-Sistem Transaksi	🔴 Belum tersedia	Akan ditambahkan ke MySQL
-🧭 Rencana Update Selanjutnya
-
-🔜 Tambah sistem keranjang pesanan dinamis
-
-🔜 Buat admin panel untuk mengatur menu & pesanan
-
-🔜 Implementasi pembayaran simulasi
-
-🔜 Tambah fitur notifikasi pesanan
-
-🔜 Optimasi responsif di mobile
-
-⚠️ Catatan
-
-Jika login sosial media gagal, pastikan:
-
-callback.php & config_oauth.php sesuai path di Laragon
-
-Redirect URL di Google & Facebook Developer Console sudah benar
-
-Apache dan MySQL aktif di Laragon
-
-Folder vendor/ lengkap dan composer install sudah dijalankan
-
-🏁 Kesimpulan
-
-Cafeteria Project adalah pondasi sistem kantin digital berbasis PHP yang kuat,
-dengan sistem autentikasi ganda (manual dan sosial media),
-rencana ekspansi ke sistem transaksi, dan desain struktur folder profesional.
-💻 GitHub: Juan Felix
+| Nama | Email | GitHub |
+| :--- | :--- | :--- |
+| **Juan Felix Katoroj** | `jferxiic@gmail.com` | [J-CNQU](https://github.com/J-CNQU) |
 
 ```
