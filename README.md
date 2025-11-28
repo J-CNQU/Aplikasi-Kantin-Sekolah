@@ -1,6 +1,6 @@
+```
 🍱 Cafeteria Project | Sistem Kantin Digital Sekolah
 Aplikasi web berbasis PHP Native dan MySQL, dikembangkan menggunakan lingkungan server lokal Laragon. Proyek ini dirancang sebagai fondasi sistem kantin digital sekolah dengan fokus utama pada fitur autentikasi, sistem menu, dan manajemen pesanan.
-
 Proyek ini masih dalam fase pengembangan aktif dan berencana untuk diperluas ke sistem transaksi penuh dan pengelolaan stok otomatis.
 
 🚀 Fitur Utama & Fungsionalitas
@@ -53,7 +53,8 @@ Digunakan untuk login sosial media (Google & Facebook).
 • Version Control
 Git + GitHub
 Untuk manajemen versi dan kolaborasi.
-
+```
+```
 🛠️ Panduan Instalasi Lokal
 
 Ikuti langkah-langkah berikut untuk menyiapkan dan menjalankan proyek di lingkungan lokal.
@@ -84,6 +85,7 @@ $db   = "cafeteria";
 4. Konfigurasi Login Sosial Media (OAuth)
 
 Edit file config_oauth.php untuk memasukkan kredensial aplikasi Anda:
+```
 ```
 <?php
 return [
