@@ -102,6 +102,7 @@ return [
 ];
 ?>
 ```
+```
 Pastikan Redirect URL sesuai dengan pengaturan OAuth Anda, contoh:
 
 http://localhost/cafeteria/callback.php?provider=Google
@@ -111,6 +112,7 @@ http://localhost/cafeteria/callback-facebook.php?provider=Facebook
 Jalankan Apache & MySQL melalui Laragon.
 Akses aplikasi melalui URL:
 http://localhost/cafeteria
+```
 ```
 🗂️ Struktur Folder & File Proyek
 Struktur folder proyek dirancang untuk memisahkan logika utama dengan aset dan modul:
@@ -425,6 +427,7 @@ Struktur folder proyek dirancang untuk memisahkan logika utama dengan aset dan m
 └───vendor
     │   autoload.php
 ```
+```
 🧑‍💻 Struktur Tabel users
 
 Berikut adalah struktur tabel utama untuk data pengguna:
@@ -469,3 +472,4 @@ Fokus Tugas: Implementasi Desain dan Pengembangan Front-end (HTML, CSS, JavaScri
 Ethan (UI/UX Designer)
 
 Fokus Tugas: Perancangan User Interface dan User Experience (Desain Proyek), dan Implementasi Front-end Desain.
+```
