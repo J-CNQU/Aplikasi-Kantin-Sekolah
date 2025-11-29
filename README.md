@@ -446,30 +446,40 @@ Nama lengkap pengguna.
 
 • created_at — DATETIME
 Tanggal dan waktu registrasi.
+```
+```
 
 🧭 Roadmap Pengembangan Selanjutnya
 Kami merencanakan fitur-fitur berikut untuk iterasi berikutnya:
-
 Keranjang Pesanan Dinamis: Implementasi sistem keranjang pesanan berbasis session yang fungsional.
-
 Admin Panel: Pembuatan dashboard admin untuk manajemen menu dan pemrosesan pesanan.
-
 Pembayaran Simulasi: Implementasi alur pembayaran dan konfirmasi.
-
 Notifikasi: Penambahan fitur notifikasi status pesanan (misalnya: Pesanan diterima, Sedang diproses).
-
 Optimasi: Peningkatan responsifitas tampilan di perangkat mobile.
+```
+```
 
 👤 Tim Kontributor dan Pembagian Tugas
 Juan Felix Katoro (Fullstack Developer)
-
 Fokus Tugas: Pengembangan Back-end (PHP/MySQL), Logika Autentikasi, Struktur Database, dan Front-end Pendukung.
 
 Britannia (Front-end Engineer)
-
 Fokus Tugas: Implementasi Desain dan Pengembangan Front-end (HTML, CSS, JavaScript), termasuk responsivitas dan interaktivitas UI.
 
 Ethan (UI/UX Designer)
-
 Fokus Tugas: Perancangan User Interface dan User Experience (Desain Proyek), dan Implementasi Front-end Desain.
+```
+
+```
+🔑 Akun Testing Proyek CafeTaria
+
+Pengguna (User)
+Email: Ethan@gmail.com
+Password: 123456
+Akses: Halaman Menu dan Orders.
+
+Administrator (Admin)
+Email: Richard@gmail.com
+Password: richardadmin
+Akses: Dashboard Admin untuk Kelola Menu.
 ```
