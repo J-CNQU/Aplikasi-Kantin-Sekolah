@@ -58,6 +58,7 @@ button {
   gap: 20px;
   list-style: none;
   font-family: myFont;
+  padding-left: 250px;
 }
 
 .nav-links a {

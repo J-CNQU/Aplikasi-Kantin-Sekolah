@@ -707,26 +707,110 @@ button {
   padding: 0;
 }
 
-@keyframes worm-move {
-  0%,
-  100% {
-    transform: translateX(300px); /* gerak ke kanan */
-  }
-  50% {
-    transform: translateX(-300px); /* gerak ke kiri */
-  }
-}
-
 .btns-user {
   display: inline-block;
-  animation: worm-move 6s ease-in-out infinite;
   font-weight: bold;
-  color: #007bff;
-  padding: 40px 80px; /* bikin kotaknya besar */
+  color: #f97316;
+  padding: 20px 400px;
   border-radius: 25px;
   font-size: 80px;
   text-decoration: none;
   text-align: center;
-  border: 3px solid #007bff; /* biar terlihat kotaknya */
+  border: 5px solid #f97316;
   box-shadow: 0 0 25px rgba(0, 123, 255, 0.4);
 }
+
+.nav-icons a {
+  display: inline-block;
+  padding: 0 10px;
+  color: #333;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.nav-icons a:hover {
+  color: #007bff;
+}
+
+.nav-icons {
+  position: relative;
+}
+.nav-icons a {
+  display: inline-block;
+  padding: 0 12px;
+  color: #333;
+  font-size: 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.nav-icons a:hover {
+  color: #007bff;
+}
+
+#search-modal {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 180px;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  z-index: 1000;
+}
+#search-modal input[type="search"] {
+  padding: 8px;
+  width: 250px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+#user-dropdown {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  z-index: 1000;
+  min-width: 150px;
+  text-align: left;
+}
+#user-dropdown a {
+  display: block;
+  padding: 5px 0;
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+}
+#user-dropdown hr {
+  margin: 5px 0;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+.btns-user {
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.btns-user span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#f {
+  border-radius: 10px;
+}
+

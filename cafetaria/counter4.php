@@ -1,22 +1,91 @@
 <?php
+// =======================================================
+// A. LOGIKA PHP: Mengambil Data Menu dari Database & Menu Statis
+// =======================================================
+session_start();
+$userRole = $_SESSION['role'] ?? null;
+$isLoggedIn = isset($_SESSION['id']) ? 'true' : 'false';
 include("../config.php");
 
-$sql = "SELECT name, price, image, category FROM menu ORDER BY category, name";
+$category_filter = 'Counter 4'; // Target: Counter 4
+$dynamic_menus = [];
+$error_message = "";
 
-$result = $conn->query($sql);
+$sql = "SELECT name, price, description, image 
+        FROM menu 
+        WHERE category = ? AND is_available = TRUE 
+        ORDER BY name";
 
-$menus = [];
-if ($result && $result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        $category = $row['category'];
-        if (!isset($menus[$category])) {
-            $menus[$category] = [];
+try {
+    if ($conn) {
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $category_filter);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            $dynamic_menus = $result->fetch_all(MYSQLI_ASSOC);
         }
-        $menus[$category][] = $row;
+        $stmt->close();
+    } else {
+        $error_message = "❌ Koneksi database gagal.";
     }
+} catch (Exception $e) {
+    $error_message = "❌ Gagal memuat menu dari database: " . $e->getMessage();
 }
 
-$conn->close();
+// Tutup koneksi setelah selesai mengambil data
+if (isset($conn) && $conn) {
+    $conn->close();
+}
+
+// --- DEFINISI MENU STATIS UNTUK COUNTER 4 (Menu Sate/Bakso) ---
+$static_menus = [
+    [
+        'name' => 'Sate Kambing',
+        'price' => 18000,
+        'description' => 'Potongan daging kambing empuk dibakar dengan bumbu kecap khas, disajikan dengan lontong.',
+        'image' => 'counter 4/4.sate-kambing.png'
+    ],
+    [
+        'name' => 'Sate Ayam',
+        'price' => 16000,
+        'description' => 'Sate ayam bakar dengan bumbu kacang gurih dan sedikit manis, nikmat dengan lontong.',
+        'image' => 'counter 4/4.sate-ayam.png'
+    ],
+    [
+        'name' => 'Bakso Urat',
+        'price' => 19000,
+        'description' => 'Bakso urat kenyal dan gurih disajikan dalam kuah kaldu sapi hangat.',
+        'image' => 'counter 4/4.bakso-urat.png'
+    ],
+    [
+        'name' => 'Bakso Biasa',
+        'price' => 16000,
+        'description' => 'Bakso daging sapi lembut dalam kuah gurih, disajikan dengan mie dan tahu.',
+        'image' => 'counter 4/4.bakso-biasa.png'
+    ],
+    [
+        'name' => 'Bakso Komplit',
+        'price' => 24000,
+        'description' => 'Campuran bakso urat, tahu, dan mie dalam kuah kaldu sapi gurih hangat.',
+        'image' => 'counter 4/4.bakso-komplit.png'
+    ],
+    [
+        'name' => 'Gado-Gado',
+        'price' => 20000,
+        'description' => 'Sayuran segar, lontong, dan telur rebus disiram bumbu kacang khas Betawi.',
+        'image' => 'counter 4/4.gado-gado.png'
+    ]
+];
+
+// Gabungkan menu dinamis dan statis
+$all_menus = array_merge($dynamic_menus, $static_menus);
+
+// Urutkan semua menu berdasarkan nama agar terlihat lebih rapi
+usort($all_menus, function ($a, $b) {
+    return strcmp($a['name'], $b['name']);
+});
 ?>
 
 <!DOCTYPE html>
@@ -25,12 +94,12 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Cafeteria Sekolah - Home</title>
+    <title>Cafeteria Sekolah - Counter 4</title>
+
     <link rel="stylesheet" href="/cafetaria/counter-4.css">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/style-index.css">
     <link rel="shortcut icon" href="/assets/img/fcon.png" type="image/x-icon">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body class="site-bg">
@@ -42,31 +111,67 @@ $conn->close();
 
         <ul class="nav-links">
             <li><a href="../../homepage.php" class="btns">Home</a></li>
-            <li><a href="../../counter1.php" class="active">Menu</a></li>
+            <li><a href="counter.php?id=4" class="active">Menu</a></li>
             <li><a href="../../orders.php" class="btns">Orders</a></li>
             <li><a href="../../helps.php" class="btns">Helps</a></li>
         </ul>
 
-        </ul>
-
         <div class="nav-icons">
-            <button><i class="fas fa-search"></i></button>
-            <button><i class="fas fa-user"></i></button>
-            <button><i class="fas fa-shopping-cart"></i></button>
+            <?php
+            if ($isLoggedIn === 'true') {
+              $user_icon_url = ($userRole === 'admin') ? 'counter3.php' : 'homepage.php';
+              $user_icon = ($userRole === 'admin') ? 'fas fa-user-shield' : 'fas fa-user';
+            } else {
+              $user_icon_url = 'login.php';
+              $user_icon = 'fas fa-user';
+            }
+            $show_cart = ($isLoggedIn === 'true' && $userRole !== 'admin');
+            ?>
 
+            <a href="#" id="search-icon" title="Pencarian Cepat">
+              <i class="fas fa-search"></i>
+            </a>
+
+            <a href="#" id="user-icon" title="Profil Pengguna/Admin">
+              <i class="<?php echo htmlspecialchars($user_icon); ?>"></i>
+            </a>
+            <?php if ($show_cart): ?>
+                <a href="../orders/orders.php" title="Lihat Keranjang Belanja">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            <?php endif; ?>
         </div>
-
     </nav>
 
+    <div id="search-modal">
+        <input type="search" placeholder="Cari menu, counter, atau kategori..." />
+        <button id="f" type="button">Cari</button>
+    </div>
 
+    <div id="user-dropdown">
+        <?php if ($isLoggedIn === 'true'): ?>
+            <p>Halo, <?= htmlspecialchars($_SESSION['name']) ?></p>
+            <hr>
+            <a href="<?php echo htmlspecialchars($user_icon_url); ?>">Dashboard / Profil</a>
+            <hr>
+            <a href="../acc/logout.php">Logout</a>
+        <?php else: ?>
+            <a href="../acc/login.php">Login</a>
+            <hr>
+            <a href="../acc/signup.php">Sign Up</a>
+        <?php endif; ?>
+    </div>
+    </nav>
+
+    <hr>
 
     <section class="counters">
         <div class="counter-content">
             <div class="counter-background">
-                <img src="counter 1/iklan counter 4.png" alt="counter 1">
+                <img src="/cafetaria/counter 4/iklan counter 4.png" alt="counter 4">
             </div>
 
-            <img src="logo per counter/4.png" alt="counter 1" class="counter-logo">
+            <img src="/cafetaria/logo per counter/4.png" alt="counter 4" class="counter-logo">
 
             <div class="counter-selection">
                 <a href="../php/counter.php?id=1" class="counter-item">
@@ -82,138 +187,63 @@ $conn->close();
                     Counter <span class="number">4</span>
                 </a>
             </div>
-
-
         </div>
     </section>
+
+    <hr>
 
     <section class="menus">
         <h1 class="h1">Menu</h1>
-
         <div class="menu-grid">
-            <div class="list-menu" data-menu="SateKambing" data-name="Sate Kambing" data-price="18000">
-                <div class="menu-image">
-                    <img src="counter 4/4.sate-kambing.png" alt="sate kambing">
-                </div>
-                <div class="menu-info">
-                    <h3 class="menu-title">Sate Kambing</h3>
-                    <p class="menu-desc">Potongan daging kambing empuk dibakar dengan bumbu kecap khas, disajikan dengan
-                        lontong.</p>
 
-                    <div class="menu-button">
-                        <span class="menu-price">Rp18.000</span>
-                        <div class="menu-qty">
-                            <button class="qty-btn plus"><img src="icons/plus.png" alt="+"></button>
-                            <span class="qty-number">0</span>
-                            <button class="qty-btn minus"><img src="icons/minus.png" alt="-"></button>
+            <?php if (!empty($error_message)): ?>
+                <p style="grid-column: 1 / -1; color: red; text-align: center;"><?php echo $error_message; ?></p>
+            <?php elseif (!empty($all_menus)): ?>
+                <?php foreach ($all_menus as $menu_item): ?>
+
+                    <?php
+                    // Membuat slug/ID menu untuk atribut data-menu
+                    $menu_slug = strtolower(str_replace(' ', '-', $menu_item['name']));
+                    ?>
+
+                    <div class="list-menu" data-menu="<?php echo $menu_slug; ?>"
+                        data-name="<?php echo htmlspecialchars($menu_item['name']); ?>"
+                        data-price="<?php echo htmlspecialchars($menu_item['price']); ?>">
+
+                        <div class="menu-info">
+                            <h3 class="menu-title"><?php echo htmlspecialchars($menu_item['name']); ?></h3>
+
+                            <p class="menu-desc">
+                                <?php echo htmlspecialchars($menu_item['description'] ?? 'Deskripsi belum tersedia.'); ?></p>
+
+                            <div class="menu-button">
+                                <span class="menu-price">Rp<?php echo number_format($menu_item['price'], 0, ',', '.'); ?></span>
+
+                                <div class="menu-qty">
+                                    <button class="qty-btn plus"><img src="icons/plus.png" alt="+"></button>
+                                    <span class="qty-number">0</span>
+                                    <button class="qty-btn minus"><img src="icons/minus.png" alt="-"></button>
+                                </div>                
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="list-menu" data-menu="SateAyam" data-name="Sate Ayam" data-price="16000">
-                <div class="menu-image">
-                    <img src="counter 4/4.sate-ayam.png" alt="sate ayam">
-                </div>
-                <div class="menu-info">
-                    <h3 class="menu-title">Sate Ayam</h3>
-                    <p class="menu-desc">Sate ayam bakar dengan bumbu kacang gurih dan sedikit manis, nikmat dengan
-                        lontong.</p>
-
-                    <div class="menu-button">
-                        <span class="menu-price">Rp16.000</span>
-                        <div class="menu-qty">
-                            <button class="qty-btn plus"><img src="icons/plus.png" alt="+"></button>
-                            <span class="qty-number">0</span>
-                            <button class="qty-btn minus"><img src="icons/minus.png" alt="-"></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="list-menu" data-menu="BaksoUrat" data-name="Bakso Urat" data-price="19000">
-                <div class="menu-image">
-                    <img src="counter 4/4.bakso-urat.png" alt="bakso urat">
-                </div>
-                <div class="menu-info">
-                    <h3 class="menu-title">Bakso Urat</h3>
-                    <p class="menu-desc">Bakso urat kenyal dan gurih disajikan dalam kuah kaldu sapi hangat.</p>
-
-                    <div class="menu-button">
-                        <span class="menu-price">Rp19.000</span>
-                        <div class="menu-qty">
-                            <button class="qty-btn plus"><img src="icons/plus.png" alt="+"></button>
-                            <span class="qty-number">0</span>
-                            <button class="qty-btn minus"><img src="icons/minus.png" alt="-"></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="list-menu" data-menu="BaksoBiasa" data-name="Bakso Biasa" data-price="16000">
-                <div class="menu-image">
-                    <img src="counter 4/4.bakso-biasa.png" alt="bakso biasa">
-                </div>
-                <div class="menu-info">
-                    <h3 class="menu-title">Bakso Biasa</h3>
-                    <p class="menu-desc">Bakso daging sapi lembut dalam kuah gurih, disajikan dengan mie dan tahu.</p>
-
-                    <div class="menu-button">
-                        <span class="menu-price">Rp16.000</span>
-                        <div class="menu-qty">
-                            <button class="qty-btn plus"><img src="icons/plus.png" alt="+"></button>
-                            <span class="qty-number">0</span>
-                            <button class="qty-btn minus"><img src="icons/minus.png" alt="-"></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="list-menu" data-menu="BaksoKomplit" data-name="Bakso Komplit" data-price="24000">
-                <div class="menu-image">
-                    <img src="counter 4/4.bakso-komplit.png" alt="bakso komplit">
-                </div>
-                <div class="menu-info">
-                    <h3 class="menu-title">Bakso Komplit</h3>
-                    <p class="menu-desc">Campuran bakso urat, tahu, dan mie dalam kuah kaldu sapi gurih hangat.</p>
-
-                    <div class="menu-button">
-                        <span class="menu-price">Rp24.000</span>
-                        <div class="menu-qty">
-                            <button class="qty-btn plus"><img src="icons/plus.png" alt="+"></button>
-                            <span class="qty-number">0</span>
-                            <button class="qty-btn minus"><img src="icons/minus.png" alt="-"></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="list-menu" data-menu="GadoGado" data-name="Gado-Gado" data-price="20000">
-                <div class="menu-image">
-                    <img src="counter 4/4.gado-gado.png" alt="gado gado">
-                </div>
-                <div class="menu-info">
-                    <h3 class="menu-title">Gado-Gado</h3>
-                    <p class="menu-desc">Sayuran segar, lontong, dan telur rebus disiram bumbu kacang khas Betawi.</p>
-
-                    <div class="menu-button">
-                        <span class="menu-price">Rp20.000</span>
-                        <div class="menu-qty">
-                            <button class="qty-btn plus"><img src="icons/plus.png" alt="+"></button>
-                            <span class="qty-number">0</span>
-                            <button class="qty-btn minus"><img src="icons/minus.png" alt="-"></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p style="grid-column: 1 / -1; text-align: center;">Tidak ada menu yang tersedia saat ini untuk Counter 2.
+                </p>
+            <?php endif; ?>
 
         </div>
     </section>
+
+
     <div class="order-button-container">
         <a href="../../orders.php"><button class="order-button">Order</button></a>
     </div>
 
     <br><br><br><br><br><br><br><br><br><br>
+
     <footer class="footer">
         <div class="footer-container">
 
@@ -248,16 +278,16 @@ $conn->close();
         <div class="footer-social">
             <div>
                 <h4>Connect with us</h4>
-                <a href="#"><img src="logo2 footer/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="logo2 footer/instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="logo2 footer/twitter.png" alt="Twitter"></a>
-                <a href="#"><img src="logo2 footer/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="/cafetaria/logo2 footer/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="/cafetaria/logo2 footer/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="/cafetaria/logo2 footer/twitter.png" alt="Twitter"></a>
+                <a href="#"><a href="#"><img src="/cafetaria/logo2 footer/youtube.png" alt="YouTube"></a>
             </div>
 
             <div>
                 <h4>Download the app</h4>
-                <a href="#"><img src="logo2 footer/apple.png" alt="App Store"></a>
-                <a href="#"><img src="logo2 footer/playstore.png" alt="Play Store"></a>
+                <a href="#"><img src="/cafetaria/logo2 footer/apple.png" alt="App Store"></a>
+                <a href="#"><img src="/cafetaria/logo2 footer/playstore.png" alt="Play Store"></a>
             </div>
         </div>
 
@@ -268,6 +298,7 @@ $conn->close();
     </footer>
 
     <script src="counter.js"></script>
+    <script src="../admin/admin-js/homepage-admin.js"></script>
 </body>
 
 </html>

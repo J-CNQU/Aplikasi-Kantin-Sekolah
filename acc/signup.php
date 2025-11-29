@@ -1,5 +1,5 @@
 <?php
-require 'config.php';
+require '../config.php';
 $error = '';
 $success = '';
 
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cafeteria Sekolah - Sign Up</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-  <link href="assets/css/login.css" rel="stylesheet" />
+  <link href="../assets/css/login.css" rel="stylesheet" />
   <link rel="shortcut icon" href="fcon.png" type="image/x-icon">
 </head>
 
@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div class="card">
       <div class="logo">
-        <img alt="CAFETARIA Logo" src="/assets/img/logo.png" />
+        <img alt="CAFETARIA Logo" src="../assets/img/logo.png" />
       </div>
 
       <h1>Sign Up</h1>
@@ -85,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       <p class="or-with">Or With</p>
       <div class="socials">
-        <a href="login_google.php"><img src="/assets/img/google.png" alt="Google" /></a>
+        <a href="login_google.php"><img src="/../assets/img/google.png" alt="Google" /></a>
       </div>
 
 

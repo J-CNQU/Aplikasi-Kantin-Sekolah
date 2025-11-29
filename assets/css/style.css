@@ -5,14 +5,9 @@
     box-sizing: border-box;
   }
 
-  @font-face {
-    font-family: myFont;
-    src: url(/assets/font/Cocogoose-Pro-Bold-trial.ttf);
-  }
-
   html,
   body {
-    font-family: myFont;
+    font-weight: bolder;
     background: #fdf7f2;
     color: #333;
     min-height: 100vh;
@@ -38,7 +33,6 @@
 
   .brand {
     font-size: 22px;
-    font-weight: 700;
     color: #ffa041;
     text-decoration: none;
   }
@@ -47,7 +41,6 @@
     margin-left: 12px;
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
     padding: 6px 10px;
     transition: 0.3s;
     border-bottom: 2px solid transparent;
@@ -59,7 +52,7 @@
   }
 
   .logo {
-    width: 120px; /* sesuaikan ukuran logo */
+    width: 120px;
     height: auto;
   }
 

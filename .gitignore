@@ -1,2 +1,5 @@
 /.env
 hybridauth.log
+/vendor/
+readme.html
+fcon.png

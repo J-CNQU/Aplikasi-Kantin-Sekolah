@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, sans-serif;
+  padding-top: 0px;
+  font-weight: bold;
+}
+.container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+h2 {
+  border-bottom: 3px solid #ccc;
+  padding-bottom: 10px;
+  margin-top: 30px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th,
+td {
+  border: 3px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+form {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 3px solid #eee;
+  background: #f9f9f9;
+  border-radius: 1px;
+}
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 3px solid #ccc;
+  border-radius: 1px;
+  box-sizing: border-box;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.available {
+  color: green;
+  font-weight: bold;
+}
+.unavailable {
+  color: red;
+  font-weight: bold;
+}
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.checkbox-container input {
+  width: auto;
+  margin-left: 10px;
+  transform: scale(1.2);
+}
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 1px;
+}
+.alert.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 3px solid #c3e6cb;
+}
+.alert.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 3px solid #f5c6cb;
+}
+
+.btnss {
+  border-radius: 5px;
+  color: #78020d;
+  border-color: grey;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  font-size: 16px;
+}
+
+#counter {
+  color: #b91c1c;
+}
+
+.dropdown-wrapper select {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  color: #b91c1c;
+  font-weight: 900;
+  font-size: 28px;
+  padding-bottom: 5px;
+}

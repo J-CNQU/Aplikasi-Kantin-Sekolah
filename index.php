@@ -11,7 +11,6 @@ $isLoggedIn = isset($_SESSION['id']) ? 'true' : 'false';
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <script>
-    // Melewatkan status login PHP ke variabel JavaScript
     const IS_LOGGED_IN = <?php echo $isLoggedIn; ?>;
   </script>
   <title>Cafeteria Sekolah - Home</title>
@@ -36,21 +35,16 @@ $isLoggedIn = isset($_SESSION['id']) ? 'true' : 'false';
 
       <?php if (isset($_SESSION['name'])): ?>
         <li><a href="../cafetaria/Counter1.php" class="btns">Menu</a></li>
-        <li><a href="orders.php" class="btns">Orders</a></li>
-        <li><a href="logout.php" class="btns-logout">Signout</a></li>
+        <li><a href="./orders/orders.php" class="btns">Orders</a></li>
+        <li><a href="/acc/logout.php" class="btns-logout">Signout</a></li>
       <?php else: ?>
-        <li><a href="login.php" class="btns">Login</a></li>
-        <li><a href="signup.php" class="btns">Sign Up</a></li>
+        <li><a href="/acc/login.php" class="btns">Login</a></li>
+        <li><a href="/acc/signup.php" class="btns">Sign Up</a></li>
       <?php endif; ?>
 
       <li><a href="/helppage/help.php">Help</a></li>
     </ul>
-
-    <div class="nav-icons">
-      <button><i class="fas fa-search"></i></button>
-      <button><i class="fas fa-user"></i></button>
-      <button><i class="fas fa-shopping-cart"></i></button>
-    </div>
+    <a style="padding-right: 350px;" href=""></a>
   </nav>
 
   <!-- HERO SECTION -->
@@ -60,13 +54,14 @@ $isLoggedIn = isset($_SESSION['id']) ? 'true' : 'false';
         <h1>Selamat Datang di <strong>Aplikasi Cafeteria Sekolah</strong></h1>
         <p>Nikmati makanan bergizi, cepat, dan terjangkau — langsung dari kantin sekolah.</p>
         <div class="hero-cta">
-          <a class="btn" href="login.php">Login</a>
-          <a class="btn-ghost" href="signup.php">Sign Up</a>
+          <a class="btn" href="/acc/login.php">Login</a>
+          <a class="btn-ghost" href="/acc/signup.php">Sign Up</a>
         </div>
       </div>
       <div class="hero-image" aria-hidden="true"></div>
     </section>
   </main>
+
 
   <!-- LOCKED SECTION -->
   <!-- ALL THIS CONTENT IS LOCKED -->

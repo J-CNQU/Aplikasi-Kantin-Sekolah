@@ -1,9 +1,9 @@
 <?php
 session_start(); // cukup sekali di paling atas
 
-require_once 'vendor/autoload.php';
-require_once 'config.php';       // koneksi database mysqli
-$config_oauth = include 'config_oauth.php'; // client id & secret
+require_once '../vendor/autoload.php';
+require_once '../config.php';       // koneksi database mysqli
+$config_oauth = include '../config_oauth.php'; // client id & secret
 
 use Hybridauth\Hybridauth;
 
@@ -12,10 +12,10 @@ $error = "";
 // Jika sudah login → redirect sesuai role
 if (isset($_SESSION['id']) && isset($_SESSION['role'])) {
   if ($_SESSION['role'] === 'admin') {
-    header("Location: dashboard_admin.php");
+    header("Location: ../admin/homepage-admin.php");
     exit();
   } else {
-    header("Location: homepage.php");
+    header("Location: ../homepage.php");
     exit();
   }
 }
@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $_SESSION['email'] = $user['email'];
       $_SESSION['role'] = $user['role'];
 
-      header("Location: " . ($user['role'] === 'admin' ? 'dashboard_admin.php' : 'homepage.php'));
+      header("Location: " . ($user['role'] === 'admin' ? '/admin/homepage-admin.php' : 'homepage.php'));
       exit();
     } else {
       $error = "Password salah!";
@@ -113,10 +113,10 @@ if (isset($_GET['provider'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Login</title>
   <style>
-    <?php include "assets/css/login.css"; ?>
+    <?php include "../assets/css/login.css"; ?>
   </style>
-  <link href="assets/css/login.css" rel="stylesheet" />
-  <link rel="shortcut icon" href="fcon.png" type="image/x-icon">
+  <link href="../assets/css/login.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="../fcon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -125,7 +125,7 @@ if (isset($_GET['provider'])) {
 
     <div class="card">
       <div class="logo">
-        <img alt="CAFETARIA Logo" src="/assets/img/logo.png" />
+        <img alt="CAFETARIA Logo" src="/../assets/img/logo.png" />
       </div>
 
       <h1>Sign In</h1>
@@ -150,7 +150,7 @@ if (isset($_GET['provider'])) {
 
       <p class="or-with">Or With</p>
       <div class="socials">
-        <a href="login_google.php"><img src="/assets/img/google.png" alt="Google" /></a>
+        <a href="login_google.php"><img src="/../assets/img/google.png" alt="Google" /></a>
       </div>
 
 
