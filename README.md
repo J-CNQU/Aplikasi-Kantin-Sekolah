@@ -1,76 +1,92 @@
 ```
+🍱 Cafeteria Project | Sistem Kantin Digital Sekolah
+Aplikasi web berbasis PHP Native dan MySQL, dikembangkan menggunakan lingkungan server lokal Laragon. Proyek ini dirancang sebagai fondasi sistem kantin digital sekolah dengan fokus utama pada fitur autentikasi, sistem menu, dan manajemen pesanan.
+Proyek ini masih dalam fase pengembangan aktif dan berencana untuk diperluas ke sistem transaksi penuh dan pengelolaan stok otomatis.
 
-🍱 Cafeteria Project (UnFixed)
+🚀 Fitur Utama & Fungsionalitas
+Autentikasi yang Komprehensif
+1. Login & Signup Manual — Selesai (✅)
+Menggunakan password_hash() dan password_verify() untuk keamanan maksimal.
+Proses registrasi dan login berjalan normal tanpa error.
 
-Aplikasi web berbasis PHP Native dan MySQL, dikembangkan menggunakan Laragon.
-Proyek ini dirancang sebagai sistem kantin digital sekolah dengan fitur autentikasi lengkap (manual dan sosial media), sistem menu, serta manajemen pesanan sederhana.
+2. Login Sosial Media — Selesai (✅)
+Terintegrasi sepenuhnya dengan Google dan Facebook.
+Menggunakan HybridAuth v3 untuk autentikasi pihak ketiga.
 
-Proyek masih dalam pengembangan aktif dan terus diperluas ke arah sistem transaksi dan pengelolaan stok otomatis.
+3. Sistem Logout Aman — Selesai (✅)
+Implementasi menggunakan session_destroy().
+Semua sesi dibersihkan dengan tepat untuk mencegah penyalahgunaan.
 
-🚀 Fitur Utama
-🧩 Autentikasi
+4. Pemeriksaan Sesi — Selesai (✅
+Pop-up login otomatis muncul jika pengguna belum terautentikasi.
+Memastikan halaman hanya bisa diakses setelah user login.
 
-✅ Login dan Signup Manual dengan password_hash() & password_verify()
-
-✅ Login Menggunakan Google dan Facebook via HybridAuth
-
-✅ Sistem Logout Aman dengan session destroy
-
-✅ Pop-up login otomatis jika user belum login
-
-🍔 Menu & Pesanan (Under Development)
-
-🧾 Halaman Menu berdasarkan kategori (Nasi, Mie, Sate, Bakso)
-
-🛒 Struktur awal sistem cart / keranjang pesanan
-
-💵 Rencana integrasi sistem pembayaran & laporan transaksi
+🍛 Menu & Manajemen Pesanan (Dalam Progres)
+• Halaman Menu — 🟡 Dalam Progres
+Tampilan menu dengan kategori: Nasi, Mie, Sate, Bakso.
+• Sistem Cart — 🛒 Struktur Awal
+Kerangka dasar keranjang pesanan sudah dibuat.
+• Transaksi & Laporan — 💵 Rencana
+Rencana integrasi pembayaran, checkout, dan laporan transaksi.
 
 ⚙️ Teknologi & Tools
+• Backend
+PHP 8+ (Native)
+Digunakan untuk logika server-side.
 
-Frontend: HTML5, CSS3, JavaScript (Native)
+• Frontend
+HTML5, CSS3, JavaScript
+Murni Native (Vanilla JS), tanpa framework.
 
-Backend: PHP 8+
+• Database
+MySQL
+Sebagai penyimpanan data utama.
 
-Database: MySQL
+• Server Lokal
+Laragon
+Lingkungan pengembangan yang direkomendasikan.
 
-Server Lokal: Laragon
+• Library OAuth
+HybridAuth v3
+Digunakan untuk login sosial media (Google & Facebook).
 
-OAuth Library: HybridAuth v3
+• Version Control
+Git + GitHub
+Untuk manajemen versi dan kolaborasi.
+```
+```
+🛠️ Panduan Instalasi Lokal
 
-Version Control: Git + GitHub
+Ikuti langkah-langkah berikut untuk menyiapkan dan menjalankan proyek di lingkungan lokal.
 
-⚙️ Cara Instalasi
+1. Kloning Repositori
 
-Clone repository
-
+Jalankan perintah berikut:
 git clone https://github.com/username/cafeteria.git
 cd cafeteria
 
+2. Konfigurasi Database
+Buka phpMyAdmin pada Laragon.
+Buat database baru dengan nama: cafeteria
+Impor file skema database:
+/databases/db.sql
 
-Buat database di phpMyAdmin
+3. Konfigurasi Koneksi Database
 
-Nama database: cafeteria
-
-Import file SQL dari folder:
-
-/Databases/db.sql
-
-
-Konfigurasi koneksi database
-Edit file config.php:
+Edit file config.php di direktori utama:
 
 <?php
 $host = "localhost";
 $user = "root";
-$pass = "";
+$pass = ""; // Sesuaikan jika Anda menggunakan password
 $db   = "cafeteria";
 ?>
 
+4. Konfigurasi Login Sosial Media (OAuth)
 
-Konfigurasi Login Google & Facebook (OAuth)
-Edit file config_oauth.php:
-
+Edit file config_oauth.php untuk memasukkan kredensial aplikasi Anda:
+```
+```
 <?php
 return [
     'callback' => 'http://localhost/cafeteria/callback.php',
@@ -82,238 +98,388 @@ return [
                 'secret' => 'YOUR_GOOGLE_CLIENT_SECRET'
             ],
         ],
-        'Facebook' => [
-            'enabled' => true,
-            'keys' => [
-                'id' => 'YOUR_FACEBOOK_APP_ID',
-                'secret' => 'YOUR_FACEBOOK_APP_SECRET'
-            ],
-        ],
     ],
 ];
 ?>
-
-
-Pastikan Authorized Redirect URL di Google & Facebook Developer Console sesuai:
+```
+```
+Pastikan Redirect URL sesuai dengan pengaturan OAuth Anda, contoh:
 
 http://localhost/cafeteria/callback.php?provider=Google
 http://localhost/cafeteria/callback-facebook.php?provider=Facebook
 
-
-Jalankan project via Laragon
-
-Start Apache & MySQL
-
-Buka http://localhost/cafeteria
-
-🔑 Akun Login Default (Testing)
-Email / Username	Password
-fishicella@gmail.co
-	user123
-🗂️ Struktur Folder & File
-cafeteria/
-├── auth_check.php
-├── callback.php                        # Callback untuk Google OAuth
-├── composer.json
-├── composer.lock
-├── config.php                          # Konfigurasi koneksi database
-├── config_oauth.php                    # Konfigurasi OAuth (Google)
-├── fcon.png
-├── hash.php                            # Proses hashing password
-├── homepage.php
-├── hybridauth.log
-├── hybridauth_config.php               # Config tambahan HybridAuth
-├── index.php                           # Halaman utama / landing page
-├── login.php                           # Login manual
-├── login_google.php                    # Login via Google
-├── login_social.php                    # Routing login sosial media
-├── logout.php                          # Logout session
-├── orders.php
-├── signup.php                          # Form signup
-├── README.md                           # Dokumentasi project
+5. Menjalankan Aplikasi
+Jalankan Apache & MySQL melalui Laragon.
+Akses aplikasi melalui URL:
+http://localhost/cafeteria
+```
+```
+🗂️ Struktur Folder & File Proyek
+Struktur folder proyek dirancang untuk memisahkan logika utama dengan aset dan modul:
+│   .env
+│   .env.example
+│   .gitignore
+│   auth_check.php
+│   callback.php
+│   composer.json
+│   composer.lock
+│   config.php
+│   config_oauth.php
+│   fcon.png
+│   hash.php
+│   homepage.php
+│   hybridauth.log
+│   index.php
+│   login.php
+│   login_google.php
+│   logout.php
+│   orders.js
+│   orders.php
+│   README.md
+│   save_order.php
+│   signup.php
+│   slideshow.js
+│   struktur.txt
 │
-├── assets/
-│   ├── css/
-│   │   ├── footer.css
-│   │   ├── homepage.css
-│   │   ├── login.css
-│   │   ├── pop-up.css
-│   │   ├── signup.css
-│   │   ├── style-index.css
-│   │   └── style.css
+├───Api
+│       index.php
+│
+├───assets
+│   ├───css
+│   │       footer.css
+│   │       homepage.css
+│   │       login.css
+│   │       orders.css
+│   │       pop-up.css
+│   │       signup.css
+│   │       style-index.css
+│   │       style.css
 │   │
-│   ├── font/
-│   │   └── Cocogoose-Pro-Bold-trial.ttf
+│   ├───font
+│   │       Cocogoose-Pro-Bold-trial.ttf
 │   │
-│   ├── homepage/
-│   │   ├── slideshow-1.png
-│   │   ├── slideshow-2.png
-│   │   ├── slideshow-3.png
-│   │   ├── iklan help.png
-│   │   ├── fried rice.jpeg
-│   │   ├── hainam.jpeg
-│   │   └── categories/
-│   │       ├── 1.png
-│   │       ├── 2.png
-│   │       ├── 3.png
-│   │       ├── 4.png
-│   │       └── 5.png
+│   ├───homepage
+│   │   │   apple.png
+│   │   │   counter 1.png
+│   │   │   counter 2.png
+│   │   │   counter 3.png
+│   │   │   counter 4.png
+│   │   │   fried rice.jpeg
+│   │   │   google.svg
+│   │   │   hainam.jpeg
+│   │   │   iklan help.png
+│   │   │   iklan kecil 2.png
+│   │   │   iklan kecil.png
+│   │   │   mie ayam spesial bakso.jpeg
+│   │   │   nasi padang.jpeg
+│   │   │   slideshow-1.png
+│   │   │   slideshow-2.png
+│   │   │   slideshow-3.png
+│   │   │   udon.jpeg
+│   │   │
+│   │   └───categories
+│   │           1.png
+│   │           2.png
+│   │           3.png
+│   │           4.png
+│   │           5.png
 │   │
-│   ├── img/
-│   │   ├── facebook.png
-│   │   ├── google.png
-│   │   ├── keranjang.png
-│   │   ├── logo.png
-│   │   └── x.png
+│   ├───img
+│   │       facebook.png
+│   │       fcon.png
+│   │       google.png
+│   │       keranjang.png
+│   │       logo-copy.png
+│   │       logo.png
+│   │       x.png
 │   │
-│   └── js/
-│       ├── index.js
-│       └── slideshow.js
+│   └───js
+│           counter.js
+│           index.js
+│           orders.js
+│           popup.js
 │
-├── cafetaria/
-│   ├── counter1.php
-│   ├── counter2.php
-│   ├── counter3.php
-│   ├── counter4.php
-│   ├── counter.js
-│   ├── counter.css
-│   └── logo.png
+├───cafetaria
+│   │   counter-2.css
+│   │   counter-3.css
+│   │   counter-4.css
+│   │   counter.js
+│   │   counter1.css
+│   │   counter1.php
+│   │   counter2.php
+│   │   counter3.php
+│   │   counter4.php
+│   │   logo.png
+│   │
+│   ├───counter 1
+│   │       1. ayam geprek.png
+│   │       1. nasi bakar.png
+│   │       1. nasi goreng.png
+│   │       1. nasi hainam.png
+│   │       1. nasi kuning.png
+│   │       1. nasi liwet.png
+│   │       1. nasi padang B.png
+│   │       1. nasi padang.png
+│   │       1. nasi uduk.png
+│   │       iklan counter 1.png
+│   │       iklan counter 2.png
+│   │       iklan counter 3.png
+│   │       iklan counter 4.png
+│   │
+│   ├───counter 2
+│   │       2.bakmie-biasa.png
+│   │       2.bakmie-spesial-bakso.png
+│   │       2.fettuccine.png
+│   │       2.kwetiau-biasa.png
+│   │       2.pesto-pasta.png
+│   │       2.spaghetti-bolognese.png
+│   │       2.udon-beef.png
+│   │       2.udon-chicken-curry.png
+│   │       iklan counter 2.png
+│   │       kwetiau-seafood.png
+│   │
+│   ├───Counter 3
+│   │       3.ayam-cabe-garam.png
+│   │       3.bibimbap.png
+│   │       3.chicken-katsu.png
+│   │       3.chicken-teriyaki.png
+│   │       3.gyudon.png
+│   │       3.oyakodon.png
+│   │       iklan counter 3.png
+│   │
+│   ├───Counter 4
+│   │       4.bakso-biasa.png
+│   │       4.bakso-komplit.png
+│   │       4.bakso-urat.png
+│   │       4.gado-gado.png
+│   │       4.sate-ayam.png
+│   │       4.sate-kambing.png
+│   │       iklan counter 4.png
+│   │
+│   ├───descriptions
+│   │   │   descriptions.css
+│   │   │   descriptions.js
+│   │   │
+│   │   └───counter1
+│   │           ayamgeprek.php
+│   │           nasigoreng.php
+│   │           nasihainam.php
+│   │           nasiuduk.php
+│   │
+│   ├───icons
+│   │       arrow-left.png
+│   │       arrow-right.png
+│   │       cart.png
+│   │       minus.png
+│   │       person.png
+│   │       plus.png
+│   │       search.png
+│   │       
+│   ├───logo deskripsi
+│   │       arrow_abu2right.png
+│   │       arrow_red.png
+│   │       profile.png
+│   │       star.png
+│   │
+│   ├───logo per counter
+│   │       1.png
+│   │       2.png
+│   │       3.png
+│   │       4.png
+│   │
+│   └───logo2 footer
+│           apple.png
+│           facebook.png
+│           instagram.png
+│           playstore.png
+│           twitter.png
+│           youtube.png
 │
-├── categories/
-│   ├── bakso.php
-│   ├── noodles.php
-│   ├── rice.php
-│   ├── sate.php
-│   ├── counter.js
-│   └── counter.css
+├───categories
+│       bakso.php
+│       counter.css
+│       counter.js
+│       noodles.php
+│       rice.php
+│       sate.php
 │
-├── databases/
-│   └── db.sql
+├───Css-AfterLogin
+│       Counter-1.css
 │
-├── Css-AfterLogin/
-│   └── Counter-1.css
+├───Databases
+│       db.sql
 │
-├── Menu-AfterLogin/
-│   └── Counter-1.php
+├───deskripsi
+│       deskripsi.php
 │
-├── orderpage/
-│   └── orderpage.php
+├───git-filter-repo
+│   │   .gitattributes
+│   │   .gitignore
+│   │   COPYING
+│   │   COPYING.gpl
+│   │   COPYING.mit
+│   │   git-filter-repo
+│   │   git_filter_repo.py
+│   │   INSTALL.md
+│   │   Makefile
+│   │   pyproject.toml
+│   │   README.md
+│   │
+│   ├───.github
+│   │   │   dependabot.yml
+│   │   │
+│   │   └───workflows
+│   │           test.yml
+│   │
+│   ├───contrib
+│   │   └───filter-repo-demos
+│   │           barebones-example
+│   │           bfg-ish
+│   │           clean-ignore
+│   │           convert-svnexternals
+│   │           filter-branch-ish
+│   │           filter-lamely
+│   │           insert-beginning
+│   │           lint-history
+│   │           README.md
+│   │           signed-off-by
+│   │
+│   ├───Documentation
+│   │       Contributing.md
+│   │       converting-from-bfg-repo-cleaner.md
+│   │       converting-from-filter-branch.md
+│   │       examples-from-user-filed-issues.md
+│   │       FAQ.md
+│   │       git-filter-repo.txt
+│   │
+│   └───t
+│       │   run_coverage
+│       │   run_tests
+│       │   t9390-filter-repo-basics.sh
+│       │   t9391-filter-repo-lib-usage.sh
+│       │   t9392-filter-repo-python-callback.sh
+│       │   t9393-filter-repo-rerun.sh
+│       │   t9394-filter-repo-sanity-checks-and-bigger-repo-setup.sh
+│       │   test-lib-functions.sh
+│       │   test-lib.sh
+│       │
+│       ├───t9390
+│       │       basic
+│       │       basic-filename
+│       │       basic-mailmap
+│       │       basic-message
+│       │       basic-numbers
+│       │       basic-replace
+│       │       basic-ten
+│       │       basic-twenty
+│       │       degenerate
+│       │       degenerate-evil-merge
+│       │       degenerate-globme
+│       │       degenerate-keepme
+│       │       degenerate-keepme-noff
+│       │       degenerate-moduleA
+│       │       empty
+│       │       empty-keepme
+│       │       less-empty-keepme
+│       │       more-empty-keepme
+│       │       sample-mailmap
+│       │       sample-message
+│       │       sample-replace
+│       │       unusual
+│       │       unusual-filtered
+│       │       unusual-mailmap
+│       │
+│       ├───t9391
+│       │       commit_info.py
+│       │       create_fast_export_output.py
+│       │       emoji-repo
+│       │       erroneous.py
+│       │       file_filter.py
+│       │       print_progress.py
+│       │       rename-master-to-develop.py
+│       │       splice_repos.py
+│       │       strip-cvs-keywords.py
+│       │       unusual.py
+│       │
+│       ├───t9393
+│       │       lfs
+│       │       simple
+│       │
+│       └───t9394
+│               date-order
 │
-├── helppage/
-│   ├── help.php
-│   └── help.css
+├───helppage
+│       help.css
+│       help.php
 │
-├── php/
-│   └── counter.php
+├───logo2 footer
+│       apple.png
+│       Counter-1.js
+│       facebook.png
+│       instagram.png
+│       playstore.png
+│       twitter.png
+│       youtube.png
 │
-└── vendor/
-    └── hybridauth/                    # Library untuk login sosial media
+├───php
+│       counter.php
+│
+└───vendor
+    │   autoload.php
+```
+```
+🧑‍💻 Struktur Tabel users
 
-🧮 Struktur Database (db.sql)
-Tabel users
-Kolom	Tipe	Keterangan
-id	INT (AI, PK)	ID unik user
-email	VARCHAR(255)	Email pengguna
-password	VARCHAR(255)	Password terenkripsi
-name	VARCHAR(100)	Nama pengguna
-created_at	DATETIME	Tanggal registrasi
-Tabel Rencana (akan dikembangkan)
+Berikut adalah struktur tabel utama untuk data pengguna:
 
-menu – daftar makanan/minuman
+• id — INT (AUTO_INCREMENT, PRIMARY KEY)
+ID unik pengguna.
 
-orders – data pesanan user
+• email — VARCHAR(255)
+Alamat email pengguna.
 
-order_items – rincian isi pesanan
+• password — VARCHAR(255)
+Password terenkripsi menggunakan password_hash().
 
-transactions – pencatatan transaksi
+• name — VARCHAR(100)
+Nama lengkap pengguna.
 
-stok_log – log perubahan stok produk
+• created_at — DATETIME
+Tanggal dan waktu registrasi.
+```
+```
 
-🔄 Alur Aplikasi
+🧭 Roadmap Pengembangan Selanjutnya
+Kami merencanakan fitur-fitur berikut untuk iterasi berikutnya:
+Keranjang Pesanan Dinamis: Implementasi sistem keranjang pesanan berbasis session yang fungsional.
+Admin Panel: Pembuatan dashboard admin untuk manajemen menu dan pemrosesan pesanan.
+Pembayaran Simulasi: Implementasi alur pembayaran dan konfirmasi.
+Notifikasi: Penambahan fitur notifikasi status pesanan (misalnya: Pesanan diterima, Sedang diproses).
+Optimasi: Peningkatan responsifitas tampilan di perangkat mobile.
+```
+```
 
-User membuka halaman utama (index.php)
+👤 Tim Kontributor dan Pembagian Tugas
+Juan Felix Katoro (Fullstack Developer)
+Fokus Tugas: Pengembangan Back-end (PHP/MySQL), Logika Autentikasi, Struktur Database, dan Front-end Pendukung.
 
-Jika belum login → muncul pop-up login/signup
+Britannia (Front-end Engineer)
+Fokus Tugas: Implementasi Desain dan Pengembangan Front-end (HTML, CSS, JavaScript), termasuk responsivitas dan interaktivitas UI.
 
-Setelah login → diarahkan ke homepage.php
+Ethan (UI/UX Designer)
+Fokus Tugas: Perancangan User Interface dan User Experience (Desain Proyek), dan Implementasi Front-end Desain.
+```
 
-User dapat memilih kategori (Nasi, Mie, Bakso, dll)
+```
+🔑 Akun Testing Proyek CafeTaria
 
-Sistem menyiapkan struktur untuk:
+Pengguna (User)
+Email: Ethan@gmail.com
+Password: 123456
+Akses: Halaman Menu dan Orders.
 
-menambah ke keranjang,
-
-menghitung total pesanan,
-
-dan checkout (belum aktif)
-
-Logout akan menghapus session dan mengembalikan ke halaman utama.
-
-🌐 Integrasi Login Sosial Media
-🔹 Login dengan Google
-
-Menggunakan HybridAuth Provider Google.php
-
-Memerlukan Client ID dan Client Secret
-
-Redirect ke:
-http://localhost/cafeteria/callback.php?provider=Google
-
-🔹 Login dengan Facebook
-
-Menggunakan HybridAuth Provider Facebook.php
-
-Memerlukan App ID dan App Secret
-
-Redirect ke:
-http://localhost/cafeteria/callback-facebook.php?provider=Facebook
-
-Semua log proses tersimpan otomatis di file hybridauth.log
-
-🧑‍💻 Author
-
-Juan Felix Katoro
-📧 Email: jferxiic@gmail.com
-
-💻 GitHub: J-CNQU
-
-📊 Status Proyek
-Komponen	Status	Catatan
-Login & Signup Manual	✅ Selesai	Aman & stabil
-OAuth Google & Facebook	✅ Selesai	Gunakan config_oauth.php
-Homepage & Menu	🟡 Dalam Progres	Struktur sudah tersedia
-Pesanan & Checkout	🔴 Belum Dimulai	Akan menggunakan session cart
-Dashboard User	🟡 Prototipe	Dalam perancangan UI
-Sistem Transaksi	🔴 Belum tersedia	Akan ditambahkan ke MySQL
-🧭 Rencana Update Selanjutnya
-
-🔜 Tambah sistem keranjang pesanan dinamis
-
-🔜 Buat admin panel untuk mengatur menu & pesanan
-
-🔜 Implementasi pembayaran simulasi
-
-🔜 Tambah fitur notifikasi pesanan
-
-🔜 Optimasi responsif di mobile
-
-⚠️ Catatan
-
-Jika login sosial media gagal, pastikan:
-
-callback.php & config_oauth.php sesuai path di Laragon
-
-Redirect URL di Google & Facebook Developer Console sudah benar
-
-Apache dan MySQL aktif di Laragon
-
-Folder vendor/ lengkap dan composer install sudah dijalankan
-
-🏁 Kesimpulan
-
-Cafeteria Project adalah pondasi sistem kantin digital berbasis PHP yang kuat,
-dengan sistem autentikasi ganda (manual dan sosial media),
-rencana ekspansi ke sistem transaksi, dan desain struktur folder profesional.
-💻 GitHub: Juan Felix
-
+Administrator (Admin)
+Email: Richard@gmail.com
+Password: richardadmin
+Akses: Dashboard Admin untuk Kelola Menu.
 ```
