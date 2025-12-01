@@ -1,7 +1,7 @@
 <?php
-require 'vendor/autoload.php';
-require 'config.php';
-$config = include 'config_oauth.php';
+require '../vendor/autoload.php';
+require '../config.php';
+$config = include '../config_oauth.php';
 
 use Hybridauth\Hybridauth;
 
